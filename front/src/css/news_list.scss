@@ -1,0 +1,47 @@
+#news_area {
+    div {
+        .left_area {
+            padding: 0 0;
+            .card-header {
+                h2 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #f8f9fa;
+                }
+            }
+            ul {
+                border: 1px solid rgba(0, 0, 0, .125);
+                li {
+                    overflow: hidden;
+                    font-size: 15px;
+                    background-color: #f8f9fa;
+                    border-bottom: 1px dashed rgba(0, 0, 0, .125);
+                    border-left: none;
+                    border-right: none;
+                    a {
+                        float: left;
+                        color: #343a40;
+                    }
+                    a:hover {
+                        color: #fff;
+                        background-color: #28a745;
+                        text-decoration: none;
+                    }
+                    span {
+                        float: right;
+                    }
+                }
+            }
+        }
+        .right_area {
+            padding: 0 0;
+            .card-header {
+                h2 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #f8f9fa;
+                }
+            }
+        }
+    }
+}

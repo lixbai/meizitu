@@ -1,0 +1,239 @@
+#daohang {
+    nav {
+        margin: 0 -15px;
+        .navbar-brand {
+            font-weight: bold;
+            margin: 0 35px 0 20px;
+        }
+        div {
+            ul {
+                font-size: 16px;
+                font-weight: bolder;
+                li {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+//标签
+#tags {
+    div {
+        p {
+            width: 100%;
+            padding: 7px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #eee;
+        }
+        .tags_1 {
+            padding: 0 15px;
+            .manytags {
+                margin: 8px 0;
+                a {
+                    font-size: 15px;
+                    margin: 1px 0;
+                    text-decoration: none;
+                }
+            }
+            .manytags_special {
+                a {
+                    font-size: 15px;
+                    margin: 5px 0;
+                    text-decoration: none;
+                }
+            }
+        }
+        .tags_2 {
+            padding: 0 15px;
+            li {
+                margin: 5px 0;
+                span {
+                    // font-weight: bold;
+                    font-size: 16px;
+                }
+                p {
+                    background-color: darkorange;
+                    color: #1e7e34;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                a {
+                    color: black;
+                    font-size: 14.5px;
+                    margin-right: 4px;
+                }
+                a:hover {
+                    font-size: 14.5px;
+                    color: #fff;
+                    background-color: #00cc99;
+                    text-decoration: blink;
+                }
+            }
+        }
+    }
+}
+
+//图集
+#altas {
+    background: url("/dist/images/bg.png");
+    .imgs_list {
+        p {
+            width: 100%;
+            padding: 7px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #eee;
+        }
+        .img_display {
+            margin-top: 15px;
+            .thumbnail {
+                .imgs_link {
+                    img {
+                        height: auto;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .imgs_title {
+                    .title_height {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        font-size: 14px;
+                        line-height: 1.2rem;
+                        margin-top: 7px;
+                        margin-bottom: -5px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .pages_list {
+        .page {
+            a {
+                display: inline-block;
+                padding: 0 10px;
+                height: 28px;
+                line-height: 28px;
+                background: #fff;
+                border-radius: 5px;
+                border-bottom: 1px solid #ddd;
+                margin: 0 5px;
+                transition: .2s;
+                color: #343a40;
+            }
+            a.active {
+                background-color: #f84f7a;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//热点图集推荐
+#hot_altas {
+    background: url("/dist/images/bg.png");
+    .imgs_list {
+        p {
+            width: 100%;
+            padding: 7px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #eee;
+        }
+        .img_display {
+            margin-top: 15px;
+            .thumbnail {
+                .imgs_link {
+                    img {
+                        height: auto;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .imgs_title {
+                    .title_height {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        font-size: 14px;
+                        line-height: 1.2rem;
+                        margin-top: 7px;
+                        margin-bottom: -5px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .pages_list {
+        .page {
+            a {
+                display: inline-block;
+                padding: 0 10px;
+                height: 28px;
+                line-height: 28px;
+                background: #fff;
+                border-radius: 5px;
+                border-bottom: 1px solid #ddd;
+                margin: 0 5px;
+                transition: .2s;
+                color: #343a40;
+            }
+            a.active {
+                background-color: #f84f7a;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//底部footer
+footer {
+    .footer_title {
+        margin: 0 -15px;
+        p {
+            width: 100%;
+            padding: 7px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    .many_links {
+        div {
+            ul {
+                margin-bottom: 10px;
+                padding: 15px 0;
+                border: 1px solid rgba(0, 0, 0, .125);
+                li {
+                    margin: 0 -2px;
+                    padding: 0 5px;
+                    display: inline-block;
+                    text-align: center;
+                    a {
+                        font-size: 15px;
+                        color: #6c757d;
+                    }
+                    a:hover {
+                        color: #fff;
+                        background-color: #28a745;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//底部版权
+#copyright {
+    div {
+        p {
+            font-size: 14px;
+            line-height: 1.3rem;
+        }
+    }
+}

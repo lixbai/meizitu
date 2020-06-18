@@ -1,0 +1,147 @@
+#beauty_article {
+    .row {
+        .article_left {
+            padding: 0 0;
+            nav {
+                margin-bottom: -16px;
+                ol {
+                    padding: 7px 16px;
+                }
+            }
+            .article_content {
+                margin-top: 10px;
+                .person_info {
+                    border: 1px solid #e9ecef;
+                    .beauty_header {
+                        border-bottom: 1px dashed #eee;
+                    }
+                    .info {
+                        .imgss {
+                            img {
+                                width: 80%;
+                                height: auto;
+                            }
+                        }
+                        .rate {
+                            .score {
+                                font-size: 60px;
+                            }
+                            p {
+                                font-size: 15px;
+                                padding: 10px 0;
+                            }
+                        }
+                    }
+                }
+                .person_detail {
+                    border: 1px solid #e9ecef;
+                    .title {
+                        width: 100%;
+                        padding: 7px 15px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        background-color: #eee;
+                    }
+                    .detail_body {
+                        width: 100%;
+                        padding: 15px 15px;
+                        font-size: 15px;
+                    }
+                }
+                .person_album {
+                    border: 1px solid #e9ecef;
+                    .title {
+                        width: 100%;
+                        padding: 7px 15px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        background-color: #eee;
+                    }
+                    .img_display {
+                        margin-top: 15px;
+                        .thumbnail {
+                            .imgs_link {
+                                img {
+                                    height: auto;
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                            .imgs_title {
+                                .title_height {
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    font-size: 14px;
+                                    line-height: 1.2rem;
+                                    margin-top: 7px;
+                                    margin-bottom: -5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hot_beauty_list {
+                    border: 1px solid #e9ecef;
+                    p {
+                        width: 100%;
+                        padding: 7px 15px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        background-color: #eee;
+                    }
+                    .beauty_img_display {
+                        margin-top: 15px;
+                        .thumbnail {
+                            .imgs_link {
+                                img {
+                                    height: auto;
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                            .beauty_imgs_title {
+                                .title_height {
+                                    // text-align: center;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    font-size: 14px;
+                                    line-height: 1.2rem;
+                                    margin-top: 7px;
+                                    margin-bottom: -5px;
+                                    padding: 0 3px;
+                                    a:hover {
+                                        font-size: 14.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .article_right {
+        .hot_news_title {
+            width: 100%;
+            padding: 7px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .hot_news {
+            margin-bottom: 10px;
+            border: 1px solid #e9ecef;
+            .row {
+                padding-left: 5px;
+                height: 100px;
+                overflow: hidden;
+                border-bottom: 1px dashed #17a2b8;
+            }
+            .row:last-child {
+                border: none;
+            }
+        }
+    }
+}

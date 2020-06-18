@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/init.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/beauty_detail.min.css' %}">
+
+    <title>beauty_detail</title>
+</head>
+
+<body>
+    <script id="__bs_script__">
+        //<![CDATA[
+        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+        //]]>
+    </script>
+
+
+    <!-- 导航栏 开始 -->
+    <nav class="container" id="daohang">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <a class="navbar-brand " href="# ">首页</a>
+            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="# ">最新情报</a>
+                    </li>
+                    <li class="nav-item active ">
+                        <a class="nav-link " href="# ">美女图集<span class="sr-only ">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="# ">女神专区</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="# ">经典珍藏</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="# ">女神排行榜</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="# ">每日更新</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control mr-sm-2 " type="search " placeholder="输入搜索美女 " aria-label="Search " name="q">
+                    <button class="btn btn-success border-light my-2 my-sm-0 text-light font-weight-bolder" type="submit ">搜索一下</button>
+                </form>
+            </div>
+        </nav>
+    </nav>
+    <!-- 导航栏 结束 -->
+
+
+
+
+    <!-- 内容区 开始 -->
+    <div class="container mt-3 " id="beauty_article">
+        <div class="row justify-content-between">
+            <div class="article_left col-12 col-sm-12 col-lg-8">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item"><a href="#">现在位置</a></li>
+                        <li class="breadcrumb-item"><a href="#">首页</a></li>
+                        <li class="breadcrumb-item"><a href="#">女神专区</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">李昭冉</li>
+                    </ol>
+                </nav>
+                <div class="article_content p-3">
+                    <div class="row person_info rounder d-flex flex-column">
+                        <div class=" col-12 p-3 beauty_header justify-content-between">
+                            <p class="pl-2 font-weight-bold btn btn-light">李昭冉 </p>
+                            <p class="pr-2 btn btn-primary float-right">个人百科词条</p>
+                        </div>
+                        <div class="mt-3 d-flex flex-row info">
+                            <div class="imgss col-4">
+                                <img class="img-fluid img-thumbnail" src="https://img.onvshen.com:85/girl/16223/16223.jpg" alt="">
+                            </div>
+                            <div class="person_data col-4">
+                                <table class="table table-bordered table-light table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td>年龄</td>
+                                            <td>29岁</td>
+                                        </tr>
+                                        <tr>
+                                            <td>生日</td>
+                                            <td>1990-10-15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>星 座</td>
+                                            <td>天蝎座</td>
+                                        </tr>
+                                        <tr>
+                                            <td>身 高</td>
+                                            <td>172</td>
+                                        </tr>
+                                        <tr>
+                                            <td>体 重</td>
+                                            <td>46 KG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>三 围</td>
+                                            <td>B86 W60 H85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>出 生</td>
+                                            <td>中国 北京</td>
+                                        </tr>
+                                        <tr>
+                                            <td>职 业</td>
+                                            <td>平面模特、车模</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="rate col-4 align-content-center">
+                                <div class="score text-secondary font-weight-bold text-center pb-2">
+                                    <span>9.2</span>
+                                </div>
+                                <p class="text-center">给出您的评价(125人评分)</p>
+                                <div class="five_star text-center">
+                                    <svg t="1591701956961" class="icon" fill="#6c757d" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1965" width="2.4em" height="2.4em">
+                                        <path
+                                            d="M512 768l-174.250667 91.605333a42.666667 42.666667 0 0 1-61.909333-44.970666l33.28-194.048-141.013333-137.386667a42.666667 42.666667 0 0 1 23.68-72.832l194.816-28.288 87.125333-176.554667a42.666667 42.666667 0 0 1 76.544 0l87.125333 176.554667 194.816 28.288a42.666667 42.666667 0 0 1 23.68 72.789333l-141.013333 137.429334 33.28 194.048a42.666667 42.666667 0 0 1-61.866667 44.970666L512 768z">
+                                        </path>
+                                    </svg>
+                                    <svg t="1591701956961" class="icon" fill="#6c757d" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1965" width="2.4em" height="2.4em">
+                                        <path
+                                            d="M512 768l-174.250667 91.605333a42.666667 42.666667 0 0 1-61.909333-44.970666l33.28-194.048-141.013333-137.386667a42.666667 42.666667 0 0 1 23.68-72.832l194.816-28.288 87.125333-176.554667a42.666667 42.666667 0 0 1 76.544 0l87.125333 176.554667 194.816 28.288a42.666667 42.666667 0 0 1 23.68 72.789333l-141.013333 137.429334 33.28 194.048a42.666667 42.666667 0 0 1-61.866667 44.970666L512 768z">
+                                        </path>
+                                    </svg>
+                                    <svg t="1591701956961" class="icon" fill="#6c757d" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1965" width="2.4em" height="2.4em">
+                                        <path
+                                            d="M512 768l-174.250667 91.605333a42.666667 42.666667 0 0 1-61.909333-44.970666l33.28-194.048-141.013333-137.386667a42.666667 42.666667 0 0 1 23.68-72.832l194.816-28.288 87.125333-176.554667a42.666667 42.666667 0 0 1 76.544 0l87.125333 176.554667 194.816 28.288a42.666667 42.666667 0 0 1 23.68 72.789333l-141.013333 137.429334 33.28 194.048a42.666667 42.666667 0 0 1-61.866667 44.970666L512 768z">
+                                        </path>
+                                    </svg>
+                                    <svg t="1591701956961" class="icon" fill="#6c757d" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1965" width="2.4em" height="2.4em">
+                                        <path
+                                            d="M512 768l-174.250667 91.605333a42.666667 42.666667 0 0 1-61.909333-44.970666l33.28-194.048-141.013333-137.386667a42.666667 42.666667 0 0 1 23.68-72.832l194.816-28.288 87.125333-176.554667a42.666667 42.666667 0 0 1 76.544 0l87.125333 176.554667 194.816 28.288a42.666667 42.666667 0 0 1 23.68 72.789333l-141.013333 137.429334 33.28 194.048a42.666667 42.666667 0 0 1-61.866667 44.970666L512 768z">
+                                        </path>
+                                    </svg>
+                                    <svg t="1591701956961" class="icon" fill="#6c757d" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1965" width="2.4em" height="2.4em">
+                                        <path
+                                            d="M512 768l-174.250667 91.605333a42.666667 42.666667 0 0 1-61.909333-44.970666l33.28-194.048-141.013333-137.386667a42.666667 42.666667 0 0 1 23.68-72.832l194.816-28.288 87.125333-176.554667a42.666667 42.666667 0 0 1 76.544 0l87.125333 176.554667 194.816 28.288a42.666667 42.666667 0 0 1 23.68 72.789333l-141.013333 137.429334 33.28 194.048a42.666667 42.666667 0 0 1-61.866667 44.970666L512 768z">
+                                        </path>
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 person_detail">
+                        <div class="col-12 p-0">
+                            <p class="title">详细资料</p>
+                            <p class="detail_body">藤原亚纪乃（藤原亜紀乃，ふじわらあきの），日本舞台剧演员、艺人，所属事务所是AVILLA。藤原亚纪乃有着可爱的面容和娇小的身材，自2006年出道后，一直活跃在舞台剧界，最近被入围新一代惠比寿麝香葡萄成员，知名度更高。</p>
+                        </div>
+                    </div>
+                    <div class="row mt-3 d-flex flex-row person_album">
+                        <p class="title">女神图集</p>
+                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+                                </a>
+                                <div class="imgs_title">
+                                    <h2 class="title_height">
+                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+                                </a>
+                                <div class="imgs_title">
+                                    <h2 class="title_height">
+                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+                                </a>
+                                <div class="imgs_title">
+                                    <h2 class="title_height">
+                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+                                </a>
+                                <div class="imgs_title">
+                                    <h2 class="title_height">
+                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+                                </a>
+                                <div class="imgs_title">
+                                    <h2 class="title_height">
+                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-4 d-flex flex-row hot_beauty_list ">
+                        <p class="text-dark">最热女神</p>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集 <strong
+                                                style="font-size: 15px; color: red;">3</strong> 个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-03-10/1583830168rbH4.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-08-24/15666294418W44.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
+                            <div class="thumbnail">
+                                <a class="imgs_link" href="">
+                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
+                                </a>
+                                <div class="beauty_imgs_title">
+                                    <h2 class="title_height d-flex justify-content-center">
+                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                                    </h2>
+                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article_right col-lg-4 d-none d-lg-block pr-0 pl-5  ">
+                <p class="hot_news_title bg-dark border border-dark ">热点资讯</p>
+                <div class="hot_news bg-light">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 flex-column align-self-center">
+                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 flex-column align-self-center">
+                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 flex-column align-self-center">
+                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 flex-column align-self-center">
+                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 flex-column align-self-center">
+                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 flex-column align-self-center">
+                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容区 结束 -->
+
+
+
+
+
+    <!-- 底部footer信息展示 开始 -->
+    <footer class="container mt-5 d-sm-none d-md-block">
+        <div class="footer_title">
+            <p class="bg-dark">图集快速导航</p>
+        </div>
+        <div class="row many_links">
+            <div class="d-sm-none d-md-block">
+                <ul class="list-inline rounded-bottom bg-light">
+                    <li class="col-2 col-sm-2"><a href=" ">雅拉伊</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">秀人网</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">美媛馆</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">爱蜜社</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">魅妍社</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">尤蜜荟</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">蜜桃社</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">尤物馆</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">御女郎</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">嗲囡囡</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">优星馆</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">影私荟</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">语画界</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">花の颜</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">星乐园</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">推女郎</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">星颜社</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">尤果网</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">尤果圈</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">优果网</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">推女神</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">顽味生活</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">波萝社</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">猎女神</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">激萌文化</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">兔几盟</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">青豆客</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">果团网</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">熊川纪信</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">轰趴猫</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">头条女神</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">阳光宝贝</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">飞图网</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">蜜团女孩</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">模范学院</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">熊薄荷叶</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">花漾</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">尤美</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">蜜丝</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">克拉女神</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">瑞丝馆 (猫萌榜)</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">网红馆(糖果画报)</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">51modo</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">RQ-STAR</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">YS-Web</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">DGC</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">Bomb.tv</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">@misty</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">Sabra.net</a></li>
+                    <li class="col-2 col-sm-2"> <a href=" ">4K-STAR</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <!-- 底部footer信息展示 结束 -->
+
+    <!-- 底部版权 开始 -->
+    <div class="container mt-3 mb-3" id="copyright">
+        <div>
+            <p class="text-center text-secondary">本站所有资源来源于网友上传与分享，如有关内容侵犯了你的权益，请联系告之，我们会第一时间删除！邮箱:zngirls520@gmail.com
+            </p>
+            <p class="text-center text-secondary">© 2017－2019 nvshens.net, all rights reserved</p>
+        </div>
+    </div>
+    <!-- 底部版权 结束 -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/beauty_detail.min.js' %}"></script>
+</body>
+
+</html>
