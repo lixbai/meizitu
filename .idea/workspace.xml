@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/album/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/beauty/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/dailyupdate/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/oldschool/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mzauth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mzauth/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mzauth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mzauth/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/album/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty_album.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/beauty_album.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/index.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/index.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty_album.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/beauty_album.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +48,26 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/src/css/beauty_album.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/css/index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="79" column="27" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,6 +76,12 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>url</find>
+      <find>background-color</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,6 +118,9 @@
         <option value="$PROJECT_DIR$/apps/mzauth/views.py" />
         <option value="$PROJECT_DIR$/apps/mzauth/forms.py" />
         <option value="$PROJECT_DIR$/apps/news/views.py" />
+        <option value="$PROJECT_DIR$/front/dist/css/index.min.css" />
+        <option value="$PROJECT_DIR$/front/src/css/index.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/beauty_album.scss" />
       </list>
     </option>
   </component>
@@ -115,7 +138,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,12 +148,95 @@
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="album" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="album" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="beauty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,7 +245,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -217,12 +322,14 @@
       <workItem from="1592556681303" duration="598000" />
       <workItem from="1592810686184" duration="1900000" />
       <workItem from="1592881610122" duration="2073000" />
-      <workItem from="1592996575167" duration="2035000" />
+      <workItem from="1592996575167" duration="3335000" />
+      <workItem from="1593397700999" duration="2239000" />
+      <workItem from="1593400460321" duration="1156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25210000" />
+    <option name="totallyTimeSpent" value="29905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,7 +343,7 @@
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1663113" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16950959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,10 +357,10 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17363344" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19527897" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
-      <window_info anchor="bottom" id="manage.py@meizitu" order="14" visible="true" weight="0.23927039" />
+      <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.23927039" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -265,46 +372,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/cms/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ENVS/dytt_env/Lib/site-packages/django/contrib/auth/base_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ENVS/dytt_env/Lib/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -370,13 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -414,13 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/album/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -428,9 +485,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/album/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/album/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/album/models.py">
@@ -504,6 +558,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/dailyupdate/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/images/bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/images/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1476">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/album/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/album/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/css/index.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="921" selection-start-column="921" selection-end-column="921" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/beauty.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/css/beauty_album.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="270" selection-start-column="254" selection-end-column="270" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="79" column="27" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/beauty_album.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
