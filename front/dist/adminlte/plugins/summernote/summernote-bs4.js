@@ -226,7 +226,7 @@ module.exports = __webpack_amd_options__;
 var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
 var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
 
-// CONCATENATED MODULE: ./src/js/base/summernote-en-US.js
+// CONCATENATED MODULE: ./src/js/frontbase/summernote-en-US.js
 
 external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote || {
   lang: {}
@@ -392,7 +392,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.exten
     }
   }
 });
-// CONCATENATED MODULE: ./src/js/base/core/env.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/env.js
 
 var isSupportAmd = typeof define === 'function' && __webpack_require__(2); // eslint-disable-line
 
@@ -473,7 +473,7 @@ var inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNo
   genericFontFamilies: genericFontFamilies,
   validFontName: validFontName
 });
-// CONCATENATED MODULE: ./src/js/base/core/func.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/func.js
 
 /**
  * @class core.func
@@ -670,7 +670,7 @@ function isValidUrl(url) {
   debounce: debounce,
   isValidUrl: isValidUrl
 });
-// CONCATENATED MODULE: ./src/js/base/core/lists.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/lists.js
 
 /**
  * returns the first item of an array.
@@ -914,7 +914,7 @@ function prev(array, item) {
   compact: compact,
   unique: unique
 });
-// CONCATENATED MODULE: ./src/js/base/core/dom.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/dom.js
 
 
 
@@ -2211,7 +2211,7 @@ function isCustomStyleTag(node) {
   detachEvents: detachEvents,
   isCustomStyleTag: isCustomStyleTag
 });
-// CONCATENATED MODULE: ./src/js/base/Context.js
+// CONCATENATED MODULE: ./src/js/frontbase/Context.js
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -2545,7 +2545,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.fn.ex
     return this;
   }
 });
-// CONCATENATED MODULE: ./src/js/base/core/range.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/range.js
 function range_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function range_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -3288,7 +3288,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
       };
     }
     /**
-     * create offsetPath bookmark base on paragraph
+     * create offsetPath bookmark frontbase on paragraph
      *
      * @param {Node[]} paras
      */
@@ -3496,7 +3496,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
     return new range_WrappedRange(sc, so, ec, eo);
   }
 });
-// CONCATENATED MODULE: ./src/js/base/core/key.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/key.js
 
 
 var KEY_MAP = {
@@ -3591,7 +3591,7 @@ var KEY_MAP = {
   nameFromCode: func.invertObject(KEY_MAP),
   code: KEY_MAP
 });
-// CONCATENATED MODULE: ./src/js/base/core/async.js
+// CONCATENATED MODULE: ./src/js/frontbase/core/async.js
 
 /**
  * @method readFileAsDataURL
@@ -3638,7 +3638,7 @@ function createImage(url) {
     }).appendTo(document.body).attr('src', url);
   }).promise();
 }
-// CONCATENATED MODULE: ./src/js/base/editing/History.js
+// CONCATENATED MODULE: ./src/js/frontbase/editing/History.js
 function History_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function History_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -3795,7 +3795,7 @@ var History_History = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Style.js
+// CONCATENATED MODULE: ./src/js/frontbase/editing/Style.js
 function Style_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Style_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -3982,7 +3982,7 @@ var Style_Style = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Bullet.js
+// CONCATENATED MODULE: ./src/js/frontbase/editing/Bullet.js
 function Bullet_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Bullet_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4303,7 +4303,7 @@ var Bullet_Bullet = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Typing.js
+// CONCATENATED MODULE: ./src/js/frontbase/editing/Typing.js
 function Typing_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Typing_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4437,7 +4437,7 @@ var Typing_Typing = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Table.js
+// CONCATENATED MODULE: ./src/js/frontbase/editing/Table.js
 function Table_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Table_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -5135,7 +5135,7 @@ var Table_Table = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Editor.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Editor.js
 function Editor_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Editor_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6268,7 +6268,7 @@ var Editor_Editor = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Clipboard.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Clipboard.js
 function Clipboard_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Clipboard_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6336,7 +6336,7 @@ var Clipboard_Clipboard = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Dropzone.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Dropzone.js
 function Dropzone_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Dropzone_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6484,7 +6484,7 @@ var Dropzone_Dropzone = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Codeview.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Codeview.js
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -6708,7 +6708,7 @@ var Codeview_CodeView = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Statusbar.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Statusbar.js
 function Statusbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Statusbar_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6769,7 +6769,7 @@ var Statusbar_Statusbar = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Fullscreen.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Fullscreen.js
 function Fullscreen_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Fullscreen_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6846,7 +6846,7 @@ var Fullscreen_Fullscreen = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Handle.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Handle.js
 function Handle_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Handle_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6997,7 +6997,7 @@ var Handle_Handle = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/AutoLink.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/AutoLink.js
 function AutoLink_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function AutoLink_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7085,7 +7085,7 @@ var AutoLink_AutoLink = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/AutoSync.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/AutoSync.js
 function AutoSync_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function AutoSync_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7122,7 +7122,7 @@ var AutoSync_AutoSync = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/AutoReplace.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/AutoReplace.js
 function AutoReplace_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function AutoReplace_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7228,7 +7228,7 @@ var AutoReplace_AutoReplace = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Placeholder.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Placeholder.js
 function Placeholder_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Placeholder_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7295,7 +7295,7 @@ var Placeholder_Placeholder = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Buttons.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Buttons.js
 function Buttons_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Buttons_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8167,7 +8167,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/Toolbar.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/Toolbar.js
 function Toolbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Toolbar_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8343,7 +8343,7 @@ var Toolbar_Toolbar = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/LinkDialog.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/LinkDialog.js
 function LinkDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function LinkDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8531,7 +8531,7 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/LinkPopover.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/LinkPopover.js
 function LinkPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function LinkPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8626,7 +8626,7 @@ var LinkPopover_LinkPopover = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/ImageDialog.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/ImageDialog.js
 function ImageDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function ImageDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8776,7 +8776,7 @@ var ImageDialog_ImageDialog = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/ImagePopover.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/ImagePopover.js
 function ImagePopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function ImagePopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8868,7 +8868,7 @@ var ImagePopover_ImagePopover = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/TablePopover.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/TablePopover.js
 function TablePopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function TablePopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8965,7 +8965,7 @@ var TablePopover_TablePopover = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/VideoDialog.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/VideoDialog.js
 function VideoDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function VideoDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -9169,7 +9169,7 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/HelpDialog.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/HelpDialog.js
 function HelpDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function HelpDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -9268,7 +9268,7 @@ var HelpDialog_HelpDialog = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/AirPopover.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/AirPopover.js
 function AirPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function AirPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -9402,7 +9402,7 @@ var AirPopover_AirPopover = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/module/HintPopover.js
+// CONCATENATED MODULE: ./src/js/frontbase/module/HintPopover.js
 function HintPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function HintPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -9715,7 +9715,7 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/settings.js
+// CONCATENATED MODULE: ./src/js/frontbase/settings.js
 
 
 
@@ -10015,7 +10015,7 @@ __webpack_require__.r(__webpack_exports__);
 var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
 var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
 
-// EXTERNAL MODULE: ./src/js/base/renderer.js
+// EXTERNAL MODULE: ./src/js/frontbase/renderer.js
 var renderer = __webpack_require__(1);
 
 // CONCATENATED MODULE: ./src/js/bs4/ui.js
@@ -10205,7 +10205,7 @@ var ui_ui = function ui(editorOptions) {
 };
 
 /* harmony default export */ var bs4_ui = (ui_ui);
-// EXTERNAL MODULE: ./src/js/base/settings.js + 37 modules
+// EXTERNAL MODULE: ./src/js/frontbase/settings.js + 37 modules
 var settings = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/styles/summernote-bs4.scss

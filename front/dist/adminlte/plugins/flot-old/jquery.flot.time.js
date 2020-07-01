@@ -19,7 +19,7 @@ API.txt for details.
 		}
 	};
 
-	// round to nearby lower multiple of base
+	// round to nearby lower multiple of frontbase
 
 	function floorInBase(n, base) {
 		return base * Math.floor(n / base);

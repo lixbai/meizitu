@@ -294,7 +294,7 @@ Docs & License: https://fullcalendar.io/
                 left = backwardCoord;
                 right = 1 - forwardCoord;
             }
-            props.zIndex = seg.level + 1; // convert from 0-base to 1-based
+            props.zIndex = seg.level + 1; // convert from 0-frontbase to 1-based
             props.left = left * 100 + '%';
             props.right = right * 100 + '%';
             if (shouldOverlap && seg.forwardPressure) {

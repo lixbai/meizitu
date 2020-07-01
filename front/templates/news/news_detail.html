@@ -1,70 +1,13 @@
-<!doctype html>
-<html lang="en">
+{% extends 'frontbase/base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-    <link rel="stylesheet" href="{% static 'css/init.css' %}">
+{% block head %}
     <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/news_detail.min.css' %}">
+{% endblock %}
 
-    <title>news_detail</title>
-</head>
+{% block title %}最新情报文章{% endblock %}
 
-<body>
-    <script id="__bs_script__">
-        //<![CDATA[
-        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-        //]]>
-    </script>
-
-
-    <!-- 导航栏 开始 -->
-    <nav class="container" id="daohang">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-            <a class="navbar-brand " href="# ">首页</a>
-            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">最新情报</a>
-                    </li>
-                    <li class="nav-item active ">
-                        <a class="nav-link " href="# ">美女图集<span class="sr-only ">(current)</span></a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">女神专区</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">经典珍藏</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">女神排行榜</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">每日更新</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0 ">
-                    <input class="form-control mr-sm-2 " type="search " placeholder="输入搜索美女 " aria-label="Search " name="q">
-                    <button class="btn btn-success border-light my-2 my-sm-0 text-light font-weight-bolder" type="submit ">搜索一下</button>
-                </form>
-            </div>
-        </nav>
-    </nav>
-    <!-- 导航栏 结束 -->
-
-
-
-
+{% block main %}
     <!-- 内容区 开始 -->
     <div class="container mt-3 " id="news_article">
         <div class="row justify-content-between">
@@ -147,93 +90,4 @@
         </div>
     </div>
     <!-- 内容区 结束 -->
-
-
-
-
-
-    <!-- 底部footer信息展示 开始 -->
-    <footer class="container mt-5 d-sm-none d-md-block">
-        <div class="footer_title">
-            <p class="bg-dark">图集快速导航</p>
-        </div>
-        <div class="row many_links">
-            <div class="d-sm-none d-md-block">
-                <ul class="list-inline rounded-bottom bg-light">
-                    <li class="col-2 col-sm-2"><a href=" ">雅拉伊</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">秀人网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">美媛馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">爱蜜社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">魅妍社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤蜜荟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜桃社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤物馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">御女郎</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">嗲囡囡</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">优星馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">影私荟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">语画界</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">花の颜</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">星乐园</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">推女郎</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">星颜社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤果网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤果圈</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">优果网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">推女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">顽味生活</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">波萝社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">猎女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">激萌文化</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">兔几盟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">青豆客</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">果团网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">熊川纪信</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">轰趴猫</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">头条女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">阳光宝贝</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">飞图网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜团女孩</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">模范学院</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">熊薄荷叶</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">花漾</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤美</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜丝</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">克拉女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">瑞丝馆 (猫萌榜)</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">网红馆(糖果画报)</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">51modo</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">RQ-STAR</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">YS-Web</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">DGC</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">Bomb.tv</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">@misty</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">Sabra.net</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">4K-STAR</a></li>
-
-                </ul>
-            </div>
-        </div>
-
-    </footer>
-    <!-- 底部footer信息展示 结束 -->
-
-    <!-- 底部版权 开始 -->
-    <div class="container mt-3 mb-3" id="copyright">
-        <div>
-            <p class="text-center text-secondary">本站所有资源来源于网友上传与分享，如有关内容侵犯了你的权益，请联系告之，我们会第一时间删除！邮箱:zngirls520@gmail.com
-            </p>
-            <p class="text-center text-secondary">© 2017－2019 nvshens.net, all rights reserved</p>
-        </div>
-    </div>
-    <!-- 底部版权 结束 -->
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}

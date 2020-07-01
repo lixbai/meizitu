@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'apps.mzauth',
     'apps.news',
     'apps.cms',
+    'apps.album',
+    'apps.beauty'
 
 ]
 
