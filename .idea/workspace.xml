@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/templates/album/classic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/album/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/album/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/beauty/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/beauty/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/chart.js/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/chart.js/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables-buttons/js/buttons.print.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables-buttons/js/buttons.print.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables-buttons/js/dataTables.buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables-buttons/js/dataTables.buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables-fixedheader/js/dataTables.fixedHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables-fixedheader/js/dataTables.fixedHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/datatables/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot-old/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot-old/jquery.flot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot-old/jquery.flot.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot-old/jquery.flot.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot-old/jquery.flot.time.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot-old/jquery.flot.time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/flot/jquery.flot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/fullcalendar-timegrid/main.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/fullcalendar-timegrid/main.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/fullcalendar-timegrid/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/fullcalendar-timegrid/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/ion-rangeslider/js/ion.rangeSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/ion-rangeslider/js/ion.rangeSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery-mapael/jquery.mapael.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery-mapael/jquery.mapael.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery-ui/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery-ui/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/jszip/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/jszip/jszip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/overlayScrollbars/js/OverlayScrollbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/overlayScrollbars/js/OverlayScrollbars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/pdfmake/pdfmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/pdfmake/pdfmake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/pdfmake/pdfmake.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/pdfmake/pdfmake.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.full.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/select2/js/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/summernote/summernote-bs4.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/summernote/summernote-bs4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/summernote/summernote-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/summernote/summernote-lite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/adminlte/plugins/summernote/summernote.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/adminlte/plugins/summernote/summernote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/album/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/album/old_school.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/beauty_album.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/beauty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty_album.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/news/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/news/news_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/news/news_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/news/news_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meizitu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/meizitu/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meizitu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/meizitu/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库设计表.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/数据库设计表.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +51,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
+                <state relative-caret-position="105">
                   <caret line="6" selection-start-line="6" selection-end-line="6" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
@@ -106,7 +63,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="666">
+                <state relative-caret-position="882">
                   <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
                 </state>
               </provider>
@@ -124,7 +81,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -235,7 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,12 +207,6 @@
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="beauty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -264,13 +214,6 @@
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="beauty" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
@@ -281,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,12 +315,13 @@
       <workItem from="1593397700999" duration="2239000" />
       <workItem from="1593400460321" duration="1156000" />
       <workItem from="1593419537512" duration="775000" />
-      <workItem from="1593570028317" duration="9119000" />
+      <workItem from="1593570028317" duration="9441000" />
+      <workItem from="1593590721913" duration="1239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39799000" />
+    <option name="totallyTimeSpent" value="41360000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -389,14 +334,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18347639" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18347639" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -405,7 +349,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19506967" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19420601" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
       <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.23927039" />
@@ -524,16 +468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/tags.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="217" column="16" lean-forward="true" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/tags.html" />
     <entry file="file://$PROJECT_DIR$/front/templates/album/index-bak.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -666,8 +601,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
+        <state relative-caret-position="882">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/beauty/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -678,13 +620,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
