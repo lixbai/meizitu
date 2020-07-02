@@ -179,8 +179,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
+    <option name="x" value="1913" />
+    <option name="y" value="-12" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -316,12 +316,13 @@
       <workItem from="1593400460321" duration="1156000" />
       <workItem from="1593419537512" duration="775000" />
       <workItem from="1593570028317" duration="9441000" />
-      <workItem from="1593590721913" duration="1239000" />
+      <workItem from="1593590721913" duration="1400000" />
+      <workItem from="1593652250521" duration="1842000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41360000" />
+    <option name="totallyTimeSpent" value="43363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,13 +335,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18347639" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18347639" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,7 +351,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19420601" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19420601" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
       <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.23927039" />
