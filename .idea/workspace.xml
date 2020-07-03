@@ -94,11 +94,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/beauty/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="147">
                   <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -178,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1913" />
     <option name="y" value="-12" />
     <option name="width" value="1936" />
@@ -192,6 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,6 +220,12 @@
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -218,13 +237,33 @@
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="album" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="beauty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,12 +356,13 @@
       <workItem from="1593419537512" duration="775000" />
       <workItem from="1593570028317" duration="9441000" />
       <workItem from="1593590721913" duration="1400000" />
-      <workItem from="1593652250521" duration="1842000" />
+      <workItem from="1593652250521" duration="1883000" />
+      <workItem from="1593739788079" duration="1062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43363000" />
+    <option name="totallyTimeSpent" value="44466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,15 +374,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1663113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18347639" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18347639" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,9 +406,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/album/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/album/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -571,16 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/album/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -625,10 +652,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/beauty/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
