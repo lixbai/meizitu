@@ -1,0 +1,117 @@
+#picshow {
+    .row {
+        background-color: #eee;
+        .desc_1 {
+            .album_title {
+                h1 {
+                    font-size: 30px;
+                    font-weight: 500;
+                }
+                .album_tags {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .desc_2 {
+            p {
+                font-size: 13px;
+            }
+            a {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .album_photos {
+            padding: 0 0;
+            .photos {
+                #pic {
+                    li {
+                        border: 1px solid #eee;
+                        img {
+                            border: 5px solid #fff;
+                            margin: 7px 0;
+                            // width: 100%;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 推荐
+#suggest_album {
+    row {
+        div {
+            ul {
+                li {
+                    a {
+                        img {
+                            width: 220px;
+                            height: 330px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//图集
+#suggest_album {
+    background: url("/dist/images/bg.png");
+    // background-color: #343a40;
+    .xtitle {
+        .xxtitle {
+            background-color: #eee;
+            padding: 7px 15px;
+            .title {
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+                .lefttitle {
+                    float: left;
+                }
+                .change {
+                    // width: 100%;
+                    // padding: 7px 15px;
+                    // font-size: 20px;
+                    // font-weight: bold;
+                    // background-color: #eee;
+                    float: right;
+                }
+            }
+        }
+    }
+    .imgs_list {
+        .img_display {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .thumbnail {
+                .imgs_link {
+                    img {
+                        height: auto;
+                        display: block;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+                .imgs_title {
+                    .title_height {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        font-size: 14px;
+                        line-height: 1.2rem;
+                        margin-top: 7px;
+                        margin-bottom: -5px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

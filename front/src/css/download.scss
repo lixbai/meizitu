@@ -1,0 +1,160 @@
+#download {
+    .row {
+        .download_left {
+            .first_nav {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ddd;
+                ul {
+                    li {
+                        a {
+                            display: block;
+                            height: 34px;
+                            line-height: 34px;
+                            border-radius: 4px;
+                            color: #757575;
+                            text-decoration: none;
+                            margin-bottom: 1px;
+                            span {
+                                padding-left: 10px;
+                                ;
+                            }
+                        }
+                    }
+                }
+            }
+            .second_nav {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ddd;
+                ul {
+                    .download_area {
+                        background-color: #009A61;
+                        border-radius: 2px;
+                        a {
+                            // font-size: 16px;
+                            font-weight: 900;
+                            color: #fff;
+                        }
+                    }
+                    li {
+                        a {
+                            display: block;
+                            height: 34px;
+                            line-height: 34px;
+                            border-radius: 4px;
+                            padding-left: 10px;
+                            color: #757575;
+                            text-decoration: none;
+                            margin-bottom: 1px;
+                            span {
+                                padding-left: 10px;
+                                ;
+                            }
+                        }
+                    }
+                }
+            }
+            .third_nav {
+                ul {
+                    li {
+                        a {
+                            display: block;
+                            height: 34px;
+                            line-height: 34px;
+                            border-radius: 4px;
+                            padding-left: 10px;
+                            color: #757575;
+                            text-decoration: none;
+                            margin-bottom: 1px;
+                            span {
+                                padding-left: 10px;
+                                ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .download_middle {
+            .news_item {
+                .media {
+                    border-bottom: 1px solid #ccc;
+                    img {
+                        width: 100px;
+                    }
+                    .media-body {
+                        h1 {
+                            font-size: larger;
+                            font-weight: bolder;
+                            margin-bottom: 10px;
+                        }
+                        p {
+                            color: #878787;
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                        .news_item_meta {
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .download_right {
+            .notices {
+                .alert {
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    border: 1px solid #8a6d3b;
+                    border-radius: 2px;
+                }
+                .alert-warning {
+                    background-color: #fcf8e3;
+                    border-color: #faebcc;
+                    a {
+                        text-decoration: none;
+                        color: #8a6d3b;
+                        letter-spacing: normal;
+                    }
+                }
+            }
+            .abcd {
+                p {
+                    background-color: #28a745;
+                    color: #fff;
+                    font-size: small;
+                    font-weight: 900;
+                    padding: 1px 12px;
+                    border: 1px solid #009A61;
+                }
+            }
+            .media_list {
+                .recommend_title {
+                    background-color: #28a745;
+                    color: #fff;
+                    font-size: small;
+                    font-weight: 900;
+                    padding: 1px 12px;
+                    border: 1px solid #009A61;
+                    .more_btn {
+                        font-size: 14px;
+                    }
+                }
+                .list_item {
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    padding: 5px 0;
+                    padding-left: 5px;
+                    a {
+                        display: block;
+                        line-height: 22px;
+                        padding-left: 5px;
+                        font-size: 14px;
+                        color: #343a40;
+                    }
+                }
+            }
+        }
+    }
+}
