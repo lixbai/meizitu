@@ -1,68 +1,16 @@
-<!doctype html>
-<html lang="en">
+{% extends 'frontbase/base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pic_show.min.css' %}">
+{% endblock %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/css/init.css">
-    <link rel="stylesheet" href="../dist/css/index.min.css">
-    <link rel="stylesheet" href="../dist/css/pic_show.min.css">
+{% block title %}
+PIC show
+{% endblock %}
 
-
-    <title>Pic_show</title>
-</head>
-
-<body>
-    <script id="__bs_script__">
-        //<![CDATA[
-        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-        //]]>
-    </script>
-
-
-    <!-- 导航栏 开始 -->
-    <nav class="container" id="daohang">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-            <a class="navbar-brand " href="# ">首页</a>
-            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">最新情报</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">美女图集</span></a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">女神专区</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">经典珍藏</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">女神排行榜</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">每日更新</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0 ">
-                    <input class="form-control mr-sm-2 " type="search " placeholder="输入搜索美女 " aria-label="Search " name="q">
-                    <button class="btn btn-success border-light my-2 my-sm-0 text-light font-weight-bolder" type="submit ">搜索一下</button>
-                </form>
-            </div>
-        </nav>
-    </nav>
-    <!-- 导航栏 结束 -->
-
-    <!-- 图片展示区开始 -->
+{% block main %}
+<!-- 图片展示区开始 -->
     <div class="container mt-3 mb-3" id="picshow">
         <div class="row pt-2 pb-2">
             <div class="col-12 desc_1">
@@ -87,9 +35,9 @@
             <div class="col-12 album_photos mt-2">
                 <div class="photos text-center">
                     <ul id="pic">
-                        <li><img class="img-fluid" src="https://img.onvshen.com:85/gallery/20440/14505/0.jpg" alt=""></li>
-                        <li><img class="img-fluid" src="https://img.onvshen.com:85/gallery/20440/14505/001.jpg" alt=""></li>
-                        <li><img class="img-fluid" src="https://img.onvshen.com:85/gallery/20440/14505/002.jpg" alt=""></li>
+                        <li><img class="img-fluid" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt=""></li>
+                        <li><img class="img-fluid" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt=""></li>
+                        <li><img class="img-fluid" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt=""></li>
                     </ul>
                 </div>
                 <div class="page mt-3 mb-4">
@@ -179,7 +127,7 @@
             <div class="img_display col-6 col-sm-6 col-lg-2">
                 <div class="thumbnail">
                     <a class="imgs_link" href="">
-                        <img class=" border border-light" src="https://t1.onvshen.com:85/gallery/24936/32974/cover/0.jpg" alt="">
+                        <img class=" border border-light" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt="">
                     </a>
                     <div class="imgs_title">
                         <h2 class="title_height">
@@ -287,91 +235,4 @@
         </div>
     </div>
     <!-- 最近更新的热门图集 结束 -->
-
-    <!-- 底部footer信息展示 开始 -->
-    <footer class="container mt-5 d-sm-none d-md-block">
-        <div class="footer_title">
-            <p class="bg-success">图集快速导航</p>
-        </div>
-        <div class="row many_links">
-            <div class="d-sm-none d-md-block">
-                <ul class="list-inline rounded-bottom bg-light">
-                    <li class="col-2 col-sm-2"><a href=" ">雅拉伊</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">秀人网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">美媛馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">爱蜜社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">魅妍社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤蜜荟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜桃社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤物馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">御女郎</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">嗲囡囡</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">优星馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">影私荟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">语画界</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">花の颜</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">星乐园</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">推女郎</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">星颜社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤果网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤果圈</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">优果网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">推女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">顽味生活</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">波萝社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">猎女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">激萌文化</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">兔几盟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">青豆客</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">果团网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">熊川纪信</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">轰趴猫</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">头条女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">阳光宝贝</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">飞图网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜团女孩</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">模范学院</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">熊薄荷叶</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">花漾</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤美</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜丝</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">克拉女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">瑞丝馆 (猫萌榜)</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">网红馆(糖果画报)</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">51modo</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">RQ-STAR</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">YS-Web</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">DGC</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">Bomb.tv</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">@misty</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">Sabra.net</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">4K-STAR</a></li>
-
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <!-- 底部footer信息展示 结束 -->
-
-    <!-- 底部版权 开始 -->
-    <div class="container mt-3 mb-3" id="copyright">
-        <div>
-            <p class="text-center text-secondary">本站所有资源来源于网友上传与分享，如有关内容侵犯了你的权益，请联系告之，我们会第一时间删除！邮箱:zngirls520@gmail.com
-            </p>
-            <p class="text-center text-secondary">© 2017－2019 nvshens.net, all rights reserved</p>
-        </div>
-    </div>
-    <!-- 底部版权 结束 -->
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/dist/js/jquery-3.4.1.min.js "></script>
-    <script src="/dist/js/popper.min.js "></script>
-    <script src="/dist/js/bootstrap.min.js "></script>
-</body>
-
-</html>
+{% endblock %}
