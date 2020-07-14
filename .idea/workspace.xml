@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/album/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/album/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/download.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/download.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/pic_show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/pic_show.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/beauty/pic_show.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/pic_show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/download/download.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/download/download.html" afterDir="false" />
-    </list>
+    <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +145,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/front/src/css/download.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
+                <state relative-caret-position="599">
                   <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
                 </state>
               </provider>
@@ -438,12 +431,12 @@
       <workItem from="1593825715182" duration="1283000" />
       <workItem from="1594431682590" duration="317000" />
       <workItem from="1594458682149" duration="661000" />
-      <workItem from="1594710501300" duration="2801000" />
+      <workItem from="1594710501300" duration="4087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50879000" />
+    <option name="totallyTimeSpent" value="52165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -458,12 +451,12 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17430703" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17430703" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18347639" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18347639" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,7 +465,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19206008" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19206008" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
       <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.23927039" />
@@ -760,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/css/download.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="599">
           <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
         </state>
       </provider>
