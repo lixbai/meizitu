@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="" />
+    <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/album/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/album/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/beauty.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty_album.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/beauty_album.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty_detail.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/beauty_detail.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/download.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/download.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/index.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/index.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/beauty.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty_album.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/beauty_album.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty_detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/beauty_detail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/download.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/download.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/old_school.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/classic.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/beauty_album.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/beauty_album.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/classic.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/classic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/beauty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/download/download.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/download/download.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meizitu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/meizitu/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$数据库设计表.xlsx" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,149 +64,112 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48353776">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/apps/album/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="666">
-                  <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/beauty/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/beauty/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="4" selection-start-line="4" selection-end-line="4" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/frontbase/base.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1407">
-                  <caret line="67" column="55" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/download/download.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="255" column="82" selection-start-line="255" selection-start-column="82" selection-end-line="255" selection-end-column="82" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/front/src/css/download.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="599">
-                  <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/beauty/pic_show.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="423">
-                  <caret line="39" column="111" selection-start-line="39" selection-start-column="111" selection-end-line="39" selection-end-column="111" />
-                  <folding>
-                    <element signature="e#27939#32252#0#HTML" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty_detail.html">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/css/pic_show.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/dist/css/download.min.css">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/album/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/templates/frontbase/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-231">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/css/beauty.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+              <folding>
+                <element signature="e#19#351#0" />
+                <element signature="e#366#1859#0" />
+                <element signature="e#1880#3017#0" />
+                <element signature="e#3037#3920#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/templates/download/download.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+              <folding>
+                <element signature="e#289#20712#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/css/download.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-181">
+              <caret line="125" column="35" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
+              <folding>
+                <element signature="e#1425#1616#0#HTML" />
+                <element signature="e#1645#3592#0#HTML" />
+                <element signature="e#3621#7981#0#HTML" />
+                <element signature="e#13392#13428#0#HTML" expanded="true" />
+                <element signature="e#24222#27739#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/css/beauty_detail.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1680">
+              <caret line="101" column="59" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -206,9 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/templates/registration.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
@@ -231,35 +213,40 @@
         <option value="$PROJECT_DIR$/apps/mzauth/views.py" />
         <option value="$PROJECT_DIR$/apps/mzauth/forms.py" />
         <option value="$PROJECT_DIR$/front/dist/css/index.min.css" />
-        <option value="$PROJECT_DIR$/front/src/css/index.scss" />
-        <option value="$PROJECT_DIR$/front/src/css/beauty_album.scss" />
         <option value="$PROJECT_DIR$/front/templates/base/base.html" />
         <option value="$PROJECT_DIR$/front/templates/frontbase/tags.html" />
-        <option value="$PROJECT_DIR$/front/templates/album/index.html" />
         <option value="$PROJECT_DIR$/front/templates/album/old_school.html" />
         <option value="$PROJECT_DIR$/front/templates/beauty/beauty_album.html" />
-        <option value="$PROJECT_DIR$/front/templates/beauty/beauty.html" />
-        <option value="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" />
         <option value="$PROJECT_DIR$/front/templates/news/news_detail.html" />
         <option value="$PROJECT_DIR$/front/templates/news/news_list.html" />
         <option value="$PROJECT_DIR$/apps/news/views.py" />
         <option value="$PROJECT_DIR$/apps/news/urls.py" />
         <option value="$PROJECT_DIR$/apps/album/urls.py" />
-        <option value="$PROJECT_DIR$/meizitu/settings.py" />
         <option value="$PROJECT_DIR$/meizitu/urls.py" />
         <option value="$PROJECT_DIR$/apps/beauty/views.py" />
         <option value="$PROJECT_DIR$/apps/beauty/urls.py" />
         <option value="$PROJECT_DIR$/front/templates/frontbase/base.html" />
         <option value="$PROJECT_DIR$/front/templates/beauty/pic_show.html" />
         <option value="$PROJECT_DIR$/front/src/css/pic_show.scss" />
-        <option value="$PROJECT_DIR$/apps/album/views.py" />
+        <option value="$PROJECT_DIR$/meizitu/settings.py" />
         <option value="$PROJECT_DIR$/front/templates/download/download.html" />
+        <option value="$PROJECT_DIR$/front/templates/album/index.html" />
+        <option value="$PROJECT_DIR$/front/src/css/index.scss" />
+        <option value="$PROJECT_DIR$/front/templates/album/beauty_album.html" />
+        <option value="$PROJECT_DIR$/front/src/css/beauty_album.scss" />
+        <option value="$PROJECT_DIR$/front/templates/album/classic.html" />
+        <option value="$PROJECT_DIR$/front/src/css/classic.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/beauty.scss" />
+        <option value="$PROJECT_DIR$/front/templates/beauty/beauty.html" />
+        <option value="$PROJECT_DIR$/front/src/css/beauty_detail.scss" />
+        <option value="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" />
         <option value="$PROJECT_DIR$/front/src/css/download.scss" />
+        <option value="$PROJECT_DIR$/apps/album/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
@@ -272,7 +259,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,12 +274,6 @@
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -307,7 +287,7 @@
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
@@ -325,12 +305,40 @@
             <path>
               <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="download" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="frontbase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
               <item name="meizitu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,11 +440,13 @@
       <workItem from="1594431682590" duration="317000" />
       <workItem from="1594458682149" duration="661000" />
       <workItem from="1594710501300" duration="4087000" />
+      <workItem from="1594865809490" duration="2124000" />
+      <workItem from="1594871267946" duration="4645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52165000" />
+    <option name="totallyTimeSpent" value="58934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,15 +458,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17430703" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17750533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18347639" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18347639" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,7 +475,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19206008" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19098713" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
       <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.23927039" />
@@ -480,12 +490,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/beauty/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/beauty/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -540,18 +544,6 @@
     <entry file="file://$PROJECT_DIR$/front/dist/images/1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/dist/css/index.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="921" selection-start-column="921" selection-end-column="921" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/beauty.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1819" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/dist/css/beauty_album.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -559,49 +551,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="79" column="27" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/frontbase/tags.html" />
     <entry file="file://$PROJECT_DIR$/front/templates/album/index-bak.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/beauty_album.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/mzauth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="777">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/classic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#5428#14533#0#HTML" />
-            <element signature="e#14587#18942#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="e#919#6794#0#HTML" />
-            <element signature="e#6846#26771#0#HTML" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="228" column="22" lean-forward="true" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/news/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -657,25 +607,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/beauty_album.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/urls.py">
+    <entry file="file://$PROJECT_DIR$/front/src/css/pic_show.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1365">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/css/download.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="84">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -683,20 +630,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/dist/css/download.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/base.html">
+    <entry file="file://$PROJECT_DIR$/apps/beauty/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1407">
-          <caret line="67" column="55" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
+        <state relative-caret-position="147">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
+    <entry file="file://$PROJECT_DIR$/front/templates/beauty/pic_show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        <state relative-caret-position="423">
+          <caret line="39" column="111" selection-start-line="39" selection-start-column="111" selection-end-line="39" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/css/index.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1100" selection-start-column="1000" selection-end-column="1100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,54 +671,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meizitu/urls.py">
+    <entry file="file://$PROJECT_DIR$/front/templates/album/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <caret line="9" selection-start-line="9" selection-end-line="226" selection-end-column="20" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#211#11992#0#HTML" />
+            <element signature="e#12042#20802#0#HTML" />
+            <element signature="e#20856#40760#0#HTML" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/beauty_album.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="135" selection-start-line="135" selection-end-line="207" selection-end-column="1" />
+          <folding>
+            <element signature="e#366#1833#0" />
+            <element signature="e#1847#3387#0" />
+            <element signature="e#3410#3710#0" />
+            <element signature="e#3732#5292#0" />
+            <element signature="e#4982#5865#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/classic.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+          <folding>
+            <element signature="e#366#1833#0" />
+            <element signature="e#1847#3400#0" />
+            <element signature="e#3419#3719#0" />
+            <element signature="e#3741#5288#0" />
+            <element signature="e#4995#5878#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/album/classic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          <folding>
+            <element signature="e#224#9329#0#HTML" />
+            <element signature="e#9383#17861#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/album/beauty_album.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="416" selection-start-line="416" selection-end-line="582" selection-end-column="25" />
+          <folding>
+            <element signature="e#231#12012#0#HTML" />
+            <element signature="e#229#9332#0#HTML" />
+            <element signature="e#21216#29694#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+          <folding>
+            <element signature="e#216#6091#0#HTML" />
+            <element signature="e#6143#26068#0#HTML" />
+            <element signature="e#6199#25700#0#HTML" />
+            <element signature="e#6912#6947#0#HTML" expanded="true" />
+            <element signature="e#6998#7022#0#HTML" expanded="true" />
+            <element signature="e#7078#7114#0#HTML" expanded="true" />
+            <element signature="e#7853#7888#0#HTML" expanded="true" />
+            <element signature="e#7939#7963#0#HTML" expanded="true" />
+            <element signature="e#7974#7978#0#HTML" expanded="true" />
+            <element signature="e#8022#8058#0#HTML" expanded="true" />
+            <element signature="e#8069#8073#0#HTML" expanded="true" />
+            <element signature="e#8800#8835#0#HTML" expanded="true" />
+            <element signature="e#8886#8910#0#HTML" expanded="true" />
+            <element signature="e#8921#8925#0#HTML" expanded="true" />
+            <element signature="e#8969#9005#0#HTML" expanded="true" />
+            <element signature="e#9016#9020#0#HTML" expanded="true" />
+            <element signature="e#9747#9782#0#HTML" expanded="true" />
+            <element signature="e#9833#9857#0#HTML" expanded="true" />
+            <element signature="e#9868#9872#0#HTML" expanded="true" />
+            <element signature="e#9916#9952#0#HTML" expanded="true" />
+            <element signature="e#9963#9967#0#HTML" expanded="true" />
+            <element signature="e#10694#10729#0#HTML" expanded="true" />
+            <element signature="e#10780#10804#0#HTML" expanded="true" />
+            <element signature="e#10815#10819#0#HTML" expanded="true" />
+            <element signature="e#10863#10899#0#HTML" expanded="true" />
+            <element signature="e#10910#10914#0#HTML" expanded="true" />
+            <element signature="e#11641#11676#0#HTML" expanded="true" />
+            <element signature="e#11727#11751#0#HTML" expanded="true" />
+            <element signature="e#11762#11766#0#HTML" expanded="true" />
+            <element signature="e#11810#11846#0#HTML" expanded="true" />
+            <element signature="e#11857#11861#0#HTML" expanded="true" />
+            <element signature="e#12621#12656#0#HTML" expanded="true" />
+            <element signature="e#12707#12731#0#HTML" expanded="true" />
+            <element signature="e#12742#12746#0#HTML" expanded="true" />
+            <element signature="e#12790#12826#0#HTML" expanded="true" />
+            <element signature="e#12837#12841#0#HTML" expanded="true" />
+            <element signature="e#13601#13636#0#HTML" expanded="true" />
+            <element signature="e#13687#13711#0#HTML" expanded="true" />
+            <element signature="e#13722#13726#0#HTML" expanded="true" />
+            <element signature="e#13770#13806#0#HTML" expanded="true" />
+            <element signature="e#13817#13821#0#HTML" expanded="true" />
+            <element signature="e#14581#14616#0#HTML" expanded="true" />
+            <element signature="e#14667#14691#0#HTML" expanded="true" />
+            <element signature="e#14702#14706#0#HTML" expanded="true" />
+            <element signature="e#14750#14786#0#HTML" expanded="true" />
+            <element signature="e#14797#14801#0#HTML" expanded="true" />
+            <element signature="e#15561#15596#0#HTML" expanded="true" />
+            <element signature="e#15647#15671#0#HTML" expanded="true" />
+            <element signature="e#15682#15686#0#HTML" expanded="true" />
+            <element signature="e#15730#15766#0#HTML" expanded="true" />
+            <element signature="e#15777#15781#0#HTML" expanded="true" />
+            <element signature="e#16541#16576#0#HTML" expanded="true" />
+            <element signature="e#16627#16651#0#HTML" expanded="true" />
+            <element signature="e#16662#16666#0#HTML" expanded="true" />
+            <element signature="e#16710#16746#0#HTML" expanded="true" />
+            <element signature="e#16757#16761#0#HTML" expanded="true" />
+            <element signature="e#17521#17556#0#HTML" expanded="true" />
+            <element signature="e#17607#17631#0#HTML" expanded="true" />
+            <element signature="e#17642#17646#0#HTML" expanded="true" />
+            <element signature="e#17690#17726#0#HTML" expanded="true" />
+            <element signature="e#17737#17741#0#HTML" expanded="true" />
+            <element signature="e#18501#18536#0#HTML" expanded="true" />
+            <element signature="e#18587#18611#0#HTML" expanded="true" />
+            <element signature="e#18622#18626#0#HTML" expanded="true" />
+            <element signature="e#18670#18706#0#HTML" expanded="true" />
+            <element signature="e#18717#18721#0#HTML" expanded="true" />
+            <element signature="e#19481#19516#0#HTML" expanded="true" />
+            <element signature="e#19567#19591#0#HTML" expanded="true" />
+            <element signature="e#19602#19606#0#HTML" expanded="true" />
+            <element signature="e#19650#19686#0#HTML" expanded="true" />
+            <element signature="e#19697#19701#0#HTML" expanded="true" />
+            <element signature="e#20461#20496#0#HTML" expanded="true" />
+            <element signature="e#20547#20571#0#HTML" expanded="true" />
+            <element signature="e#20582#20586#0#HTML" expanded="true" />
+            <element signature="e#20630#20666#0#HTML" expanded="true" />
+            <element signature="e#20677#20681#0#HTML" expanded="true" />
+            <element signature="e#21441#21476#0#HTML" expanded="true" />
+            <element signature="e#21527#21551#0#HTML" expanded="true" />
+            <element signature="e#21562#21566#0#HTML" expanded="true" />
+            <element signature="e#21610#21646#0#HTML" expanded="true" />
+            <element signature="e#21657#21661#0#HTML" expanded="true" />
+            <element signature="e#22421#22456#0#HTML" expanded="true" />
+            <element signature="e#22507#22531#0#HTML" expanded="true" />
+            <element signature="e#22542#22546#0#HTML" expanded="true" />
+            <element signature="e#22590#22626#0#HTML" expanded="true" />
+            <element signature="e#22637#22641#0#HTML" expanded="true" />
+            <element signature="e#23401#23436#0#HTML" expanded="true" />
+            <element signature="e#23487#23511#0#HTML" expanded="true" />
+            <element signature="e#23522#23526#0#HTML" expanded="true" />
+            <element signature="e#23570#23606#0#HTML" expanded="true" />
+            <element signature="e#23617#23621#0#HTML" expanded="true" />
+            <element signature="e#24381#24416#0#HTML" expanded="true" />
+            <element signature="e#24467#24491#0#HTML" expanded="true" />
+            <element signature="e#24502#24506#0#HTML" expanded="true" />
+            <element signature="e#24550#24586#0#HTML" expanded="true" />
+            <element signature="e#24597#24601#0#HTML" expanded="true" />
+            <element signature="e#25361#25396#0#HTML" expanded="true" />
+            <element signature="e#25447#25471#0#HTML" expanded="true" />
+            <element signature="e#25482#25486#0#HTML" expanded="true" />
+            <element signature="e#25530#25566#0#HTML" expanded="true" />
+            <element signature="e#25577#25581#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/beauty.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+          <folding>
+            <element signature="e#19#351#0" />
+            <element signature="e#366#1859#0" />
+            <element signature="e#1880#3017#0" />
+            <element signature="e#3037#3920#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/beauty_detail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="101" column="59" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty_detail.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/beauty/pic_show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="39" column="111" selection-start-line="39" selection-start-column="111" selection-end-line="39" selection-end-column="111" />
+        <state relative-caret-position="317">
+          <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
           <folding>
-            <element signature="e#27939#32252#0#HTML" />
+            <element signature="e#1425#1616#0#HTML" />
+            <element signature="e#1645#3592#0#HTML" />
+            <element signature="e#3621#7981#0#HTML" />
+            <element signature="e#13392#13428#0#HTML" expanded="true" />
+            <element signature="e#24222#27739#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/pic_show.scss">
+    <entry file="file://$PROJECT_DIR$/front/src/css/download.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="-181">
+          <caret line="125" column="35" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/download/download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="e#289#20712#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/album/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/download/download.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="255" column="82" selection-start-line="255" selection-start-column="82" selection-end-line="255" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/download.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
         </state>
       </provider>
     </entry>

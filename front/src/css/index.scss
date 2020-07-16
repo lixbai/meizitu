@@ -75,16 +75,26 @@
     }
 }
 
-//图集
+//图集background-color: #31303b;
 #altas {
     background-color: #31303b;
     .imgs_list {
-        p {
+        .p_message {
             width: 100%;
-            padding: 7px 15px;
-            font-size: 20px;
-            font-weight: bold;
             background-color: #eee;
+            padding: 5px 0;
+            p {
+                padding: 7px 15px;
+                font-size: 20px;
+                font-weight: bold;
+                display: inline;
+            }
+            .p_title {
+                float: left;
+            }
+            .p_more {
+                float: right;
+            }
         }
         .img_display {
             margin-top: 15px;
@@ -111,24 +121,13 @@
             }
         }
     }
-    .pages_list {
-        .page {
-            a {
-                display: inline-block;
-                padding: 0 10px;
-                height: 28px;
-                line-height: 28px;
-                background: #fff;
-                border-radius: 5px;
-                border-bottom: 1px solid #ddd;
-                margin: 0 5px;
-                transition: .2s;
-                color: #343a40;
-            }
-            a.active {
-                background-color: #f84f7a;
-                color: #fff;
-            }
+    .load_more {
+        a {
+            color: #fff;
+            font-size: large;
+            font-weight: 500;
+            border: 1px solid #fff;
+            background-color: #f84f7a;
         }
     }
 }
@@ -136,12 +135,22 @@
 //女神beauty
 #beauty {
     .beauty_list {
-        p {
+        .p_message {
             width: 100%;
-            padding: 7px 15px;
-            font-size: 20px;
-            font-weight: bold;
             background-color: #eee;
+            padding: 5px 0;
+            p {
+                padding: 7px 15px;
+                font-size: 20px;
+                font-weight: bold;
+                display: inline;
+            }
+            .p_title {
+                float: left;
+            }
+            .p_more {
+                float: right;
+            }
         }
         .beauty_img_display {
             margin: 0 10px;
@@ -152,6 +161,7 @@
                         height: auto;
                         display: block;
                         width: 100%;
+                        border: 1px solid #ddd;
                     }
                 }
                 .beauty_imgs_title {
@@ -171,6 +181,15 @@
                     }
                 }
             }
+        }
+    }
+    .more_beauty_button {
+        a {
+            color: #fff;
+            font-size: large;
+            font-weight: 500;
+            border: 1px solid #ddd;
+            background-color: #f84f7a;
         }
     }
 }

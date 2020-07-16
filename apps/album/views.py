@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'download/download.html')
+    return render(request, 'news/news_detail.html')
 
 def albums(request):
     return render(request, 'album/beauty_album.html')

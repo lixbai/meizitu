@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    # 'django.middleware.cache.UpdateCacheMiddleware',#设置全站缓存的配置1
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,7 +54,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.cache.FetchFromCacheMiddleware',#设置全站缓存的配置2
 ]
+#设置全站缓存的配置3
+# CACHE_MIDDLEWARE_KEY_PREFIX = ''
+# CACHE_MIDDLEWARE_SECONDS = 5
 
 ROOT_URLCONF = 'meizitu.urls'
 
@@ -118,7 +123,7 @@ AUTH_USER_MODEL = 'mzauth.User'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 

@@ -62,9 +62,10 @@
                         .thumbnail {
                             .imgs_link {
                                 img {
+                                    width: 100%;
                                     height: auto;
                                     display: block;
-                                    width: 100%;
+
                                 }
                             }
                             .imgs_title {
@@ -98,6 +99,7 @@
                                     height: auto;
                                     display: block;
                                     width: 100%;
+                                    border: 1px solid #ddd;
                                 }
                             }
                             .beauty_imgs_title {
