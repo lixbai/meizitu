@@ -5,5 +5,5 @@ app_name='album'
 
 urlpatterns = [
     path('', views.albums, name='album'),
-    path('classic/', views.classic, name='album_classic')
+    path('<int:album_id>', views.album_detail, name='album_detail')
 ]

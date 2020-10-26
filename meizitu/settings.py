@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'apps.news',
     'apps.cms',
     'apps.album',
-    'apps.beauty'
+    'apps.beauty',
+    'apps.ueditor'
 
 ]
 
@@ -90,8 +91,13 @@ WSGI_APPLICATION = 'meizitu.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'meizitu',
+        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PORT': '3306',
+        'PASSWORD': '123456'
+
     }
 }
 
@@ -141,3 +147,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'front', 'dist')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+#配置Ueditor编辑器的全局配置
+UEDITOR_UPLOAD_TO_SERVER = True
+UEDITOR_UPLOAD_PATH = MEDIA_ROOT
+UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR, 'front','dist','ueditor', 'config.json')

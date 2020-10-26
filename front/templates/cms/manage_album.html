@@ -1,0 +1,91 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+发布新闻
+{% endblock %}
+
+{% block head %}
+	<script src="{% static 'ueditor/ueditor.config.js' %}"></script>
+	<script src="{% static 'ueditor/ueditor.all.min.js' %}"></script>
+	<script src="{% static 'js/write_album.min.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+发布新闻Write_news page
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-8">
+		<div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">发布新闻</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="title">图集标题</label>
+                    <input type="text" class="form-control" id="title" placeholder="图集标题" name="title">
+                  </div>
+                  <div class="form-group">
+                    <label for="desc">图集简介</label>
+                    <input type="text" class="form-control" id="desc" placeholder="图集简介" name="desc">
+                  </div>
+	              <div class="form-group">
+                    <label for="beauty_name">女神姓名</label>
+                    <input type="text" class="form-control" id="beauty_name" placeholder="女神姓名" name="beauty_name">
+                  </div>
+	              <div class="form-group">
+                    <label for="download_url">下载链接</label>
+                    <input type="text" class="form-control" id="download_url" placeholder="下载链接" name="download_url">
+                  </div>
+	              <div class="form-group">
+                    <label for="download_password">下载密码</label>
+                    <input type="text" class="form-control" id="download_password" placeholder="下载密码" name="download_password">
+                  </div>
+	              <div class="form-group">
+                    <label for="download_price">价格</label>
+                    <input type="text" class="form-control" id="download_price" placeholder="价格" name="download_price">
+                  </div>
+	              <div class="form-group">
+                    <label for="watch_count">浏览次数</label>
+                    <input type="text" class="form-control" id="watch_count" placeholder="图集简介" name="watch_count">
+                  </div>
+	              <div class="form-group">
+                    <label for="tags">标签</label>
+		              <div class="overflow-auto">
+						<select name="tags" id="tags" multiple="multiple" class=" ">
+							{% for tag in tags %}
+					              <option value="{{ tag.pk }}" class="badge badge-success badge-pill ml-1">{{ tag.name }}</option>
+							{% endfor %}
+				           </select>
+		              </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="cover_img">上传缩略图</label>
+                    <div class="input-group">
+	                    <input type="text" class="form-control" id="cover_img_url" name="cover_img" placeholder="请粘贴图片的URL地址">
+                      <div class="custom-file">
+	                      <label class="custom-file-label" for="cover_img">选择文件</label>
+		                  <input type="file" class="custom-file-input" id="cover_img">
+                      </div>
+                    </div>
+                  </div>
+                    <div class="form-group">
+	                    <label for="content_form">内容</label>
+	                    <script id="editor" type="text/plain"></script>
+                    </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+		</div>
+	</div>
+{% endblock %}

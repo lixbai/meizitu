@@ -1,0 +1,131 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+	美女管理
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content-header %}
+	美女资料管理
+{% endblock %}
+
+{% block content %}
+	<div class="col-md-8">
+		<div class="card card-primary">
+			<div class="card-header">
+				<h3 class="card-title">资料填写表格</h3>
+			</div>
+			<!-- /.card-header -->
+			<!-- form start -->
+			<form action="" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class="card-body">
+					<div class="row">
+						<div class="col-4">
+							<div class="form-group">
+								<label for="beautyName">姓名</label>
+								<input type="text" class="form-control" id="beautyName" placeholder="输入姓名" name="beauty_name">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="age">年龄</label>
+								<input type="text" class="form-control" id="age" placeholder="" name="age">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="birthday">出生日</label>
+								<input type="date" class="form-control" id="birthday" name="birthday">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-4">
+							<div class="form-group">
+								<label for="xingzuo">星座</label>
+								<input type="text" class="form-control" id="xingzuo" name="xingzuo">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="tall">身高</label>
+								<input type="text" class="form-control" id="tall" name="tall">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="weight">体重</label>
+								<input type="text" class="form-control" id="weight" name="weight">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-4">
+							<div class="form-group">
+								<label for="sanwei">三围</label>
+								<input type="text" class="form-control" id="sanwei" name="sanwei">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="job">职业</label>
+								<input type="text" class="form-control" id="job" name="job">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="interested">兴趣爱好</label>
+								<input type="text" class="form-control" id="interested" name="interested">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="country">籍贯</label>
+						<input type="password" class="form-control" id="country" placeholder="" name="country">
+					</div>
+
+					<div class="form-group">
+						<label for="textarea">详细资料</label>
+						<textarea class="form-control" rows="3" placeholder="Enter ..." id="textarea" name="detail"></textarea>
+					</div>
+
+
+					<div class="col-12">
+                      <!-- Select multiple-->
+                      <div class="form-group">
+                        <label>标签</label>
+                        <select multiple="multiple" class="form-control overflow-auto" name="tags">
+	                        {% for tag in tags %}
+		                        <option value="{{ tag.pk }}" class="badge badge-success mr-1">{{ tag.tag }}</option>
+		                    {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+					<div class="form-group">
+						<label for="coverImg">上传美女缩略图</label>
+						<div class="input-group">
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="coverImg" multiple="multiple" name="cover_img">
+								<label class="custom-file-label" for="coverImg">Choose file</label>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /.card-body -->
+
+				<div class="card-footer">
+					<button type="submit" class="btn btn-primary">提交</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}
