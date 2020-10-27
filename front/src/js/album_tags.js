@@ -22,7 +22,7 @@ AlbumTags.prototype.listenAddTagsBtnEvent = function(){
                 xfzajax.post({
                     'url': '/cms/write_album_tag/',
                     'data': {
-                        'tag': inputValue
+                        'tag': $.trim(inputValue)
                     },
                     'success': function(result){
                         if(result['code']===200){
