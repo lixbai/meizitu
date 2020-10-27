@@ -26,13 +26,13 @@ class Album(models.Model):
     uid = ShortUUIDField(primary_key=True)
     watch_count = models.IntegerField(verbose_name='浏览次数', default=9000)
     title = models.CharField(max_length=300, verbose_name='标题')
-    desc = models.TextField(verbose_name='图集介绍')
-    beauty_name = models.CharField(max_length=30, verbose_name='女神姓名')
+    desc = models.TextField(verbose_name='图集介绍', null=True)
+    beauty_name = models.CharField(max_length=30, verbose_name='女神姓名', null=True)
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     modify_time = models.DateTimeField(verbose_name='修改时间', auto_now=True)
-    download_url = models.TextField(verbose_name='下载链接')
-    download_password = models.CharField(max_length=30, verbose_name='下载密码')
-    download_price = models.FloatField(verbose_name='图集价格')
+    download_url = models.TextField(verbose_name='下载链接', null=True)
+    download_password = models.CharField(max_length=30, verbose_name='下载密码', null=True)
+    download_price = models.FloatField(verbose_name='图集价格', null=True)
 
     cover_img = models.ImageField(upload_to=create_album_folder)
     #和图集标签多对多的关系

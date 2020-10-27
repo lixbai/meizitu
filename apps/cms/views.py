@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required #装饰器，判断是不是 staff是的话，就让访问该视图
 from django.views.generic import View
 from django.views.decorators.http import require_POST, require_GET
@@ -180,14 +181,126 @@ class WriteBeautyView(View):
                 BeautyTags.objects.get(pk=int(tags_id[i]))
         )
 
+        print('*'*20)
+        print(beauty_name, age, birthday, country, xingzuo, tall, weight, sanwei, job, interested, detail, cover_img, tags_id)
+        print('*'*20)
+
         try:
-            beauty = Beauty.objects.create(beauty_name=beauty_name, age=age, birthday=birthday, xingzuo=xingzuo, tall=tall, weight=weight, sanwei=sanwei, job=job, interested=interested, detail=detail, cover_img=cover_img)
+            beauty = Beauty.objects.create(beauty_name=beauty_name, age=age, birthday=birthday, country=country, xingzuo=xingzuo, tall=tall, weight=weight, sanwei=sanwei, job=job, interested=interested, detail=detail, cover_img=cover_img)
 
             #多对多添加
             beauty.tags.add(*upload_beauty_tags)
-            return restful.ok()
+            # return restful.ok()
+            return redirect('cms:write_beauty')
         except:
             return restful.params_error('美女信息插入不成功!')
 
 
 
+'''
+处理图集
+'''
+class WriteAlbumView(View):
+    def get(self, request, *args, **kwargs):
+        tags = AlbumTags.objects.all()
+        #暂时是吧所有的女神的资料都在这里返回,但是如果系统里面女神较多,可以例用JS把前面传递的,在单独的函数里面返回.
+
+        beautys = Beauty.objects.all()
+        context = {
+            'tags':tags,
+            'beautys': beautys
+        }
+        return render(request, 'cms/manage_album.html', context=context)
+
+    #新增图集
+    def post(self, request, *args, **kwargs):
+        watch_count = request.POST.get('watch_count')
+        title = request.POST.get('title')
+        desc = request.POST.get('desc')
+        beauty_name = request.POST.get('beauty_name')
+        download_url = request.POST.get('download_url')
+        download_password = request.POST.get('download_password')
+        download_price = request.POST.get('download_price')
+
+        cover_img = request.FILES.get('cover_img')
+
+        #获取多个标签,这里tags_id是数组,
+        tags_id = request.POST.getlist('tags')
+        album_tags_list = []
+        for i in range(len(tags_id)):
+            album_tags_list.append(
+                AlbumTags.objects.get(pk=int(tags_id[i]))
+            )
+
+        #获取传递过来的beauty
+        beauty_id = request.POST.get('beauty')
+        beauty = Beauty.objects.get(pk=beauty_id)
+
+        print('*'*30)
+        print(watch_count,title, desc, beauty_name, download_url, download_password, download_price, cover_img, tags_id, beauty_id)
+        print(beauty)
+        print(download_price)
+        print(album_tags_list)
+        print('*'*30)
+
+        try:
+            #把数据插入
+            a = Album.objects.create(cover_img=cover_img, watch_count=watch_count, title=title, desc=desc, beauty_name=beauty_name, download_url=download_url,download_password=download_password, download_price=download_price, beauty=beauty)
+            #标签和图集多对多插入
+            a.tags.add(*album_tags_list)
+
+            return redirect('cms:write_album')
+        except:
+            return restful.params_error('插入图集数据不成功')
+
+
+
+'''
+处理图集对应的图片
+'''
+
+class PicView(View):
+    def get(self, request, *args, **kwargs):
+        albums = Album.objects.all()
+        context = {
+            'albums':albums
+        }
+        return render(request, 'cms/manage_pic.html', context=context)
+
+    #新增图片
+    def post(self, request, *args, **kwargs):
+        album_id = request.POST.get('album')
+        album = Album.objects.get(pk=album_id)
+
+        pictures = request.FILES.getlist('picture')
+
+        print('*'*30)
+        print(album_id, album, pictures)
+        print('*'*30)
+
+        try:
+            # 创建多个pic实例，然后同意保存到数据库，用于接收前台传入的多个文件
+
+            # 先创建一个列表
+            more_pic_list = []
+            # 创建多个实例：
+            for i in range (int (len (pictures))):
+                more_pic_list.append (
+                    Pic (
+                        picture=pictures [i], album=album
+                    )
+                )
+
+            if more_pic_list:
+                try:
+                    # Pic.objects.create(picture=pic, album=a)
+                    Pic.objects.bulk_create (more_pic_list)
+                    return redirect('cms:write_pic')
+                except:
+                    return HttpResponse ('图片上传不成功')
+
+            else:
+                return HttpResponse ('有问题！！！')
+
+        except:
+            return restful.params_error('上传图片不成功')

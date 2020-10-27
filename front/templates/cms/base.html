@@ -117,9 +117,15 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">
-							<i class="nav-icon fa fa-picture"></i>
+						<a href="{% url 'cms:write_album' %}" class="nav-link">
+							<i class="nav-icon fa fa-newspaper"></i>
 							<p>图集管理</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="{% url 'cms:write_pic' %}" class="nav-link">
+							<i class="nav-icon fa fa-images"></i>
+							<p>图片管理</p>
 						</a>
 					</li>
 
@@ -127,9 +133,7 @@
 					<li class="nav-item">
 						<a href="{% url 'cms:write_album_tag' %}" class="nav-link">
 							<i class="nav-icon fa fa-newspaper"></i>
-							<p>
-								发布新闻
-							</p>
+							<p>发布新闻</p>
 						</a>
 					</li>
 				</ul>

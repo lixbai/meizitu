@@ -24,7 +24,7 @@ class Beauty(models.Model):
 
     beauty_name = models.CharField(max_length=40)
     age = models.IntegerField(null=True)
-    birthday = models.DateField(null=True)
+    birthday = models.CharField(max_length=20, null=True)
     country = models.CharField(max_length=50, null=True)
     xingzuo = models.CharField(max_length=30, null=True)
     tall = models.CharField(max_length=20, null=True)

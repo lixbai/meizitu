@@ -12,6 +12,12 @@ urlpatterns = [
     path('edit_album_tags/', views.edit_album_tags, name='edit_album_tags'),
     path('del_album_tags/', views.del_album_tags, name='del_album_tags'),
 
+    #处理图集
+    path('write_album/', views.WriteAlbumView.as_view(), name='write_album'),
+
+    #处理图集图片
+    path('write_pic/', views.PicView.as_view(), name='write_pic'),
+
     #处理美女的标签
     path('write_beauty_tag/', views.WriteBeautyTagView.as_view(), name='write_beauty_tag'),
     path('edit_beauty_tag/', views.edit_beauty_tag, name='edit_beauty_tag'),
