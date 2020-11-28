@@ -1,159 +1,100 @@
-<!doctype html>
-<html lang="en">
+{% extends 'frontbase/base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index.min.css' %}">
+{% endblock %}
 
+{% block title %}首页{% endblock %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/init.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
-
-    <title>index</title>
-</head>
-
-<body>
-    <script id="__bs_script__">
-        //<![CDATA[
-        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-        //]]>
-    </script>
-
-
-    <!-- 导航栏 开始 -->
-    <nav class="container" id="daohang">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-            <a class="navbar-brand " href="# ">首页</a>
-            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">最新情报</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">美女图集</span></a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">女神专区</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">经典珍藏</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">女神排行榜</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="# ">每日更新</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0 ">
-                    <input class="form-control mr-sm-2 " type="search " placeholder="输入搜索美女 " aria-label="Search " name="q">
-                    <button class="btn btn-success border-light my-2 my-sm-0 text-light font-weight-bolder" type="submit ">搜索一下</button>
-                </form>
-            </div>
-        </nav>
-    </nav>
-
-    <!-- 导航栏 结束 -->
-
-    <!-- 搜索栏 开始 -->
-
-    <!-- 搜索栏 结束 -->
-
+{% block main %}
     <!-- 标签分类 开始 -->
     <div class="container border mt-3" id="tags">
         <div class="row">
             <p class="text-dark">个性标签</p>
             <ul class="tags_1">
-                <li class="manytags">
-                    <a href=" " class="badge badge-pill badge-success ">沙滩</a>
-                    <a href=" " class="badge badge-pill badge-success ">泳池</a>
-                    <a href=" " class="badge badge-pill badge-success ">户外</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">街拍</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">家居</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">圣诞</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">春节</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">沙漠</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">私房照</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">浴室</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">浴缸</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">温泉</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">雪地</a>
+	            <li class="manytags">
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.0.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.0.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.1.pk }} " class="badge badge-pill badge-success ">{{ beauty_tags.1.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.2.pk }} " class="badge badge-pill badge-success ">{{ beauty_tags.2.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.3.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.3.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.4.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.4.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.5.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.5.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.6.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.6.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.7.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.7.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.8.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.8.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.9.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.9.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.10.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.10.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.11.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.11.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.12.pk }} " class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.12.tag }}</a>
                 </li>
                 <li class="manytags">
-                    <a href=" " class="badge badge-pill badge-success ">萝莉</a>
-                    <a href=" " class="badge badge-pill badge-success ">空姐</a>
-                    <a href=" " class="badge badge-pill badge-success ">女神</a>
-                    <a href=" " class="badge badge-pill badge-success ">护士</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">秘书</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">女兵</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">警花</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">厨娘</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">教师</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">女仆</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">尤物</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">姐妹花</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">娇小萝莉</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.13.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.13.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.14.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.14.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.15.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.15.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.16.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.16.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.17.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.17.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.18.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.18.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.19.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.19.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.20.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.20.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.21.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.21.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.22.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.22.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.23.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.23.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.24.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.24.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.25.pk }}" class="badge badge-pill badge-success badge-warning">{{ beauty_tags.25.tag }}</a>
                 </li>
                 <li class="manytags_special">
-                    <a href=" " class="badge badge-pill badge-success ">湿身</a>
-                    <a href=" " class="badge badge-pill badge-success ">蜜桃臀</a>
-                    <a href=" " class="badge badge-pill badge-success">骨感</a>
-                    <a href=" " class="badge badge-pill badge-success">极品</a>
-                    <a href=" " class="badge badge-pill badge-success">美腿</a>
-                    <a href=" " class="badge badge-pill badge-success">波涛胸涌</a>
-                    <a href=" " class="badge badge-pill badge-success">人间胸器</a>
-                    <a href=" " class="badge badge-pill badge-success">童颜巨乳</a>
-                    <a href=" " class="badge badge-pill badge-success">肉感</a>
-                    <a href=" " class="badge badge-pill badge-success">白嫩</a>
-                    <a href=" " class="badge badge-pill badge-success">美臀</a>
-                    <a href=" " class="badge badge-pill badge-success">玉足</a>
-                    <a href=" " class="badge badge-pill badge-success">丁字裤</a>
-                    <a href=" " class="badge badge-pill badge-success">黑丝</a>
-                    <a href=" " class="badge badge-pill badge-success">高跟鞋</a>
-                    <a href=" " class="badge badge-pill badge-success">丝袜</a>
-                    <a href=" " class="badge badge-pill badge-success">旗袍</a>
-                    <a href=" " class="badge badge-pill badge-success">制服</a>
-                    <a href=" " class="badge badge-pill badge-success">角色扮演</a>
-                    <a href=" " class="badge badge-pill badge-success">香肩</a>
-                    <a href=" " class="badge badge-pill badge-success">玉背</a>
-                    <a href=" " class="badge badge-pill badge-success">肚兜</a>
-                    <a href=" " class="badge badge-pill badge-success">汉服</a>
-                    <a href=" " class="badge badge-pill badge-success">和服</a>
-                    <a href=" " class="badge badge-pill badge-success">比基尼</a>
-                    <a href=" " class="badge badge-pill badge-success">内衣</a>
-                    <a href=" " class="badge badge-pill badge-success">校服</a>
-                    <a href=" " class="badge badge-pill badge-success">眼镜</a>
-                    <a href=" " class="badge badge-pill badge-success">水手服</a>
-                    <a href=" " class="badge badge-pill badge-success">开背毛衣</a>
-                    <a href=" " class="badge badge-pill badge-success">小麦色</a>
-                    <a href=" " class="badge badge-pill badge-success">双马尾</a>
-                    <a href=" " class="badge badge-pill badge-success">纹身</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.26.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.26.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.27.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.27.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.28.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.28.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.29.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.29.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.30.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.30.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.31.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.31.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.32.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.32.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.33.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.33.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.34.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.34.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.35.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.35.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.36.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.36.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.37.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.37.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.38.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.38.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.39.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.39.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.40.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.40.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.41.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.41.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.42.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.42.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.43.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.43.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.44.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.44.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.45.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.45.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.46.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.46.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.47.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.47.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.48.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.48.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.49.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.49.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.50.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.50.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.51.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.51.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.52.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.52.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.53.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.53.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.54.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.54.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.55.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.55.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.56.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.56.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.57.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.57.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.58.pk }}" class="badge badge-pill badge-success">{{ beauty_tags.58.tag }}</a>
                 </li>
                 <li class="manytags">
-                    <a href=" " class="badge badge-pill badge-success ">清新</a>
-                    <a href=" " class="badge badge-pill badge-success ">萌系</a>
-                    <a href=" " class="badge badge-pill badge-success ">治愈系</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">清纯</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">气质</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">性感</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">冷艳</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">野性</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">诱惑</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">养眼</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">大尺度</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">妩媚</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">成熟</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">可爱</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">运动</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">知性</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">非主流</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.59.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.59.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.60.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.60.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.61.pk }}" class="badge badge-pill badge-success ">{{ beauty_tags.61.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.62.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.62.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.63.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.63.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.64.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.64.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.65.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.65.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.66.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.66.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.67.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.67.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.68.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.68.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.69.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.69.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.70.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.70.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.71.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.71.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.72.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.72.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.73.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.73.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.74.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.74.tag }}</a>
+                    <a href="{% url 'album:tags_get_beauty' %}?p={{ beauty_tags.75.pk }}" class="badge badge-pill badge-success badge-warning ">{{ beauty_tags.75.tag }}</a>
 
                 </li>
             </ul>
@@ -285,12 +226,13 @@
     </div>
     <!-- 标签分类 结束 -->
 
-    <!-- 内容区 开始 -->
-
     <!-- 每日更新图集 开始 -->
     <div class="container border mt-3" id="altas">
         <div class="imgs_list row d-flex flex-row">
-            <p>每日图集更新</p>
+            <div class="p_message col-12">
+                <p class="p_title">每日图集更新</p>
+                <p class="p_more"><a href="#">查看更多>></a></p>
+            </div>
             <div class="img_display col-6 col-sm-6 col-lg-3">
                 <div class="thumbnail">
                     <a class="imgs_link" href="">
@@ -460,36 +402,30 @@
                 </div>
             </div>
         </div>
-        <div class="pages_list row mt-5 mb-3">
-            <div class="page m-auto">
-
-                <a href="http://www.uutu.me/index.php?c=New&amp;p=1">上一页</a>
-                <a class="active" href="http://www.uutu.me/index.php?c=New&amp;p=1">1</a>
-                <a href="javascript:void(0)">2</a>
-                <a href="http://www.uutu.me/index.php?c=New&amp;p=3">3</a>
-                <a href="javascript:void(0)" class="active2">...</a> <a href="http://www.uutu.me/index.php?c=New&amp;p=274">274</a>
-                <a href="http://www.uutu.me/index.php?c=New&amp;p=3">下一页</a>
-
-            </div>
+        <div class="load_more row mt-5 mb-4 justify-content-center">
+            <a href="" class="btn ">点击查看更多美女图片</a>
         </div>
     </div>
     <!-- 每日更新图集 结束 -->
 
     <!-- 每日更新女神人物 结束 -->
-    <div class="container mt-3 border" id="beauty">
+    <div class="container mt-5 border" id="beauty">
         <div class="beauty_list row d-flex flex-row justify-content-around">
-            <p>最新女神</p>
+            <div class="p_message col-12">
+                <p class="p_title">最新新晋女神</p>
+                <p class="p_more"><a href="#">查看更多>></a></p>
+            </div>
             <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
                 <div class="thumbnail">
                     <a class="imgs_link" href="">
-                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
+                        <img src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
                     </a>
                     <div class="beauty_imgs_title">
                         <h2 class="title_height d-flex justify-content-center">
                             <a class="text-dark" href="">悠悠酱yoyoyo</a>
                         </h2>
                         <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong style="font-size: 15px; color:#f84f7a;">3</strong>&gt;个</a>
                         </h2>
                     </div>
                 </div>
@@ -497,7 +433,7 @@
             <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
                 <div class="thumbnail">
                     <a class="imgs_link" href="">
-                        <img class=" border border-light" src="http://d.kancaijing.com.cn/attach/2020-03-10/1583830168rbH4.jpg" alt="">
+                        <img src="http://d.kancaijing.com.cn/attach/2020-03-10/1583830168rbH4.jpg" alt="">
                     </a>
                     <div class="beauty_imgs_title">
                         <h2 class="title_height d-flex justify-content-center">
@@ -513,7 +449,55 @@
             <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
                 <div class="thumbnail">
                     <a class="imgs_link" href="">
-                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-08-24/15666294418W44.jpg" alt="">
+                        <img src="http://d.kancaijing.com.cn/attach/2019-08-24/15666294418W44.jpg" alt="">
+                    </a>
+                    <div class="beauty_imgs_title">
+                        <h2 class="title_height d-flex justify-content-center">
+                            <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                        </h2>
+                        <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
+                <div class="thumbnail">
+                    <a class="imgs_link" href="">
+                        <img src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
+                    </a>
+                    <div class="beauty_imgs_title">
+                        <h2 class="title_height d-flex justify-content-center">
+                            <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                        </h2>
+                        <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
+                <div class="thumbnail">
+                    <a class="imgs_link" href="">
+                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
+                    </a>
+                    <div class="beauty_imgs_title">
+                        <h2 class="title_height d-flex justify-content-center">
+                            <a class="text-dark" href="">悠悠酱yoyoyo</a>
+                        </h2>
+                        <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
+                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
+                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
+                <div class="thumbnail">
+                    <a class="imgs_link" href="">
+                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
                     </a>
                     <div class="beauty_imgs_title">
                         <h2 class="title_height d-flex justify-content-center">
@@ -577,54 +561,6 @@
             <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
                 <div class="thumbnail">
                     <a class="imgs_link" href="">
-                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
-                    </a>
-                    <div class="beauty_imgs_title">
-                        <h2 class="title_height d-flex justify-content-center">
-                            <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                        </h2>
-                        <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
-                <div class="thumbnail">
-                    <a class="imgs_link" href="">
-                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
-                    </a>
-                    <div class="beauty_imgs_title">
-                        <h2 class="title_height d-flex justify-content-center">
-                            <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                        </h2>
-                        <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
-                <div class="thumbnail">
-                    <a class="imgs_link" href="">
-                        <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
-                    </a>
-                    <div class="beauty_imgs_title">
-                        <h2 class="title_height d-flex justify-content-center">
-                            <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                        </h2>
-                        <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2">
-                <div class="thumbnail">
-                    <a class="imgs_link" href="">
                         <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
                     </a>
                     <div class="beauty_imgs_title">
@@ -760,8 +696,8 @@
                             <a class="text-dark" href="">悠悠酱yoyoyo</a>
                         </h2>
                         <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                            <a class="text-dark" style="font-size: 13px;" href="">图集<strong
+                                    style="font-size: 15px; color: #f84f7a;">3</strong>个</a>
                         </h2>
                     </div>
                 </div>
@@ -776,8 +712,8 @@
                             <a class="text-dark" href="">悠悠酱yoyoyo</a>
                         </h2>
                         <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                            <a class="text-dark" style="font-size: 13px;" href="">图集<strong
+                                    style="font-size: 15px; color: #f84f7a;">3</strong>个</a>
                         </h2>
                     </div>
                 </div>
@@ -792,121 +728,17 @@
                             <a class="text-dark" href="">悠悠酱yoyoyo</a>
                         </h2>
                         <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                            <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                    style="font-size: 15px; color: red;">3</strong>&gt;个</a>
+                            <a class="text-dark" style="font-size: 13px;" href="">图集<strong
+                                    style="font-size: 15px; color: #f84f7a;">3</strong>个</a>
                         </h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row more_beauty_button justify-content-center mt-3 mb-2">
-            <a href="" class="btn btn-primary active">更多美女...</a>
+
+        <div class="row more_beauty_button justify-content-center mt-5 mb-4">
+            <a href="" class="btn btn-primary active">点击查看更多 女神</a>
         </div>
     </div>
     <!-- 每日更新女神人物 开始 -->
-
-    <!-- 不可错过的热点图集 开始 -->
-    <!-- 不可错过的热点图集 结束 -->
-
-    <!-- 内地女神 开始 -->
-    <!-- 内地女神 结束 -->
-
-    <!-- 台湾女神 开始 -->
-    <!-- 台湾女神 结束 -->
-
-    <!-- 日本女神 开始 -->
-    <!-- 日本女神 结束 -->
-
-    <!-- 韩国女神 开始 -->
-    <!-- 韩国女神 结束 -->
-
-
-    <!-- 内容区 结束 -->
-
-    <!-- 底部footer信息展示 开始 -->
-    <footer class="container mt-5 d-sm-none d-md-block">
-        <div class="footer_title">
-            <p class="bg-dark">图集快速导航</p>
-        </div>
-        <div class="row many_links">
-            <div class="d-sm-none d-md-block">
-                <ul class="list-inline rounded-bottom bg-light">
-                    <li class="col-2 col-sm-2"><a href=" ">雅拉伊</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">秀人网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">美媛馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">爱蜜社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">魅妍社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤蜜荟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜桃社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤物馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">御女郎</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">嗲囡囡</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">优星馆</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">影私荟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">语画界</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">花の颜</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">星乐园</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">推女郎</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">星颜社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤果网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤果圈</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">优果网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">推女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">顽味生活</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">波萝社</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">猎女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">激萌文化</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">兔几盟</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">青豆客</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">果团网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">熊川纪信</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">轰趴猫</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">头条女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">阳光宝贝</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">飞图网</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜团女孩</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">模范学院</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">熊薄荷叶</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">花漾</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">尤美</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">蜜丝</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">克拉女神</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">瑞丝馆 (猫萌榜)</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">网红馆(糖果画报)</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">51modo</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">RQ-STAR</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">YS-Web</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">DGC</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">Bomb.tv</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">@misty</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">Sabra.net</a></li>
-                    <li class="col-2 col-sm-2"> <a href=" ">4K-STAR</a></li>
-
-                </ul>
-            </div>
-        </div>
-
-    </footer>
-    <!-- 底部footer信息展示 结束 -->
-
-    <!-- 底部版权 开始 -->
-    <div class="container mt-3 mb-3" id="copyright">
-        <div>
-            <p class="text-center text-secondary">本站所有资源来源于网友上传与分享，如有关内容侵犯了你的权益，请联系告之，我们会第一时间删除！邮箱:zngirls520@gmail.com</p>
-            <p class="text-center text-secondary">© 2017－2019 nvshens.net, all rights reserved</p>
-        </div>
-    </div>
-    <!-- 底部版权 结束 -->
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}

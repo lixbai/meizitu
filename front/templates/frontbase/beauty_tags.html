@@ -1,0 +1,107 @@
+<div class="container border mt-3" id="tags">
+        <div class="row">
+            <p class="text-dark">个性标签 - {{ tag_chosen|default:'最新' }}</p>
+            <ul class="tags_1">
+                <li class="manytags">
+                    <a href="{% url 'beauty:tags' tag=2 %}" class="badge badge-pill badge-success ">气质女神</a>
+                    <a href="{% url 'beauty:tags' tag=3 %}" class="badge badge-pill badge-success ">清纯美女</a>
+                    <a href="{% url 'beauty:tags' tag=4 %}" class="badge badge-pill badge-success ">小清新</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">淑女</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">辣妹</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">甜心美女</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">白皙肤色</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">茶色皮肤</a>
+
+                </li>
+                <li class="manytags">
+                    <a href=" " class="badge badge-pill badge-success">AKB48</a>
+                    <a href=" " class="badge badge-pill badge-success">少女时代</a>
+                    <a href=" " class="badge badge-pill badge-success">早安少女组</a>
+                    <a href=" " class="badge badge-pill badge-success">SDN48</a>
+                    <a href=" " class="badge badge-pill badge-success">HKT48</a>
+                    <a href=" " class="badge badge-pill badge-warning">SKE48</a>
+                    <a href=" " class="badge badge-pill badge-warning">Dream Girls</a>
+                    <a href=" " class="badge badge-pill badge-warning">F90天团</a>
+                    <a href=" " class="badge badge-pill badge-warning">G☆Girls</a>
+                    <a href=" " class="badge badge-pill badge-warning">惠比寿麝香葡萄</a>
+                    <a href=" " class="badge badge-pill badge-warning">螺旋猫</a>
+                    <a href=" " class="badge badge-pill badge-warning">36D天团</a>
+                    <a href=" " class="badge badge-pill badge-warning">Showgirl</a>
+                </li>
+                <li class="manytags_special">
+                    <a href=" " class="badge badge-pill badge-success ">萝莉</a>
+                    <a href=" " class="badge badge-pill badge-success ">美少女</a>
+                    <a href=" " class="badge badge-pill badge-success ">御姐</a>
+                    <a href=" " class="badge badge-pill badge-success ">熟女</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">美腿</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">美臀</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">平胸妹纸</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">骨感美女</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">童颜巨乳</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">波涛汹涌</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">人间胸器</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">大耳朵</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning">G奶女神</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">小虎牙</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">美人痣</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">美唇</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">小酒窝</a>
+                    <a href=" " class="badge badge-pill badge-success badge-warning ">丹凤眼</a>
+                </li>
+
+            </ul>
+            <ul class="tags_2 ">
+                <li class="tuijiguidang ">
+                    <span class="badge badge-danger ">所属国家</span><br>
+                    <a href=" ">内地女神</a>
+                    <a href=" ">香港女神</a>
+                    <a href=" ">台湾正妹</a>
+                    <a href=" ">澳门美女</a>
+                    <a href=" ">日本女优</a>
+                    <a href=" ">韩国美女</a>
+                    <a href=" ">泰国女星</a>
+                    <a href=" ">新加坡美女</a>
+                    <a href=" ">大马美女</a>
+                    <a href=" ">混血女神</a>
+                    <a href=" ">亚洲女神</a>
+
+                </li>
+                <li>
+                    <span class="badge badge-danger mb-2">身份所属</span><br>
+                    <a href=" ">演员</a>
+                    <a href=" ">校花</a>
+                    <a href=" ">空姐</a>
+                    <a href=" ">教师</a>
+                    <a href=" ">海归</a>
+                    <a href=" ">OL</a>
+                    <a href=" ">Cosplayer</a>
+                    <a href=" ">学生</a>
+                    <a href=" ">嫩模</a>
+                    <a href=" ">淘女郎</a>
+                    <a href=" ">舞蹈家</a>
+                    <a href=" ">啦啦队</a>
+                    <a href=" ">企业家</a>
+                    <a href=" ">高学历</a>
+                    <a href=" ">近视</a>
+                    <a href=" ">左撇子</a>
+                    <a href=" ">整容</a>
+                    <a href=" ">假胸</a>
+                    <a href=" ">人妖</a>
+                    <a href=" ">足球宝贝</a>
+                    <a href=" ">模特&麻豆</a>
+                    <a href=" ">配音&声优</a>
+                    <a href=" ">主播&主持人</a>
+                    <a href=" ">车模&赛车女郎</a>
+                    <a href=" ">纹身&刺青</a>
+                    <a href=" ">瑜伽教练</a>
+                    <a href=" ">芭比娃娃</a>
+                    <a href=" ">选美小姐</a>
+                    <a href=" ">书法美女</a>
+                    <a href=" ">美女作家</a>
+                    <a href=" ">网络美女</a>
+                    <a href=" ">写真女优</a>
+                    <a href=" ">体坛美女</a>
+                </li>
+            </ul>
+        </div>
+    </div>

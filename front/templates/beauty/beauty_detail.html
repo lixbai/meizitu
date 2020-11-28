@@ -17,53 +17,53 @@
                         <li class="breadcrumb-item"><a href="#">现在位置</a></li>
                         <li class="breadcrumb-item"><a href="#">首页</a></li>
                         <li class="breadcrumb-item"><a href="#">女神专区</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">李昭冉</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ beauty.beauty_name }}</li>
                     </ol>
                 </nav>
                 <div class="article_content p-3">
                     <div class="row person_info rounder d-flex flex-column">
                         <div class=" col-12 p-3 beauty_header justify-content-between">
-                            <p class="pl-2 font-weight-bold btn btn-light">李昭冉 </p>
+                            <p class="pl-2 font-weight-bold btn btn-light">{{ beauty.beauty_name }} </p>
                             <p class="pr-2 btn btn-primary float-right">个人百科词条</p>
                         </div>
                         <div class="mt-3 d-flex flex-row info">
                             <div class="imgss col-4">
-                                <img class="img-fluid img-thumbnail" src="https://img.onvshen.com:85/girl/27826/27826.jpg" alt="">
+                                <img class="lazyload img-fluid img-thumbnail" src="" data-src="{{ url }}{{ beauty.cover_img }}" alt="{{ beauty.beauty_name }}">
                             </div>
                             <div class="person_data col-4">
                                 <table class="table table-bordered table-light table-sm">
                                     <tbody>
                                         <tr>
                                             <td>年龄</td>
-                                            <td>29岁</td>
+                                            <td>{{ beauty.age }}</td>
                                         </tr>
                                         <tr>
                                             <td>生日</td>
-                                            <td>1990-10-15</td>
+                                            <td>{{ beauty.birthday }}</td>
                                         </tr>
                                         <tr>
                                             <td>星 座</td>
-                                            <td>天蝎座</td>
+                                            <td>{{ beauty.xingzuo }}</td>
                                         </tr>
                                         <tr>
                                             <td>身 高</td>
-                                            <td>172</td>
+                                            <td>{{ beauty.tall }}</td>
                                         </tr>
                                         <tr>
                                             <td>体 重</td>
-                                            <td>46 KG</td>
+                                            <td>{{ beauty.weight }} KG</td>
                                         </tr>
                                         <tr>
                                             <td>三 围</td>
-                                            <td>B86 W60 H85</td>
+                                            <td>{{ beauty.sanwei }}</td>
                                         </tr>
                                         <tr>
                                             <td>出 生</td>
-                                            <td>中国 北京</td>
+                                            <td>{{ beauty.country }}</td>
                                         </tr>
                                         <tr>
                                             <td>职 业</td>
-                                            <td>平面模特、车模</td>
+                                            <td>{{ beauty.job }}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -104,75 +104,31 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row mt-3 person_detail">
                         <div class="col-12 p-0">
                             <p class="title">详细资料</p>
-                            <p class="detail_body">藤原亚纪乃（藤原亜紀乃，ふじわらあきの），日本舞台剧演员、艺人，所属事务所是AVILLA。藤原亚纪乃有着可爱的面容和娇小的身材，自2006年出道后，一直活跃在舞台剧界，最近被入围新一代惠比寿麝香葡萄成员，知名度更高。</p>
+                            <p class="detail_body">{{ beauty.detail }}</p>
                         </div>
                     </div>
+
                     <div class="row mt-3 d-flex flex-row person_album">
                         <p class="title">女神图集</p>
-                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
-                                </a>
-                                <div class="imgs_title">
-                                    <h2 class="title_height">
-                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
-                                </a>
-                                <div class="imgs_title">
-                                    <h2 class="title_height">
-                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
-                                </a>
-                                <div class="imgs_title">
-                                    <h2 class="title_height">
-                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
-                                </a>
-                                <div class="imgs_title">
-                                    <h2 class="title_height">
-                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
-                                </a>
-                                <div class="imgs_title">
-                                    <h2 class="title_height">
-                                        <a class="text-dark" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
 
+	                    {% for beauty_album in beauty_albums %}
+		                    <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
+	                            <div class="thumbnail">
+	                                <a class="imgs_link" href="{% url 'album:show_pic' beauty_album.uid %}">
+	                                    <img class="lazyload border border-secondary" src="" data-src="{{ url }}{{ beauty_album.cover_img }}" alt="{{ beauty.beauty_name }}">
+	                                </a>
+	                                <div class="imgs_title">
+	                                    <h2 class="title_height">
+	                                        <a class="text-dark" href="{% url 'album:show_pic' beauty_album.uid %}">{{ beauty_album.title }}</a>
+	                                    </h2>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    {% endfor %}
                     </div>
                     <div class="row mt-4 d-flex flex-row hot_beauty_list ">
                         <p class="text-dark">最热女神</p>

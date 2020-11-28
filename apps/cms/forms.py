@@ -11,7 +11,3 @@ class DelAlbumTagsForm(forms.Form):
 
 
 #处理beauty
-class BeautyForm(forms.ModelForm):
-    class Meta:
-        model = Beauty
-        exclude = ['uid', 'create_time', 'modify_time']

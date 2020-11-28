@@ -8,6 +8,7 @@ var imagemin = require('gulp-imagemin');
 var watch = require('gulp-watch');
 var bs = require('browser-sync').create();
 var sass = require('gulp-sass');
+var babel = require('gulp-babel');
 
 // 为避免写死路径,这里我们定义路径,然后方面后面随时更改.
 var path = {
@@ -36,6 +37,14 @@ gulp.task('css', function() {
         .pipe(gulp.dest(path.css_dist))
         .pipe(bs.stream())
 });
+
+/*这里的babal是任务名,可以修改为其他turn ,change 都行,执行的时候在命令行输入 gulp turn 或者 gulp change就行了*/
+gulp.task("babel", function () {
+  return gulp.src(path.js +'es6/'+ '*.js')// ES6 源码存放的路径
+    .pipe(babel())
+    .pipe(gulp.dest(path.js)); //转换成 ES5 存放的路径
+});
+
 
 //定义处理js任务
 gulp.task('js', function() {

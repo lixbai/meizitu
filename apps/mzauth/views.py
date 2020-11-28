@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 
 class LoginView(View):
     def get(self, request, *args, **kwargs):
+
         return render(request, 'login.html')
 
     def post(self, request, *args, **kwargs):

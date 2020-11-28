@@ -19,7 +19,7 @@ class Beauty(models.Model):
     封面img	美女tags	姓名	年 龄	生 日	星 座	身 高	体 重	三 围	出 生	职 业	兴 趣	创建时间	修改时间
             多对多
     '''
-    #主键用shortuuid来做,
+    # 主键用shortuuid来做,
     uid = ShortUUIDField(primary_key=True)
 
     beauty_name = models.CharField(max_length=40)
@@ -36,10 +36,10 @@ class Beauty(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)
     modify_time = models.DateTimeField(auto_now=True)
 
-    #存放图片的
+    # 存放图片的
     cover_img = models.ImageField (upload_to=create_beauty_folder)
 
-    #和标签多对多类型
+    # 和标签多对多类型
     tags = models.ManyToManyField(to=BeautyTags, related_name='beauty')
 
     class Meta:

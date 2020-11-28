@@ -3,9 +3,11 @@ from apps.beauty.models import Beauty
 from shortuuidfield import ShortUUIDField
 import os
 
+
 #图集标签类
 class AlbumTags(models.Model):
     tag = models.CharField(max_length=40, verbose_name='图集标签', error_messages={'max_length':'最长为40位', 'min_length':'最短是0位'})
+
 
 
 #创建存放图集封面图片的文件夹函数
@@ -43,6 +45,10 @@ class Album(models.Model):
 
     class Meta:
         ordering = ['-create_time']
+
+    def get_uid(self):
+       return self.uid
+
 
 
 #定义存放图片的路径位置:
