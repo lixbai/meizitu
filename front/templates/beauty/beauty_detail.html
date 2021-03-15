@@ -1,7 +1,6 @@
 {% extends 'frontbase/base.html' %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/beauty_detail.min.css' %}">
 {% endblock %}
 
@@ -22,8 +21,8 @@
                 </nav>
                 <div class="article_content p-3">
                     <div class="row person_info rounder d-flex flex-column">
-                        <div class=" col-12 p-3 beauty_header justify-content-between">
-                            <p class="pl-2 font-weight-bold btn btn-light">{{ beauty.beauty_name }} </p>
+                        <div class="col-12 p-3 beauty_header justify-content-between">
+                            <p class="pl-2 font-weight-bold btn btn-warning">{{ beauty.beauty_name }} </p>
                             <p class="pr-2 btn btn-primary float-right">个人百科词条</p>
                         </div>
                         <div class="mt-3 d-flex flex-row info">
@@ -113,8 +112,7 @@
                     </div>
 
                     <div class="row mt-3 d-flex flex-row person_album">
-                        <p class="title">女神图集</p>
-
+                        <p class="title">女神所拍摄的图集</p>
 	                    {% for beauty_album in beauty_albums %}
 		                    <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
 	                            <div class="thumbnail">
@@ -130,227 +128,25 @@
 	                        </div>
 	                    {% endfor %}
                     </div>
-                    <div class="row mt-4 d-flex flex-row hot_beauty_list ">
-                        <p class="text-dark">最热女神</p>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集 <strong
-                                                style="font-size: 15px; color: red;">3</strong> 个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img src="http://d.kancaijing.com.cn/attach/2020-03-10/1583830168rbH4.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img src="http://d.kancaijing.com.cn/attach/2019-08-24/15666294418W44.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2020-01-15/15790827615wgs.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-3 mb-2">
-                            <div class="thumbnail">
-                                <a class="imgs_link" href="">
-                                    <img class=" border border-secondary" src="http://d.kancaijing.com.cn/attach/2019-07-16/1563262708DtCf.jpg" alt="">
-                                </a>
-                                <div class="beauty_imgs_title">
-                                    <h2 class="title_height d-flex justify-content-center">
-                                        <a class="text-dark" href="">悠悠酱yoyoyo</a>
-                                    </h2>
-                                    <h2 class="title_height d-flex justify-content-center mt-2" style="text-decoration: underline;">
-                                        <a class="text-dark" style="font-size: 13px;" href="">图集&lt;<strong
-                                                style="font-size: 15px; color: red;">3</strong>&gt;个</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-            <div class="article_right col-lg-4 d-none d-lg-block pr-0 pl-5  ">
-                <p class="hot_news_title bg-dark border border-dark ">热点资讯</p>
-                <div class="hot_news bg-light">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
+
+            <div class="article_right col-lg-4 d-none d-lg-block pr-0 pl-5">
+                <p class="adtitle bg-success text-white">广告位</p>
+                <div class="aditems mt-1 mb-3">
+	                <img src="{% static 'images/20200709.png' %}" alt="" class="img-fluid pb-3">
+	                <img src="{% static 'images/20200709.png' %}" alt="" class="img-fluid ">
                 </div>
             </div>
         </div>
     </div>
     <!-- 内容区 结束 -->
+
+	{% comment %}猜你喜欢女神功能开始{% endcomment %}
+	{% include 'frontbase/suggest_beauty_5.html' with random_beautys=random_beautys %}
+	{% comment %}猜你喜欢女神功能结束{% endcomment %}
+
 {% endblock %}
 
 {% block jsfile %}

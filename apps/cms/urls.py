@@ -26,6 +26,25 @@ urlpatterns = [
     #处理美女
     path('write_beauty/', views.WriteBeautyView.as_view(), name='write_beauty'),
 
+    # 处理消息的分类
+    path('write_news_category/', views.WriteNewsCategory.as_view(), name='write_news_category'),
+    path('edit_news_category/', views.edit_news_category, name='edit_news_category'),
+    path('del_news_category/', views.del_news_category, name='del_news_category'),
+
+    # 处理文章的tag
+    path('news_add_tags/', views.news_add_tags, name='news_add_tags'),
+    path('news_edit_tags/', views.news_edit_tags, name='news_edit_tags'),
+    path('news_del_tags/', views.news_del_tags, name='news_del_tags'),
+
+    # 处理消息news
+    path('write_news/', views.WriteNews.as_view(), name='write_news'),
+    path('ajax_news_post/', views.ajax_news_post, name='ajax_news_post'),
+
+    # 处理广告ad
+    path('write_ad/', views.WriteAdView.as_view(), name='write_ad'),
+
     #news上传图片用到的.
-    path('upload_files/', views.upload_files, name='upload_files')
+    # path('upload_files/', views.upload_files, name='upload_files'),
+    path('upload_cloud_files/', views.aliyun_oss_tencent_cos_local_upload_files, name='upload_cloud_files'),
+
 ]

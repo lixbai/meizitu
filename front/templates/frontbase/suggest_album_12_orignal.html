@@ -1,0 +1,200 @@
+<!-- 最近更新的热门图集 开始 -->
+<div class="container border mt-4 mb-4" id="suggest_album">
+		<div class="row xtitle">
+			<div class="col-12 xxtitle">
+				<div class="title">
+					<p class="lefttitle">猜你喜欢的图集</p>
+					<a class="text-dark" href="{% url 'album:random_album' %}">
+						<p class="change">
+							<svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-arrow-repeat"
+							     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+								      d="M2.854 7.146a.5.5 0 0 0-.708 0l-2 2a.5.5 0 1 0 .708.708L2.5 8.207l1.646 1.647a.5.5 0 0 0 .708-.708l-2-2zm13-1a.5.5 0 0 0-.708 0L13.5 7.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0 0-.708z"/>
+								<path fill-rule="evenodd"
+								      d="M8 3a4.995 4.995 0 0 0-4.192 2.273.5.5 0 0 1-.837-.546A6 6 0 0 1 14 8a.5.5 0 0 1-1.001 0 5 5 0 0 0-5-5zM2.5 7.5A.5.5 0 0 1 3 8a5 5 0 0 0 9.192 2.727.5.5 0 1 1 .837.546A6 6 0 0 1 2 8a.5.5 0 0 1 .501-.5z"/>
+							</svg>
+							换一组
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="imgs_list row d-flex flex-row justify-content-around">
+
+			{% for album2 in album2s %}
+				<div class="img_display col-6 col-sm-6 col-lg-2">
+					<div class="thumbnail">
+						<a class="imgs_link" href="">
+							<img class="lazyload border border-light"
+							     src="" data-src="{{ url }}{{ album2.cover_img }}" alt="">
+						</a>
+						<div class="imgs_title">
+							<h2 class="title_height">
+								<a class="text-light" href="">{{ album2.title }}</a>
+							</h2>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+
+
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class="lazyload border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24110/32977/cover/001.jpg" data-src="" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/27717/32976/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.23 No.2184 陈小喵</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/27614/32975/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.23 No.2182 良人非爱人</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24936/32974/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[YOUMI] 2020.04.13 VOL.452 Egg-尤妮丝Egg</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/27717/32976/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.23 No.2184 陈小喵</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/27614/32975/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.23 No.2182 良人非爱人</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24936/32974/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[YOUMI] 2020.04.13 VOL.452 Egg-尤妮丝Egg</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" href="">
+						<img class=" border border-light"
+						     src="https://t1.onvshen.com:85/gallery/24110/32977/cover/0.jpg" alt="">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height">
+							<a class="text-light" href="">[XiuRen] 2020.04.28 悠悠酱yoyoyo</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 最近更新的热门图集 结束 -->

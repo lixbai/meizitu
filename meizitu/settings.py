@@ -25,7 +25,7 @@ SECRET_KEY = 'cs7*hd28=hgh@s$0*x1au)h2pa*skv=#!oh7ixd83sjc2hf9h*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 INTERNAL_IPS = [
     # ...
@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'apps.album',
     'apps.beauty',
     'apps.ueditor',
+    'apps.ad',
 
+    'rest_framework',
     'debug_toolbar'
 
 ]
@@ -70,12 +72,12 @@ MIDDLEWARE = [
 # CACHE_MIDDLEWARE_KEY_PREFIX = ''
 # CACHE_MIDDLEWARE_SECONDS = 5
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'LOCATION': '127.0.0.1:11211',
+#     }
+# }
 
 
 ROOT_URLCONF = 'meizitu.urls'
@@ -113,7 +115,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'USER': 'root',
         'PORT': '3306',
-        'PASSWORD': '123456'
+        'PASSWORD': 'uku123'
 
     }
 }
@@ -170,9 +172,26 @@ MEDIA_URL = '/media/'
 
 
 #配置Ueditor编辑器的全局配置
-UEDITOR_UPLOAD_TO_SERVER = True
+UEDITOR_UPLOAD_TO_SERVER = False
 UEDITOR_UPLOAD_PATH = MEDIA_ROOT
-UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR, 'front','dist','ueditor', 'config.json')
+UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR, 'front','dist', 'ueditor', 'config.json')
+
+# 配置阿里云OSS
+UEDITOR_UPLOAD_TO_ALIYUN = True
+ALIYUN_AccessKey_ID = ''
+ALIYUN_AccessKey_Secret = ''
+ALIYUN_bucket_name = ''
+ALIYUN_endpoint = ''
+ALIYUN_prefix_url = ''
+
+# 配置腾讯Cos
+UEDITOR_UPLOAD_TO_TENCENT = False
+TENCENT_secret_id = ''
+TENCENT_secret_key = ''
+TENCENT_bucket_name = ''
+TENCENT_region = ''
+TENCENT_prefix_url = ''
+
 
 
 #debug-toolbar配置
@@ -191,3 +210,20 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.redirects.RedirectsPanel',
     'debug_toolbar.panels.profiling.ProfilingPanel',
 ]
+
+
+# 配置新闻功能里面的一页 几条新闻
+ONE_PAGE_NEWS_COUNT = 20
+
+# rest_framework 配置
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES':['utils.throttle.VisitThrottle',],
+    'DEFAULT_THROTTLE_RATES':{
+        # 注意这里一个点，如果系统没有设置default_cache 那么需要关闭default_cache,要不然这个函数取不到那个cache里面的值
+        'meizitu':'3/m' # 针对scope 是meizitu这个类的设置访问次数和时间周期
+    },
+    'DEFAULT_RENDERER_CLASSES':(
+        'rest_framework.renderers.JSONRenderer'
+    )
+
+}

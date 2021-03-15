@@ -1,0 +1,32 @@
+<!-- 你可能感兴趣的其他女神 开始 -->
+<div class="container border mt-4" id="suggest">
+	<div class="row xtitle">
+		<div class="col-12 xxtitle">
+			<div class="title">
+				<p class="lefttitle">猜你喜欢的其他女神</p>
+			</div>
+		</div>
+	</div>
+	<div class="imgs_list row d-flex flex-row justify-content-around">
+
+		{% for random_beauty in random_beautys %}
+			<div class="img_display col-6 col-sm-6 col-lg-2">
+				<div class="thumbnail">
+					<a class="imgs_link" target="_blank" href="{% url 'beauty:beauty_detail' random_beauty.uid %}">
+						<img class="lazyload border border-light" src="{% static 'images/400x400.gif' %}"
+						     data-src="{{ url }}{{ random_beauty.cover_img }}" alt="{{ random_beauty.beauty_name }}">
+					</a>
+					<div class="imgs_title">
+						<h2 class="title_height d-flex justify-content-center mt-2">
+							<a class="text-light" target="_blank" style="font-size: 13px;"
+							   href="{% url 'beauty:beauty_detail' random_beauty.uid %}">(图集共有 <strong
+                                    style="font-size: 15px; color: #20c997;">{{ random_beauty.album.all.count }}</strong> 张){{ random_beauty.beauty_name }}</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+
+	</div>
+</div>
+<!-- 你可能感兴趣的其他女神 结束 -->

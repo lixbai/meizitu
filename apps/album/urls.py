@@ -8,6 +8,7 @@ urlpatterns = [
 
     # path('tags/<int:tag>/', views.tags, name='tags'),
     path('tags/<int:tag>/', views.TagGetAlbumView.as_view(), name='tags'),
-    path('show_pic/<str:uid>/', views.show_pic, name='show_pic'),
+    path('show_pic/<str:uid>/', views.ShowPicView.as_view(), name='show_pic'),
+    # path('show_pic/<str:uid>/', views.show_pic, name='show_pic'),
 
 ]

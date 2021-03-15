@@ -8,9 +8,9 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="{% static 'adminlte/plugins/fontawesome-free/css/all.min.css' %}">
 	<!-- Ionicons -->
-	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-	<!-- Tempusdominus Bootstrap 4 -->
-	<link rel="stylesheet" href="{% static 'adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+{#	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">#}
+{#	<!-- Tempusdominus Bootstrap 4 -->#}
+{#	<link rel="stylesheet" href="{% static 'adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">#}
 	<!-- Theme style -->
 	<link rel="stylesheet" href="{% static 'adminlte/dist/css/adminlte.min.css' %}">
 	<!-- overlayScrollbars -->
@@ -28,8 +28,8 @@
 	</script>
 	<!-- Bootstrap 4 -->
 	<script src="{% static 'adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-	<!-- Tempusdominus Bootstrap 4 -->
-	<script src="{% static 'adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+{#	<!-- Tempusdominus Bootstrap 4 -->#}
+{#	<script src="{% static 'adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>#}
 
 	<!-- overlayScrollbars -->
 	<script src="{% static 'adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
@@ -55,12 +55,6 @@
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-			</li>
-			<li class="nav-item d-none d-sm-inline-block">
-				<a href="index3.html" class="nav-link">Home</a>
-			</li>
-			<li class="nav-item d-none d-sm-inline-block">
-				<a href="#" class="nav-link">Contact</a>
 			</li>
 		</ul>
 
@@ -119,23 +113,38 @@
 					<li class="nav-item">
 						<a href="{% url 'cms:write_album' %}" class="nav-link">
 							<i class="nav-icon fa fa-wine-glass-alt"></i>
-							<p>图集管理</p>
+							<p>图集图片管理</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="{% url 'cms:write_pic' %}" class="nav-link">
+						<a href="{% url 'cms:write_pic' %}" class="nav-link disabled">
 							<i class="nav-icon fa fa-images"></i>
-							<p>图片管理</p>
+							<p>图片管理(暂时禁用)</p>
 						</a>
 					</li>
 
 					<li class="nav-header">新闻管理</li>
 					<li class="nav-item">
-						<a href="{% url 'cms:write_album_tag' %}" class="nav-link">
+						<a href="{% url 'cms:write_news_category' %}" class="nav-link">
+							<i class="nav-icon fa fa-tag"></i>
+							<p>文章分类管理</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="{% url 'cms:write_news' %}" class="nav-link">
 							<i class="nav-icon fa fa-newspaper"></i>
 							<p>发布新闻</p>
 						</a>
 					</li>
+
+					<li class="nav-header">广告管理</li>
+					<li class="nav-item">
+						<a href="{% url 'cms:write_ad' %}" class="nav-link">
+							<i class="nav-icon fa fa-ad"></i>
+							<p>新增广告位</p>
+						</a>
+					</li>
+
 				</ul>
 			</nav>
 			<!-- /.sidebar-menu -->

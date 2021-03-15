@@ -221,7 +221,7 @@
             if (!img.tagName || img.tagName.toLowerCase() != 'img' && !img.getAttribute("src") || !img.src) return;
 
             var wordImgFlag = img.getAttribute("word_img"),
-                src = wordImgFlag ? wordImgFlag.replace("&amp;", "&") : (img.getAttribute('_src') || img.getAttribute("src", 2).replace("&amp;", "&")),
+                src = wordImgFlag ? wordImgFlag.replace("&amp;", "&") : (img.getAttribute('data_src') || img.getAttribute("src", 2).replace("&amp;", "&")),
                 align = editor.queryCommandValue("imageFloat");
 
             /* 防止onchange事件循环调用 */
@@ -271,7 +271,7 @@
             if(data['url']) {
                 return [{
                     src: data['url'],
-                    _src: data['url'],
+                    data_src: data['url'],
                     width: data['width'] || '',
                     height: data['height'] || '',
                     border: data['border'] || '',
@@ -777,7 +777,7 @@
                 data = this.imageList[i];
                 list.push({
                     src: prefix + data.url,
-                    _src: prefix + data.url,
+                    data_src: prefix + data.url,
                     title: data.title,
                     alt: data.original,
                     floatStyle: align
@@ -912,7 +912,7 @@
                     })(img));
                     img.width = 113;
                     img.setAttribute('src', urlPrefix + list[i].url + (list[i].url.indexOf('?') == -1 ? '?noCache=':'&noCache=') + (+new Date()).toString(36) );
-                    img.setAttribute('_src', urlPrefix + list[i].url);
+                    img.setAttribute('data_src', urlPrefix + list[i].url);
                     domUtils.addClass(icon, 'icon');
 
                     item.appendChild(img);
@@ -953,10 +953,10 @@
             for (i = 0; i < lis.length; i++) {
                 if (domUtils.hasClass(lis[i], 'selected')) {
                     var img = lis[i].firstChild,
-                        src = img.getAttribute('_src');
+                        src = img.getAttribute('data_src');
                     list.push({
                         src: src,
-                        _src: src,
+                        data_src: src,
                         alt: src.substr(src.lastIndexOf('/') + 1),
                         floatStyle: align
                     });
@@ -1129,7 +1129,7 @@
                     src = child.src;
                     list.push({
                         src: src,
-                        _src: src,
+                        data_src: src,
                         alt: src.substr(src.lastIndexOf('/') + 1),
                         floatStyle: align
                     });

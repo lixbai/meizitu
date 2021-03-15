@@ -1,6 +1,6 @@
 <div class="container border mt-3" id="tags">
         <div class="row">
-            <p class="text-dark">个性标签 - {{ tag_chosen|default:'最新' }}</p>
+            <p class="text-dark">个性标签 - {{   tag_chosen|default:'最新' }}</p>
             <ul class="tags_1">
                 <li class="manytags">
                     <a href="{% url 'album:tags' tag=1 %}" class="badge badge-pill badge-success ">沙滩</a>

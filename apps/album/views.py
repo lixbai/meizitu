@@ -1,54 +1,41 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404, JsonResponse
 from .models import AlbumTags, Album
 from apps.beauty.models import BeautyTags
 from django.conf import settings
 from django.views.generic import View
 from django.core.paginator import Paginator
-from django.db import connection
 from utils.aliyun_oss import a_prefix_url
 from utils.tencent_cos import t_prefix_url
-
-def index(request):
-    # beauty_tags = BeautyTags.objects.all()
-    #
-    # context = {
-    #     'beauty_tags':beauty_tags
-    # }
-    # 这里实际上需要用到分页，但是分页后面在做
-    albums = Album.objects.all ()
-    url = request.build_absolute_uri (settings.MEDIA_URL)
-
-    context = {
-        'albums': albums,
-        't_prefix_url': t_prefix_url
-    }
-
-
-    return render(request, 'album/index-bak2.html', context=context)
-
+import random
+from django.utils import timezone
+from rest_framework.views import APIView
+from utils.throttle import VisitThrottle
+from rest_framework.renderers import JSONRenderer
 # album 主页
-# def albums(request):
-#     # 这里实际上需要用到分页，但是分页后面在做
-#     albums = Album.objects.all()
-#     url = request.build_absolute_uri(settings.MEDIA_URL)
-#
-#     context = {
-#         'albums': albums,
-#         'url': url
-#     }
-#     return render(request, 'album/beauty_album.html', context=context)
+class AlbumsView(APIView):
 
-# album 主页
-class AlbumsView(View):
+    #这里做限流措施
+    throttle_classes = [VisitThrottle,]
+    renderer_classes = [JSONRenderer]
+
     def get(self, request):
         page = int (request.GET.get ('p', 1))
-        # 这里实际上需要用到分页，但是分页后面在做
-        albums = Album.objects.all()
+
+        try:
+            albums = Album.objects.all()
+        except:
+            return render(request, '404.html')
         url = request.build_absolute_uri (settings.MEDIA_URL)
 
+        # 你可以感兴趣的功能 开始
+        random_day = timezone.now() + timezone.timedelta(days=random.randint(-16, -8))
+        random_albums = albums.filter(create_time__lt=random_day)[0:5]
+
+        # 你可以感兴趣的功能 结束
+
         #做分页处理
-        paginator = Paginator (albums, 2)
+        paginator = Paginator (albums, 16)
         page_obj = paginator.page (page)
 
         context_data = self.get_pagination_data (paginator, page_obj)
@@ -60,7 +47,9 @@ class AlbumsView(View):
 
             'url': url,
             'a_prefix_url': a_prefix_url,
-            't_prefix_url': t_prefix_url
+            't_prefix_url': t_prefix_url,
+
+            'random_albums':random_albums
         }
         context.update(context_data)
         return render (request, 'album/beauty_album.html', context=context)
@@ -96,18 +85,6 @@ class AlbumsView(View):
         }
 
 
-def tags_get_beauty(request):
-    #利用id来寻找到对应的beautyTags,然后利用这个beautyTags来找到对应的Beauty
-    pk = request.GET.get('p')
-    print('pk===', pk)
-    bts = BeautyTags.objects.get(pk=pk)
-    print('bts===', bts)
-    ball = bts.beauty.all()
-    print('ball===', ball)
-
-    return HttpResponse(bts.tag)
-
-
 # #根据传递进来的tag, 获取关联的图集album
 # def tags(request, tag):
 #
@@ -128,20 +105,32 @@ def tags_get_beauty(request):
 #     return  render(request, 'album/tags_get_album.html',context=context)
 
 # 根据传递进来的tag,获取关联的图集album
-class TagGetAlbumView(View):
+class TagGetAlbumView(APIView):
+    throttle_classes = [VisitThrottle,]
     def get(self, request, tag, *args, **kwargs):
         #获取传递进来的分页的标志,默认第一页
         page = int(request.GET.get('p', 1))
 
-        albumtag = AlbumTags.objects.prefetch_related('album_tags').get(pk=tag)
+        try:
+            albumtag = AlbumTags.objects.prefetch_related('album_tags').get(pk=tag)
+        except:
+            return render(request, '404.html')
         # albumtag = AlbumTags.objects.get(pk=tag)
         # 根据albumTags的实例对象，查找管理的album对象，manytomany的关系
         albums = albumtag.album_tags.all()
 
         url = request.build_absolute_uri(settings.MEDIA_URL)
 
+        # 你可能感兴趣的功能开始
+        ctime = timezone.now()
+        # 随机修改days
+        random_day = ctime + timezone.timedelta(days=random.randint(-30, -16))
+        random_albums = albums.filter(create_time__lt=random_day)[0:5]
+
+        # 你可能感兴趣的功能结束
+
         #做分页处理
-        paginator = Paginator(albums, 2)
+        paginator = Paginator(albums, 16)
         page_obj = paginator.page(page)
         #例用这个函数处理分页
         context_data = self.get_pagination_data(paginator, page_obj)
@@ -151,7 +140,9 @@ class TagGetAlbumView(View):
             'albums': page_obj.object_list,
             'page_obj': page_obj,
             'paginator': paginator,
-            'url':url
+            'url':url,
+
+            'random_albums':random_albums
         }
         context.update(context_data)
         return render(request, 'album/tags_get_album.html',context=context)
@@ -187,36 +178,104 @@ class TagGetAlbumView(View):
         }
 
 
-
-
 # 点击就可以察看到pic_html
-def show_pic(request, uid):
-    #根据uid 可以查到album中的数据,同时还可以查到pic表中的数据,因为这个uid在两个表中都存在
+class ShowPicView(View):
+    throttle_classes = [VisitThrottle,]
+    def get(self, request, uid, *args, **kwargs):
+        # 根据uid 可以查到album中的数据,同时还可以查到pic表中的数据,因为这个uid在两个表中都存在
 
-    # 1,先差album, 把其中需要传递的数据先拿出来,这个暂时不做那个优化
-    # album = Album.objects.get(pk=uid)
-    album = Album.objects.prefetch_related('tags', 'pic').get(pk=uid)
+        # 1,先差album, 把其中需要传递的数据先拿出来
+        try:
+            album = Album.objects.prefetch_related ('tags', 'pic').get (pk=uid)
+            # tags = album.tags.all()
+            pics = album.pic.all().order_by('pk')
+        except:
+            return render(request, '404.html')
 
-    # tags = album.tags.all()
-    # pics = album.pic.all()
+        # 分页功能代码开始
+        # 获取传递进来的分页的标志,默认第一页
+        page = int (request.GET.get ('p', 1))
+        # 做分页处理
+        paginator = Paginator (pics, 4)
+        page_obj = paginator.page (page)
+        # 例用这个函数处理分页
+        context_data = self.get_pagination_data (paginator, page_obj)
+        # 分页功能代码结束
 
-    url = request.build_absolute_uri (settings.MEDIA_URL)
+        url = request.build_absolute_uri (settings.MEDIA_URL)
 
-    context = {
-        'album':album,
-        'tags': album.tags.all(),
-        'pics': album.pic.all(),
-        'url': url,
-        't_prefix_url':t_prefix_url
-    }
+        '''
+         点击 换一组的功能开始，这里用随机的功能吧
+         这里用不了随机，因为主键是shortUUID类型，不是整形，不能用
+         这里的思路是：首先获取当前album的创建时间，然后朝前面倒1个月，开始选择，然后显示
+         1,你可能感兴趣的其他图集-->朝前面倒4-10天，开始选择5个，然后显示
+         这里timedelta里面的days可以用随机数，这样点击就是随机的了，哈哈好机智
+        '''
+        # 用的系统时间,这里的timezone是aware_time
+        # ctime = timezone.now ()
+        ctime = album.create_time
+        random_day = random.randint (-8, -4)  # 随机选择一个整数
+        before_days = ctime + timezone.timedelta (days=random_day)
+        random_albums = Album.objects.filter (create_time__lt=before_days) [0:5]
+        # 猜你喜欢和热门图集代码结束
+        context = {
+            'album': album,
+            'tags': album.tags.all (),
+            'pics': page_obj.object_list,
+            'page_obj': page_obj,
+            'paginator': paginator,
+            'url': url,
+            't_prefix_url': t_prefix_url,
 
-    return render(request, 'album/pic_show.html', context=context)
+            'random_albums': random_albums,
+        }
+        context.update(context_data)
 
+        return render (request, 'album/pic_show.html', context=context)
 
+    # 分页函数代码
+    def get_pagination_data(self,paginator,page_obj,around_count=2):
+        current_page = page_obj.number
+        num_pages = paginator.num_pages
 
-# 表头的search功能
-def search(request):
-    query = request.POST.get('query')
-    # 利用query来匹配名字，然后返回指定的女神
-    print(query)
-    return HttpResponse(query)
+        left_has_more = False
+        right_has_more = False
+
+        if current_page <= around_count + 2:
+            left_pages = range(1,current_page)
+        else:
+            left_has_more = True
+            left_pages = range(current_page-around_count,current_page)
+
+        if current_page >= num_pages - around_count - 1:
+            right_pages = range(current_page+1,num_pages+1)
+        else:
+            right_has_more = True
+            right_pages = range(current_page+1,current_page+around_count+1)
+
+        return {
+            # left_pages：代表的是当前这页的左边的页的页码
+            'left_pages': left_pages,
+            # right_pages：代表的是当前这页的右边的页的页码
+            'right_pages': right_pages,
+            'current_page': current_page,
+            'left_has_more': left_has_more,
+            'right_has_more': right_has_more,
+            'num_pages': num_pages
+        }
+
+# 点击 换一组的功能，这里用随机的功能吧
+# 这里用不了随机，因为主键是shortUUID类型，不是整形，不能用
+# 这里的思路是：首先获取当前时间，然后朝前面倒1个月，开始选择5个，然后显示
+def random_album(request):
+    # 用的系统时间,这里的timezone是aware_time
+    ctime = timezone.now()
+    print(ctime)
+    before_30_day = ctime + timezone.timedelta(days=-30)
+    print(before_30_day)
+
+    album_12 = Album.objects.filter(create_time__lt=before_30_day)[0:13]
+    print(album_12)
+
+    return HttpResponse(ctime)
+

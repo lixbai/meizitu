@@ -1,93 +1,73 @@
 {% extends 'frontbase/base.html' %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/news_detail.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/news_detail.min.css' %}">
 {% endblock %}
 
-{% block title %}最新情报文章{% endblock %}
+{% block title %}News Detail 最新情报文章{% endblock %}
 
 {% block main %}
-    <!-- 内容区 开始 -->
-    <div class="container mt-3 " id="news_article">
-        <div class="row justify-content-between">
-            <div class="article_left col-12 col-sm-12 col-lg-8">
-                <nav aria-label="breadcrumb ">
-                    <ol class="breadcrumb ">
-                        <li class="breadcrumb-item"><a href="#">现在位置:</a></li>
-                        <li class="breadcrumb-item"><a href="#">最新情报</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">只胖在胸！南韩直播主《Coco》鹅蛋脸下竟是可口的肉肉身材！</li>
-                    </ol>
-                </nav>
-                <div class="article_content w-100 rounded p-3">
-                    <div class="article_header text-center">
-                        <h1 class="title font-weight-bold" style="font-size: 20px;">只胖在胸！南韩直播主《Coco》鹅蛋脸下竟是可口的肉肉身材！</h1>
-                        <p class="pub_time mt-2 text-secondary">2019-11-09 10:36:21</p>
+	<!-- 内容区 开始 -->
+	<div class="container mt-3 " id="news_article">
+		<div class="row justify-content-between">
+			<div class="article_left col-12 col-sm-12 col-lg-9">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="javascript:void(0)">现在位置</a></li>
+						<li class="breadcrumb-item"><a href="{% url 'news:news_index' %}">最新情报</a></li>
+						<li class="breadcrumb-item active" aria-current="page">{{ news.title }}</li>
+					</ol>
+				</nav>
+				<div class="article_content w-100 rounded p-3">
+					<div class="article_header text-center">
+						<h1 class="title font-weight-bold" style="font-size: 20px;">{{ news.title }}</h1>
+						<p class="pub_time mt-2 text-secondary">{{ news.pub_time }}</p>
+					</div>
+					<div class="article_body mt-4">
+						<article class="article">
+							{{ news.content|safe }}
+						</article>
+					</div>
+				</div>
+			</div>
 
-                    </div>
-                    <div class="article_body mt-4">
-                        <p>越来越多人在做直播这个行业，韩国在这方面也是相当盛行，之前介绍的《极品韩国辣模》就是知名的网路直播主，IG追踪数目前已突破百万了呢！ 这位在afreeca.tv上直播的Coco，虽然今年才开始经营IG，但粉丝数已经有25万，Youtube则是8月才开始启用，仅上传了2支影片就吸引近2万的订阅，后势看涨！
-                        </p>
-                    </div>
-                    <div class="article_tail text-center mt-4 mb-3">
-                        <a href="" class="btn btn-primary">加载更多</a>
-                    </div>
-                </div>
-            </div>
-            <div class="article_right col-lg-4 d-none d-lg-block pr-0 pl-5  ">
-                <p class="hot_news_title bg-dark border border-dark ">热点资讯</p>
-                <div class="hot_news bg-light">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-md-4 flex-column align-self-center">
-                            <img src="https://img.onvshen.com:85/article/11060/01_s.jpg" class="card-img" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-title text-secondary pl-3">This is a wider card with supporting text below as a natural lead-in to additional content. .</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 内容区 结束 -->
+			<div class="article_right col-lg-3 d-none d-lg-block pr-0">
+				<div class="adgroup">
+					<p class="adtitle bg-success text-white">广告位置1</p>
+					<div class="aditems mt-1 mb-3">
+						<img class="img-fluid" src="{% static 'images/20200709.png' %}" alt="">
+					</div>
+				</div>
+
+				<div class="hot_news">
+					<p class="hot_news_title bg-success text-white">热点资讯</p>
+					<div class="hot_news_items">
+
+						{% for side_news in side_newses %}
+							<div class="row no-gutters mt-2 pb-2">
+								<div class="col-md-4 flex-column align-self-center left-img">
+									<a href="{% url 'news:news_detail' side_news.pk %}">
+										<img src="{{ side_news.thumbnail }}" class="card-img" alt="...">
+									</a>
+								</div>
+								<div class="col-md-8 right-text">
+									<a href="{% url 'news:news_detail' side_news.pk %}" class="text-decoration-none">
+										<p class="card-title text-success"><span>•&nbsp;</span>{{ side_news.title }}</p>
+										<div class="content">
+											<p class="font-italic font-weight-normal">{{ side_news.desc }}</p>
+										</div>
+									</a>
+									<div class="pub_time text-right">
+										<p>{{ side_news.pub_time|date }}</p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- 内容区 结束 -->
 {% endblock %}

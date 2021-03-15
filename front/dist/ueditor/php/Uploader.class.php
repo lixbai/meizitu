@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 /**
  * Created by JetBrains PhpStorm.
@@ -365,7 +365,7 @@ class Uploader
             "title" => $this->fileName,
             "original" => $this->oriName,
             "type" => $this->fileType,
-            "size" => $this->fileSize
+            "size" => $this->fileSize,
         );
     }
 

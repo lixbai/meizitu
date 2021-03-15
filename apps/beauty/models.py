@@ -23,7 +23,7 @@ class Beauty(models.Model):
     uid = ShortUUIDField(primary_key=True)
 
     beauty_name = models.CharField(max_length=40)
-    age = models.IntegerField(null=True)
+    age = models.CharField(max_length=20, null=True)
     birthday = models.CharField(max_length=20, null=True)
     country = models.CharField(max_length=50, null=True)
     xingzuo = models.CharField(max_length=30, null=True)
@@ -44,4 +44,8 @@ class Beauty(models.Model):
 
     class Meta:
         ordering = ['-create_time']
+
+
+    def get_uid(self):
+       return self.uid
 

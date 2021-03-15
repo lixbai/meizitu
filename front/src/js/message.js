@@ -53,7 +53,7 @@ Message.prototype.initElement = function () {
         'left': '50%',
         'top': '-48px',
         'margin-left':'-150px',
-        'height': '48px',
+        'height': '68px',
         'box-sizing': 'border-box',
         'border': '1px solid #ddd',
         'border-radius': '4px',

@@ -17,6 +17,10 @@ from django.http import FileResponse
 from django.views.generic import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.http import require_http_methods
+
+from meizitu import settings as meizitu_settings
+from utils.tencent_cos import client
+
 # 更改工作目录。这么做的目的是七牛qiniu的sdk
 # 在设置缓存路径的时候默认会设置到C:/Windows/System32下面
 # 会造成没有权限创建。
@@ -25,6 +29,13 @@ try:
     import qiniu
 except:
     pass
+
+# 上传到阿里云
+try:
+    import oss2
+except:
+    pass
+
 from io import BytesIO
 
 
@@ -35,6 +46,8 @@ UEDITOR_QINIU_DOMAIN = ""
 UEDITOR_UPLOAD_PATH = ""
 UEDITOR_UPLOAD_TO_QINIU = False
 UEDITOR_UPLOAD_TO_SERVER = False
+UEDITOR_UPLOAD_TO_ALIYUN = False
+UEDITOR_UPLOAD_TO_TENCENT = False
 
 
 # 用来判断是否要将文件上传到自己的服务器
@@ -54,8 +67,22 @@ try:
 except:
     pass
 
+
+# 用来判断是否要将文件上传到阿里云oss
+try:
+    UEDITOR_UPLOAD_TO_ALIYUN = meizitu_settings.UEDITOR_UPLOAD_TO_ALIYUN
+except:
+    pass
+
+# 用来判断是否要健文件上传到腾讯云cos
+try:
+    UEDITOR_UPLOAD_TO_TENCENT = meizitu_settings.UEDITOR_UPLOAD_TO_TENCENT
+except:
+    pass
+
+
 # 如果既没有配置上传到本地，又没有配置上传到七牛，那么就抛出异常
-if not UEDITOR_UPLOAD_PATH and not UEDITOR_UPLOAD_TO_QINIU:
+if not UEDITOR_UPLOAD_PATH and not UEDITOR_UPLOAD_TO_QINIU and not UEDITOR_UPLOAD_TO_ALIYUN and not UEDITOR_UPLOAD_TO_TENCENT:
     raise RuntimeError("UEditor的UEDITOR_UPLOAD_TO_SERVER或者UEDITOR_UPLOAD_TO_QINIU必须配置一项！")
 
 
@@ -73,6 +100,31 @@ if UEDITOR_UPLOAD_TO_QINIU:
         UEDITOR_QINIU_SECRET_KEY = settings.UEDITOR_QINIU_SECRET_KEY
         UEDITOR_QINIU_BUCKET_NAME = settings.UEDITOR_QINIU_BUCKET_NAME
         UEDITOR_QINIU_DOMAIN = settings.UEDITOR_QINIU_DOMAIN
+    except Exception as e:
+        option = e.args[0]
+        raise RuntimeError('请在app.config中配置%s！'%option)
+
+# 如果配置了阿里云oss则：
+if UEDITOR_UPLOAD_TO_ALIYUN:
+    try:
+        ALIYUN_AccessKey_ID = meizitu_settings.ALIYUN_AccessKey_ID
+        ALIYUN_AccessKey_Secret = meizitu_settings.ALIYUN_AccessKey_Secret
+        ALIYUN_bucket_name = meizitu_settings.ALIYUN_bucket_name
+        ALIYUN_endpoint = meizitu_settings.ALIYUN_endpoint
+        ALIYUN_prefix_url = meizitu_settings.ALIYUN_prefix_url
+    except Exception as e:
+        option = e.args[0]
+        raise RuntimeError('请在app.config中配置%s！'%option)
+
+
+# 如果配置了腾讯云cos则：
+if UEDITOR_UPLOAD_TO_ALIYUN:
+    try:
+        TENCENT_secret_id = meizitu_settings.TENCENT_secret_id
+        TENCENT_secret_key = meizitu_settings.TENCENT_secret_key
+        TENCENT_bucket_name = meizitu_settings.TENCENT_bucket_name
+        TENCENT_region = meizitu_settings.TENCENT_region
+        TENCENT_prefix_url = meizitu_settings.TENCENT_prefix_url
     except Exception as e:
         option = e.args[0]
         raise RuntimeError('请在app.config中配置%s！'%option)
@@ -125,6 +177,31 @@ class UploadView(View):
         else:
             return 'FAIL',None,None,None
 
+    def _upload_to_aliyun(self, upfile, filename):
+        '''
+        上传到阿里云
+        :param upfile:
+        :param filename:
+        :return:
+        '''
+        if not sys.modules.get('oss2'):
+            raise RuntimeError('没有导入oss2模块！')
+        for param in (ALIYUN_AccessKey_ID, ALIYUN_AccessKey_Secret, ALIYUN_bucket_name, ALIYUN_endpoint):
+            assert '<' not in param, '请设置参数：' + param
+        bucket = oss2.Bucket (oss2.Auth (ALIYUN_AccessKey_ID, ALIYUN_AccessKey_Secret), ALIYUN_endpoint, ALIYUN_bucket_name)
+        buffer = BytesIO ()
+        for chunk in upfile.chunks ():
+            buffer.write (chunk)
+        buffer.seek (0)
+        ret = bucket.put_object (os.path.join('article', filename).replace('\\', '/'), buffer)
+        if ret.status==200:
+            # 需要拼接url
+            url = os.path.join(ALIYUN_prefix_url,'article', filename).replace('\\', '/')
+            print(url)
+            return 'SUCCESS', url, None,None
+        else:
+            return 'FAIL',None,None,None
+
 
     def _upload_to_server(self,upfile,filename):
         """
@@ -155,6 +232,7 @@ class UploadView(View):
 
         qiniu_result = None
         server_result = None
+        aliyun_result = None
 
         if UEDITOR_UPLOAD_TO_QINIU:
             qiniu_result = self._upload_to_qiniu(upfile,filename)
@@ -162,10 +240,15 @@ class UploadView(View):
         if UEDITOR_UPLOAD_TO_SERVER:
             server_result = self._upload_to_server(upfile,filename)
 
+        if UEDITOR_UPLOAD_TO_ALIYUN:
+            aliyun_result = self._upload_to_aliyun(upfile, filename)
+
         if qiniu_result and qiniu_result[0] == 'SUCCESS':
             return self._json_result(*qiniu_result)
         elif server_result and server_result[0] == 'SUCCESS':
             return self._json_result(*server_result)
+        elif aliyun_result and aliyun_result[0] == 'SUCCESS':
+            return self._json_result(*aliyun_result)
         else:
             return self._json_result()
 
@@ -193,7 +276,10 @@ class UploadView(View):
             return self._json_result()
 
 
-
+# 这个函数就是用来处理已经上传的图片， 在文章里面的显示的函数，就相当于在总URL中后面添加的
+# static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)用于显示图片一样，就是展示图片
+# 如果你把图片放到阿里云oss中，再把UEDITOR_UPLOAD_TO_SERVER = False，这个函数就不起作用
+# 同样本地文件也无法显示在文章详情中
 def send_file(request,filename):
     fp = open(os.path.join(UEDITOR_UPLOAD_PATH,filename),'rb')
     response = FileResponse(fp)

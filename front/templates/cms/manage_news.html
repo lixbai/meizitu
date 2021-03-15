@@ -1,0 +1,100 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+News 消息管理
+{% endblock %}
+
+{% block head %}
+	<link rel="stylesheet" href="{% static 'css/manage_news.min.css' %}">
+	<script src="{% static 'js/write_news.min.js' %}"></script>
+	<script src="{% static 'ueditor/ueditor.config.js' %}"></script>
+	<script src="{% static 'ueditor/ueditor.all.min.js' %}"></script>
+	<script src="{% static 'js/manage_news.min.js' %}" defer="defer"></script>
+
+{% endblock %}
+
+{% block content-header %}
+News 消息管理
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-8">
+			<!-- general form elements -->
+			<div class="card card-primary">
+				<div class="card-header">
+					<h3 class="card-title">新增消息</h3>
+				</div>
+				<!-- /.card-header -->
+				<!-- form start -->
+				<form method="post" action="" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="card-body">
+
+						<div class="form-group">
+							<label for="title">标题</label>
+							<input type="text" class="form-control" id="title" name="title" placeholder="不能为空！">
+						</div>
+
+						<div class="form-group">
+							<label for="category">所属板块</label>
+							<select name="category" id="category" multiple="multiple" class="form-control overflow-auto" style="height: 60px">
+								{% for news_category in news_categories %}
+									<option value="{{ news_category.pk }}" class="badge badge-success mr-1">{{ news_category.name }}</option>
+								{% endfor %}
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="desc">消息简短描述</label>
+							<input type="text" class="form-control" id="desc" name="desc" placeholder="可以为空！">
+						</div>
+
+						<div class="form-group">
+							<label for="tags">文章标签</label>
+							<div class="tags">
+								<button type="button" class="btn btn-info ml-2 add_tag_btn">添加标签</button>
+								<div class="add_cut_html" style="display: none">
+									<div class="float-right ml-1">
+										<svg t="1610877848078" class="icon edit_tag_btn" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8480" width="16" height="16"><path d="M84.1728 716.0832L0 1024l306.9952-85.4016 484.864-484.1472L566.272 234.496 84.1728 716.0832zM755.0976 46.08l-120.832 120.6272 226.304 219.136 117.248-117.1456c61.5424-61.44 61.5424-161.1776 0-222.6176-61.44-61.44-161.28-61.44-222.72 0z" p-id="8481" fill="#707070"></path></svg>
+										<svg t="1610880381132" class="icon del_tag_btn" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10040" width="16" height="16"><path d="M511.998977 961.610044c-248.306272 0-449.607998-201.307865-449.607998-449.614138S263.692704 62.389956 511.998977 62.389956c248.364601 0 449.610044 201.299679 449.610044 449.606974S760.363577 961.610044 511.998977 961.610044L511.998977 961.610044zM718.186989 380.921639c8.457626-8.462742 8.457626-22.202675 0-30.658254l-45.927005-45.871747c-8.459672-8.459672-22.138206-8.459672-30.599925 0L511.603981 434.44874 381.546879 304.391638c-8.459672-8.459672-22.1423-8.459672-30.599925 0l-45.927005 45.871747c-8.457626 8.455579-8.457626 22.195511 0 30.658254l130.057101 130.053008L305.019948 641.031748c-8.457626 8.455579-8.457626 22.140253 0 30.599925L350.946954 717.555609c8.457626 8.404414 22.140253 8.404414 30.599925 0l130.057101-130.057101L641.661082 717.555609c8.461719 8.404414 22.140253 8.404414 30.599925 0l45.927005-45.922912c8.457626-8.459672 8.457626-22.144346 0-30.599925L588.129888 510.97567 718.186989 380.921639 718.186989 380.921639z" p-id="10041" fill="#707070"></path></svg>
+									</div>
+								</div>
+								<div class="del_html" style="display: none">
+									<div class="float-right ml-1">
+										<svg t="1610880381132" class="icon del_tag_btn" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10040" width="16" height="16"><path d="M511.998977 961.610044c-248.306272 0-449.607998-201.307865-449.607998-449.614138S263.692704 62.389956 511.998977 62.389956c248.364601 0 449.610044 201.299679 449.610044 449.606974S760.363577 961.610044 511.998977 961.610044L511.998977 961.610044zM718.186989 380.921639c8.457626-8.462742 8.457626-22.202675 0-30.658254l-45.927005-45.871747c-8.459672-8.459672-22.138206-8.459672-30.599925 0L511.603981 434.44874 381.546879 304.391638c-8.459672-8.459672-22.1423-8.459672-30.599925 0l-45.927005 45.871747c-8.457626 8.455579-8.457626 22.195511 0 30.658254l130.057101 130.053008L305.019948 641.031748c-8.457626 8.455579-8.457626 22.140253 0 30.599925L350.946954 717.555609c8.457626 8.404414 22.140253 8.404414 30.599925 0l130.057101-130.057101L641.661082 717.555609c8.461719 8.404414 22.140253 8.404414 30.599925 0l45.927005-45.922912c8.457626-8.459672 8.457626-22.144346 0-30.599925L588.129888 510.97567 718.186989 380.921639 718.186989 380.921639z" p-id="10041" fill="#707070"></path></svg>
+									</div>
+								</div>
+								<ul class="tags-list tagBtn"></ul>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="content">内容</label>
+{#							<textarea name="content" id="content" rows="3" class="form-control" placeholder="不能为空！"></textarea>#}
+							<script id="editor" name="content" type="text/plain">这里写你的初始化内容</script>
+						</div>
+
+						<div class="form-group">
+							<label for="thumbnail">缩略图URL</label>
+							<div class="input-group">
+								<input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="缩略图URL">
+								<span>
+									<label class="btn btn-primary btn-file" for="thumbnail-btn">上传图片</label>
+									<input hidden type="file" class="btn btn-default" id="thumbnail-btn" name="thumbnail-btn">
+								</span>
+							</div>
+						</div>
+
+					</div>
+					<!-- /.card-body -->
+
+					<div class="card-footer">
+						<a id="submitBtn" class="btn btn-primary float-right text-white">Submit</a>
+					</div>
+				</form>
+			</div>
+			<!-- /.card -->
+		</div>
+	</div>
+{% endblock %}

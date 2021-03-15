@@ -2,11 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ade58d9-4e02-443c-b67a-6d1b32c59445" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/ad/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/ad/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/news/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/news/migrations/0002_auto_20210117_1625.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/css/news_index_no_left.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/templates/news/news_index_no_left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/meizitu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meizitu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/album/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/album/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/album/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/album/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/beauty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/beauty/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/beauty/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/beauty/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/beauty/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/beauty/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ueditor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ueditor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/beauty.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty_album.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/beauty_detail.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/beauty_detail.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/download.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/download.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/index.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/jqcloud.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/news_detail.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/news_detail.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/news_list.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/pic_show.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/pic_show.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/images/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/images/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/index.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/jqcloud-1.0.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/jqcloud-1.0.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/message.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/message.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/write_album.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/js/xfzajax.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/xfzajax.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/ueditor/dialogs/image/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/ueditor/dialogs/image/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/ueditor/php/Uploader.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/ueditor/php/Uploader.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/ueditor/ueditor.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/ueditor/ueditor.all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/beauty.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty_album.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/beauty_detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/beauty_detail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/download.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/download.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/news_detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/news_detail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/news_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/pic_show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/pic_show.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/js/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/js/news_list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/js/write_album.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/write_news.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/js/xfzajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/xfzajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/beauty_album.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/beauty_album.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/index-bak2.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/index-bak2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/pic_show.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/pic_show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/album/tags_get_album.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/album/tags_get_album.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/beauty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/beauty/tags_get_beauty.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/beauty/tags_get_beauty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/cms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/cms/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/download/download.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/frontbase/album_tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/frontbase/album_tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/frontbase/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/frontbase/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/frontbase/beauty_tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/frontbase/beauty_tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/news/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/news/news_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/news/news_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/download/download_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meizitu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/meizitu/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meizitu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/meizitu/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/aliyun_oss.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/aliyun_oss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/tencent_cos.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/tencent_cos.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,315 +119,59 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39674896">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/beauty/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2499">
-                  <caret line="134" selection-start-line="134" selection-end-line="134" />
-                  <folding>
-                    <element signature="e#0#35#0" expanded="true" />
-                    <element signature="e#2415#2875#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/apps/album/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="303">
-                  <caret line="211" selection-start-line="211" selection-end-line="211" />
-                  <folding>
-                    <element signature="e#0#35#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="8841">
-                  <caret line="434" column="15" selection-start-line="434" selection-start-column="15" selection-end-line="434" selection-end-column="15" />
-                  <folding>
-                    <element signature="e#0#45#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_pic.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="924">
-                  <caret line="44" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="44" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/album/pic_show.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="95">
-                  <caret line="40" column="129" selection-start-line="40" selection-start-column="129" selection-end-line="40" selection-end-column="129" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/requirement.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-441" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/tencent_cos.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/utils/aliyun_oss.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/album/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="966">
-                  <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_album_pic.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2247">
-                  <caret line="107" column="30" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>url</find>
-      <find>background-color</find>
-      <find>upload_to</find>
-      <find>USERNAME_FIELD</find>
-      <find>upload_file</find>
-      <find>upload</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/front/src/js/xfzalert.js" />
-        <option value="$PROJECT_DIR$/apps/cms/urls.py" />
-        <option value="$PROJECT_DIR$/front/templates/cms/manage_pic.html" />
-        <option value="$PROJECT_DIR$/front/src/js/manage_beauty_tag.js" />
-        <option value="$PROJECT_DIR$/front/src/js/album_tags.js" />
-        <option value="$PROJECT_DIR$/front/templates/cms/base.html" />
-        <option value="$PROJECT_DIR$/front/templates/album/index-bak.html" />
-        <option value="$PROJECT_DIR$/front/templates/frontbase/tags.html" />
-        <option value="$PROJECT_DIR$/apps/beauty/models.py" />
-        <option value="$PROJECT_DIR$/front/templates/beauty/pic_show.html" />
-        <option value="$PROJECT_DIR$/meizitu/urls.py" />
-        <option value="$PROJECT_DIR$/front/templates/frontbase/beauty_tags.html" />
-        <option value="$PROJECT_DIR$/front/templates/frontbase/footer.html" />
-        <option value="$PROJECT_DIR$/front/src/css/index.scss" />
-        <option value="$PROJECT_DIR$/front/templates/frontbase/album_tags.html" />
-        <option value="$PROJECT_DIR$/开发笔记.md" />
-        <option value="$PROJECT_DIR$/front/templates/cms/manage_beauty.html" />
-        <option value="$PROJECT_DIR$/apps/beauty/forms.py" />
-        <option value="$PROJECT_DIR$/apps/cms/forms.py" />
-        <option value="$PROJECT_DIR$/front/templates/cms/manage_album.html" />
-        <option value="$PROJECT_DIR$/front/src/css/beauty_album.scss" />
-        <option value="$PROJECT_DIR$/front/src/js/lazyload.js" />
-        <option value="$PROJECT_DIR$/apps/album/urls.py" />
-        <option value="$PROJECT_DIR$/meizitu/settings.py" />
-        <option value="$PROJECT_DIR$/front/src/css/beauty.scss" />
-        <option value="$PROJECT_DIR$/apps/beauty/urls.py" />
-        <option value="$PROJECT_DIR$/front/templates/frontbase/base.html" />
-        <option value="$PROJECT_DIR$/front/dist/js/run_lazyload.min.js" />
-        <option value="$PROJECT_DIR$/front/src/js/run_lazyload.js" />
-        <option value="$PROJECT_DIR$/front/templates/album/tags_get_album.html" />
-        <option value="$PROJECT_DIR$/front/templates/beauty/beauty_detail.html" />
-        <option value="$PROJECT_DIR$/front/templates/beauty/tags_get_beauty.html" />
-        <option value="$PROJECT_DIR$/apps/beauty/views.py" />
-        <option value="$PROJECT_DIR$/front/templates/beauty/beauty.html" />
-        <option value="$PROJECT_DIR$/front/src/js/0000.js" />
-        <option value="$PROJECT_DIR$/front/.babelrc" />
-        <option value="$PROJECT_DIR$/front/src/js/es6/0000.js" />
-        <option value="$PROJECT_DIR$/apps/mzauth/views.py" />
-        <option value="$PROJECT_DIR$/apps/album/models.py" />
-        <option value="$PROJECT_DIR$/apps/cms/tencent_cos.py" />
-        <option value="$PROJECT_DIR$/apps/cms/aliyun_oss.py" />
-        <option value="$PROJECT_DIR$/front/templates/album/beauty_album.html" />
-        <option value="$PROJECT_DIR$/front/templates/album/index-bak2.html" />
-        <option value="$PROJECT_DIR$/front/gulpfile.js" />
-        <option value="$PROJECT_DIR$/front/templates/cms/manage_album_pic.html" />
-        <option value="$PROJECT_DIR$/apps/cms/views.py" />
-        <option value="$PROJECT_DIR$/apps/album/views.py" />
-        <option value="$PROJECT_DIR$/front/templates/album/pic_show.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/utils/tencent_cos.py" />
-        <option value="$PROJECT_DIR$/utils/aliyun_oss.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
-  </component>
+  <component name="ProjectId" id="1mliHDsdCdGDfmuVe1sAvi2JG5y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="album" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="beauty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="mzauth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meizitu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meizitu" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front/templates" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\templates\cms" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\dist\images" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\dist\js" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\templates\album" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\src\js" />
+      <recent name="C:\Users\Lee\PycharmProjects\meizitu\front\templates" />
+      <recent name="C:\Users\Lee\PycharmProjects\meizitu\front\templates\frontbase" />
+      <recent name="C:\Users\Lee\PycharmProjects\meizitu\apps\news\templatetags" />
+      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\dist\ueditor" />
+      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\dist\ueditor\php\upload\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lee\PycharmProjects\meizitu\apps" />
+      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\templates\download" />
+      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\templates\news" />
       <recent name="C:\Users\uku_k\PycharmProjects\meizitu\utils" />
       <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\src\js\es6" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\templates" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\front\templates\album" />
-      <recent name="C:\Users\uku_k\PycharmProjects\meizitu\apps" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
-    <configuration name="meizitu" type="Python.DjangoServer" factoryName="Django server" singleton="false">
+    <configuration name="meizitu" type="Python.DjangoServer" factoryName="Django server" singleton="true">
       <module name="meizitu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,14 +179,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="meizitu.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\uku_k\PycharmProjects\ENVS\dytt_env\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="" />
+      <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -458,426 +276,163 @@
       <workItem from="1606451472562" duration="2002000" />
       <workItem from="1606453606073" duration="882000" />
       <workItem from="1606526080320" duration="12509000" />
-      <workItem from="1606565085542" duration="805000" />
+      <workItem from="1606565085542" duration="956000" />
+      <workItem from="1606653662259" duration="5357000" />
+      <workItem from="1606699389915" duration="11124000" />
+      <workItem from="1606735350615" duration="6819000" />
+      <workItem from="1606785837591" duration="12489000" />
+      <workItem from="1606809455669" duration="183000" />
+      <workItem from="1606825818653" duration="8527000" />
+      <workItem from="1606873735348" duration="11371000" />
+      <workItem from="1606907840196" duration="7071000" />
+      <workItem from="1606959413135" duration="3375000" />
+      <workItem from="1606999673325" duration="595000" />
+      <workItem from="1607431686146" duration="594000" />
+      <workItem from="1607570820498" duration="813000" />
+      <workItem from="1607652359051" duration="7815000" />
+      <workItem from="1607670888683" duration="6566000" />
+      <workItem from="1607835876859" duration="10842000" />
+      <workItem from="1607846811089" duration="1127000" />
+      <workItem from="1607849244503" duration="4097000" />
+      <workItem from="1608029621268" duration="716000" />
+      <workItem from="1608212374741" duration="987000" />
+      <workItem from="1608254933610" duration="5556000" />
+      <workItem from="1608780839786" duration="1872000" />
+      <workItem from="1608866505439" duration="2309000" />
+      <workItem from="1608950815390" duration="4943000" />
+      <workItem from="1610074497381" duration="38000" />
+      <workItem from="1610074551818" duration="250000" />
+      <workItem from="1610075595968" duration="624000" />
+      <workItem from="1610090637353" duration="595000" />
+      <workItem from="1610108881606" duration="388000" />
+      <workItem from="1610184367095" duration="1236000" />
+      <workItem from="1610264296391" duration="313000" />
+      <workItem from="1610271518577" duration="1139000" />
+      <workItem from="1610332192775" duration="3235000" />
+      <workItem from="1610349254566" duration="2450000" />
+      <workItem from="1610421015547" duration="8383000" />
+      <workItem from="1610674795329" duration="1255000" />
+      <workItem from="1610764679430" duration="15580000" />
+      <workItem from="1610790439793" duration="4924000" />
+      <workItem from="1610869636899" duration="13939000" />
+      <workItem from="1610933600567" duration="1008000" />
+      <workItem from="1610935209297" duration="23393000" />
+      <workItem from="1610970402630" duration="10326000" />
+      <workItem from="1611023861774" duration="1774000" />
+      <workItem from="1611046388116" duration="53000" />
+      <workItem from="1611046565181" duration="7865000" />
+      <workItem from="1611063209060" duration="3617000" />
+      <workItem from="1611068092287" duration="176000" />
+      <workItem from="1611068380163" duration="240000" />
+      <workItem from="1611105883348" duration="9506000" />
+      <workItem from="1611132233904" duration="19000" />
+      <workItem from="1611132384571" duration="1221000" />
+      <workItem from="1611136573162" duration="2235000" />
+      <workItem from="1611225934290" duration="4697000" />
+      <workItem from="1612175399472" duration="2124000" />
+      <workItem from="1612331901928" duration="994000" />
+      <workItem from="1612493841651" duration="7973000" />
+      <workItem from="1612686014478" duration="165000" />
+      <workItem from="1612686192652" duration="6156000" />
+      <workItem from="1613369157598" duration="986000" />
+      <workItem from="1613381977458" duration="3957000" />
+      <workItem from="1613620408202" duration="742000" />
+      <workItem from="1613703257946" duration="10932000" />
+      <workItem from="1613721450506" duration="16205000" />
+      <workItem from="1613785287129" duration="15533000" />
+      <workItem from="1613819764435" duration="598000" />
+      <workItem from="1613823598455" duration="4513000" />
+      <workItem from="1613994779104" duration="181000" />
+      <workItem from="1614046292819" duration="66000" />
+      <workItem from="1614046919444" duration="8029000" />
+      <workItem from="1614057650164" duration="12688000" />
+      <workItem from="1614073018971" duration="4655000" />
+      <workItem from="1614135567592" duration="3456000" />
+      <workItem from="1614418288155" duration="1047000" />
+      <workItem from="1614577328130" duration="10401000" />
+      <workItem from="1614594880352" duration="2037000" />
+      <workItem from="1614646529091" duration="597000" />
+      <workItem from="1614684641267" duration="2257000" />
+      <workItem from="1614733336561" duration="14447000" />
+      <workItem from="1614844039905" duration="129000" />
+      <workItem from="1614844185739" duration="874000" />
+      <workItem from="1615448625641" duration="604000" />
+      <workItem from="1615795708896" duration="41000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339267000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11567164" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2725322" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32832617" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21995708" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32939914" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
-      <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.27575108" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="4" weight="0.14285715" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11940298" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4549356" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32832617" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23365487" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32939914" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32939914" />
-      <window_info anchor="bottom" id="manage.py@meizitu" order="14" weight="0.46459228" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="4" weight="0.14285715" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/开发笔记.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="822">
-            <caret line="145" column="62" selection-start-line="145" selection-start-column="62" selection-end-line="145" selection-end-column="62" />
-            <folding>
-              <element signature="e#8#28#0" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/forms.py" />
-    <entry file="file://$PROJECT_DIR$/front/dist/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/lazyload.js" />
-    <entry file="file://$PROJECT_DIR$/front/dist/js/lazyload.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="1289" selection-start-line="1" selection-start-column="1289" selection-end-line="1" selection-end-column="1289" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_beauty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="95" column="84" selection-start-line="95" selection-start-column="84" selection-end-line="95" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/album/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_album.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="55" column="128" selection-start-line="55" selection-start-column="128" selection-end-line="55" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/beauty.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="e#366#1858#0" />
-            <element signature="e#1898#3062#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/dist/images/bg.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/beauty_album.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="121" column="35" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ENVS/dytt_env/Lib/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="1479" column="6" selection-start-line="1479" selection-start-column="6" selection-end-line="1479" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/dist/js/run_lazyload.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/run_lazyload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="84" column="60" lean-forward="true" selection-start-line="84" selection-start-column="60" selection-end-line="84" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/beauty/pic_show.html" />
-    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="872" column="4" selection-start-line="872" selection-start-column="4" selection-end-line="872" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/dist/js/0000.min.js" />
-    <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ENVS/dytt_env/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/es6/0000.js" />
-    <entry file="file://$PROJECT_DIR$/front/src/js/0000.js" />
-    <entry file="file://$PROJECT_DIR$/front/templates/beauty/tags_get_beauty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ENVS/dytt_env/Lib/site-packages/qcloud_cos/cos_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="3020" column="19" selection-start-line="3020" selection-start-column="8" selection-end-line="3020" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/index-bak2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meizitu/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="92" column="45" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/tags_get_album.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="140" selection-start-line="22" selection-start-column="140" selection-end-line="22" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/frontbase/album_tags.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/beauty_album.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1470">
-          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="69" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/mzauth/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/beauty/beauty_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="121" column="168" selection-start-line="121" selection-start-column="168" selection-end-line="121" selection-end-column="168" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_album_bak.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/beauty/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#2415#2875#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8841">
-          <caret line="434" column="15" selection-start-line="434" selection-start-column="15" selection-end-line="434" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_pic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="44" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/album/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="211" selection-start-line="211" selection-end-line="211" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/album/pic_show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="40" column="129" selection-start-line="40" selection-start-column="129" selection-end-line="40" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/album/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/manage_album_pic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2247">
-          <caret line="107" column="30" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirement.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/tencent_cos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/aliyun_oss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Deployment" timestamp="1612514742743">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Deployment/0.0.1920.1050@0.0.1920.1050" timestamp="1612514742743" />
+    <state x="605" y="213" key="#Options" timestamp="1612514732529">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="605" y="213" key="#Options/0.0.1920.1050@0.0.1920.1050" timestamp="1612514732529" />
+    <state x="536" y="170" key="#SSH_Configurations" timestamp="1612512389189">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="536" y="170" key="#SSH_Configurations/0.0.1920.1050@0.0.1920.1050" timestamp="1612512389189" />
+    <state x="754" y="310" key="#Web_Browsers" timestamp="1610340049663">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="754" y="310" key="#Web_Browsers/0.0.1920.1050@0.0.1920.1050" timestamp="1610340049663" />
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610372100384">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1610372100384" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614746642809">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1614746642809" />
+    <state x="818" y="271" key="EnvironmentVariablesDialog" timestamp="1610075912469">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="818" y="271" key="EnvironmentVariablesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1610075912469" />
+    <state x="411" y="240" key="FileChooserDialogImpl" timestamp="1614844437512">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="411" y="240" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1614844437512" />
+    <state width="1877" height="165" key="GridCell.Tab.0.bottom" timestamp="1615449730392">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615449730392" />
+    <state width="1877" height="165" key="GridCell.Tab.0.center" timestamp="1615449730392">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="165" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615449730392" />
+    <state width="1877" height="165" key="GridCell.Tab.0.left" timestamp="1615449730392">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="165" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615449730392" />
+    <state width="1877" height="165" key="GridCell.Tab.0.right" timestamp="1615449730392">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="165" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615449730392" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1610271861694">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1610271861694" />
+    <state x="661" y="233" width="598" height="584" key="find.popup" timestamp="1614071238288">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="661" y="233" width="598" height="584" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1614071238288" />
+    <state x="795" y="255" key="ftp.server.browser" timestamp="1612512662875">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="795" y="255" key="ftp.server.browser/0.0.1920.1050@0.0.1920.1050" timestamp="1612512662875" />
+    <state x="822" y="429" key="publish.login" timestamp="1612512311796">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="822" y="429" key="publish.login/0.0.1920.1050@0.0.1920.1050" timestamp="1612512311796" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1611114801452">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1611114801452" />
   </component>
   <component name="masterDetails">
     <states>

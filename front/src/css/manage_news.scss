@@ -1,0 +1,16 @@
+.tags {
+  button {
+	margin-bottom: 5px;
+  }
+  ul {
+	overflow: hidden;
+	padding-left: 0;
+	li {
+	  list-style: none;
+	  float: left;
+	  margin-left: 10px;
+	  padding-top: 5px;
+	  font-size: 14px;
+	}
+  }
+}

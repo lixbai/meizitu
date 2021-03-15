@@ -1,0 +1,52 @@
+{% extends 'cms/base.html' %}
+
+{% block head %}
+	<script src="{% static 'js/news_category.min.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+CMS news category
+{% endblock %}
+
+{% block content-header %}
+消息分类 NewsCategory
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-8">
+	<div class="card">
+              <div class="card-header">
+		        <button id="add-btn" class="btn btn-primary">新增标签</button>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th style="width: 10px">#</th>
+                      <th>标签名称</th>
+                      <th>对应news数量</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for news_category in news_categories %}
+			            <tr data-pk="{{ news_category.pk }}" data-tag="{{ news_category.name }}">
+	                      <td>{{ news_category.pk }}</td>
+	                      <td>{{ news_category.name }}</td>
+	                      <td>{{ news_category.news.all.count }}</td>
+	                      <td><button type="button" class="btn btn-sm btn-info edit_tag_btn">编辑</button>
+		                      <button type="button" class="btn btn-sm btn-danger delete_tag_btn">删除</button>
+	                      </td>
+                        </tr>
+	                {% endfor %}
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+</div>
+</div>
+{% endblock %}
