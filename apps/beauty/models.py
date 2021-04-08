@@ -6,6 +6,9 @@ from shortuuidfield import ShortUUIDField
 class BeautyTags(models.Model):
     tag = models.CharField(max_length=30)
 
+    def get_absolute_url(self):
+        return '/beauty/tags/%s'%(self.tag)
+
 
 #定义存放美女封面图片的路径
 #这里单独吧美女封面的路径为: /media/beauty/uid/xx.jpg
@@ -22,15 +25,15 @@ class Beauty(models.Model):
     # 主键用shortuuid来做,
     uid = ShortUUIDField(primary_key=True)
 
-    beauty_name = models.CharField(max_length=40)
-    age = models.CharField(max_length=20, null=True)
-    birthday = models.CharField(max_length=20, null=True)
-    country = models.CharField(max_length=50, null=True)
-    xingzuo = models.CharField(max_length=30, null=True)
-    tall = models.CharField(max_length=20, null=True)
-    weight = models.CharField(max_length=20, null=True)
+    beauty_name = models.CharField(max_length=50)
+    age = models.CharField(max_length=30, null=True)
+    birthday = models.CharField(max_length=30, null=True)
+    country = models.CharField(max_length=100, null=True)
+    xingzuo = models.CharField(max_length=40, null=True)
+    tall = models.CharField(max_length=30, null=True)
+    weight = models.CharField(max_length=30, null=True)
     sanwei = models.CharField(max_length=40, null=True)
-    job = models.CharField(max_length=30, null=True)
+    job = models.CharField(max_length=60, null=True)
     interested = models.CharField(max_length=100, null=True)
     detail = models.TextField(null=True)
     create_time = models.DateTimeField(auto_now_add=True)
@@ -45,7 +48,8 @@ class Beauty(models.Model):
     class Meta:
         ordering = ['-create_time']
 
-
     def get_uid(self):
-       return self.uid
+        return self.uid
 
+    def get_absolute_url(self):
+        return '/beauty/detail/%s/%s.html'%(self.uid, (self.beauty_name).replace('/', '-').replace(' ', '-'))

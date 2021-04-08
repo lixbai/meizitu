@@ -16,7 +16,7 @@
 	<div class="col-md-8">
 		<div class="card card-primary">
 			<div class="card-header">
-				<h3 class="card-title">资料填写表格</h3>
+				<h3 class="card-title">填写表格</h3>
 			</div>
 			<!-- /.card-header -->
 			<!-- form start -->
@@ -33,13 +33,13 @@
 						<div class="col-4">
 							<div class="form-group">
 								<label for="age">年龄</label>
-								<input type="text" class="form-control" id="age" placeholder="输入年龄" name="age" value="">
+								<input type="text" class="form-control" id="age" placeholder="输入年龄: 23" name="age" value="">
 							</div>
 						</div>
 						<div class="col-4">
 							<div class="form-group">
 								<label for="birthday">出生日</label>
-								<input type="text" class="form-control" id="birthday" name="birthday" value="">
+								<input type="text" class="form-control" id="birthday" placeholder="出生日: 1990-2-23" name="birthday" value="">
 							</div>
 						</div>
 					</div>
@@ -48,19 +48,19 @@
 						<div class="col-4">
 							<div class="form-group">
 								<label for="xingzuo">星座</label>
-								<input type="text" class="form-control" id="xingzuo" name="xingzuo" value="">
+								<input type="text" class="form-control" id="xingzuo" placeholder="星座: 双子座" name="xingzuo" value="">
 							</div>
 						</div>
 						<div class="col-4">
 							<div class="form-group">
 								<label for="tall">身高</label>
-								<input type="text" class="form-control" id="tall" name="tall" value="">
+								<input type="text" class="form-control" id="tall" placeholder="身高: 170cm" name="tall" value="">
 							</div>
 						</div>
 						<div class="col-4">
 							<div class="form-group">
 								<label for="weight">体重</label>
-								<input type="text" class="form-control" id="weight" name="weight" value="">
+								<input type="text" class="form-control" id="weight" placeholder="体重: 50KG" name="weight" value="">
 							</div>
 						</div>
 					</div>
@@ -69,26 +69,26 @@
 						<div class="col-4">
 							<div class="form-group">
 								<label for="sanwei">三围</label>
-								<input type="text" class="form-control" id="sanwei" name="sanwei" value="">
+								<input type="text" class="form-control" id="sanwei" placeholder="三围: 32D 23 33" name="sanwei" value="">
 							</div>
 						</div>
 						<div class="col-4">
 							<div class="form-group">
 								<label for="job">职业</label>
-								<input type="text" class="form-control" id="job" name="job" value="">
+								<input type="text" class="form-control" id="job" placeholder="职业: 模特" name="job" value="">
 							</div>
 						</div>
 						<div class="col-4">
 							<div class="form-group">
 								<label for="interested">兴趣爱好</label>
-								<input type="text" class="form-control" id="interested" name="interested" value="">
+								<input type="text" class="form-control" id="interested" placeholder="兴趣爱好: 游泳" name="interested" value="">
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="country">籍贯</label>
-						<input type="text" class="form-control" id="country" placeholder="出生地" name="country" value="">
+						<label for="country">出生地</label>
+						<input type="text" class="form-control" id="country" placeholder="出生地: 中国 上海" name="country" value="">
 					</div>
 
 					<div class="form-group">
@@ -100,19 +100,19 @@
 					<div class="col-12">
                       <!-- Select multiple-->
                       <div class="form-group">
-                        <label>标签</label>
-                        <select multiple="multiple" class="form-control overflow-auto" name="tags">
-	                        {% for tag in tags %}
-		                        <option value="{{ tag.pk }}" class="badge badge-success mr-1">{{ tag.tag }}</option>
-		                    {% endfor %}
-                        </select>
+                        <label>标签: </label>
+							{% for tag in tags %}
+								<span style="font-size: 13px" class="badge">
+									<input class="form-group" type="checkbox" name="tags" value="{{ tag.pk }}">{{ tag.tag }}
+								</span>
+							{% endfor %}
                       </div>
                     </div>
 					<div class="form-group">
 						<label for="coverImg">上传美女缩略图</label>
 						<div class="input-group">
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" id="coverImg" multiple="multiple" name="cover_img">
+								<input type="file" class="custom-file-input" id="coverImg" placeholder="美女主图" multiple="multiple" name="cover_img">
 								<label class="custom-file-label" for="coverImg">Choose file</label>
 							</div>
 
@@ -122,7 +122,7 @@
 				<!-- /.card-body -->
 
 				<div class="card-footer">
-					<button type="submit" class="btn btn-primary">提交</button>
+					<button type="submit" class="btn btn-primary float-right">提 交</button>
 				</div>
 			</form>
 		</div>

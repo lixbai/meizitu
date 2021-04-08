@@ -15,11 +15,11 @@ BeautyTags.prototype.listenAddTagsEvent = function(){
     //绑定点击事件
     addBtn.click(function () {
         //弹框出来一个添加的功能
-        xfzalert.alertOneInput({
+        m_alert.alertOneInput({
            'title': '请输入要添加的美女标签',
            'placeholder': '美女标签',
            'confirmCallback':function(inputValue){
-              xfzajax.post({
+              m_ajax.post({
                  'url':'/cms/write_beauty_tag/',
                  'data': {
                      'tag': $.trim(inputValue)
@@ -28,7 +28,7 @@ BeautyTags.prototype.listenAddTagsEvent = function(){
                      if(result['code']===200){
                          window.location.reload()
                      }else {
-                         xfzalert.close()
+                         m_alert.close()
                      }
                }
               })
@@ -50,15 +50,15 @@ BeautyTags.prototype.listenEditTagsEvent = function(){
         var tag = tr.attr('data-tag')
 
         //弹出框
-        xfzalert.alertOneInput({
+        m_alert.alertOneInput({
            'title': '请输入需要修改的值',
            'value': tag,
            'confirmCallback':function(inputValue){
                if(inputValue===tag){
-                   xfzalert.alertErrorToast('跟原来的值一样,不修改乱点什么!')
+                   m_alert.alertErrorToast('跟原来的值一样,不修改乱点什么!')
 
                }else{
-                   xfzajax.post({
+                   m_ajax.post({
                   'url': '/cms/edit_beauty_tag/',
                   'data':{
                       'pk':pk,
@@ -89,14 +89,14 @@ BeautyTags.prototype.listenDelTagsEvent = function(){
         var self = $(this)
         var tr = self.parent().parent()
         var pk = tr.attr('data-pk')
-        xfzajax.post({
+        m_ajax.post({
             'url':'/cms/delete_beauty_tag/',
             'data':{
                 'pk':pk
             },
             'success':function (result) {
                if(result['code']===200){
-                   xfzalert.alertSuccessToast('删除标签成功')
+                   m_alert.alertSuccessToast('删除标签成功')
                    window.location.reload()
                }
             }

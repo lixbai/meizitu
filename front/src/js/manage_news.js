@@ -14,13 +14,13 @@ ManageNews.prototype.listenAddTag = function () {
     var self = this;
     var addTagBtn = $('.add_tag_btn')
     addTagBtn.click(function () {
-        xfzalert.alertOneInput({
+        m_alert.alertOneInput({
             'title': '请输入要添加的文章标签',
             'placeholder': '文章标签',
             'confirmCallback': function (inputValue) {
                 var cleanValue = $.trim(inputValue)
                 // ajax存入数据库
-                xfzajax.post({
+                m_ajax.post({
                     'url': '/cms/news_add_tags/',
                     'data': {
                         'tag': cleanValue
@@ -52,7 +52,7 @@ ManageNews.prototype.listenAddTag = function () {
                                 console.log(tagArray)
                             }
 
-                            xfzalert.close()
+                            m_alert.close()
                         }
                     }
                 })
@@ -71,16 +71,16 @@ ManageNews.prototype.listenEditTag = function () {
         var editSpanBtn = self.parent().prev()
         var oldTagData = $.trim(editSpanBtn.text())
 
-        xfzalert.alertOneInput({
+        m_alert.alertOneInput({
             'title': '请输入新的标签',
             'value': oldTagData,
             'confirmCallback': function (inputValue) {
                 var cleanInputValue = $.trim(inputValue)
                 if (cleanInputValue === oldTagData) {
-                    xfzalert.alertErrorToast('跟原来的值一样,不修改乱点什么!')
+                    m_alert.alertErrorToast('跟原来的值一样,不修改乱点什么!')
                 } else {
                     // 发送给数据库
-                    xfzajax.post({
+                    m_ajax.post({
                         'url': '/cms/news_edit_tags/',
                         'data': {
                             'pk': editSpanBtn.attr('data-id'),
@@ -97,9 +97,9 @@ ManageNews.prototype.listenEditTag = function () {
                                 editSpanBtn.attr('data-id', pk)
                                 editSpanBtn.attr('code-id', code)
                                 editSpanBtn.text(tagData)
-                                xfzalert.close()
+                                m_alert.close()
                             } else {
-                                xfzalert.alertErrorToast(result['message'])
+                                m_alert.alertErrorToast(result['message'])
                             }
                         }
                     })
@@ -124,7 +124,7 @@ ManageNews.prototype.listenDelTag = function () {
         var pk = SpanBtn.attr('data-id')
         console.log(pk)
         if (SpanBtn.attr('code-id') === 1) {
-            xfzajax.post({
+            m_ajax.post({
                 'url': '/cms/news_del_tags/',
                 'data': {
                     'pk': pk
@@ -208,7 +208,7 @@ ManageNews.prototype.listenSubmitNews = function () {
 
         // $('body').on('click', '#submitBtn',function () {
         // 用ajax 进行上传到后台
-        xfzajax.post({
+        m_ajax.post({
             'url': '/cms/ajax_news_post/',
             'data': {
                 'title': title,
@@ -221,7 +221,7 @@ ManageNews.prototype.listenSubmitNews = function () {
             },
             'success': function (result) {
                 if (result['code'] === 200) {
-                    xfzalert.alertSuccessToast('发布成功！',function () {
+                    m_alert.alertSuccessToast('发布成功！',function () {
                         window.location.reload()
                     })
                 }

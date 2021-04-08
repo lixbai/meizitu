@@ -40,11 +40,9 @@ urlpatterns = [
     path('write_news/', views.WriteNews.as_view(), name='write_news'),
     path('ajax_news_post/', views.ajax_news_post, name='ajax_news_post'),
 
-    # 处理广告ad
-    path('write_ad/', views.WriteAdView.as_view(), name='write_ad'),
 
     #news上传图片用到的.
-    # path('upload_files/', views.upload_files, name='upload_files'),
-    path('upload_cloud_files/', views.aliyun_oss_tencent_cos_local_upload_files, name='upload_cloud_files'),
+    path('upload_files/', views.upload_files, name='upload_files'),
+    # path('upload_cloud_files/', views.aliyun_oss_tencent_cos_local_upload_files, name='upload_cloud_files'),
 
 ]

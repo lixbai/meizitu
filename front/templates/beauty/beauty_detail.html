@@ -1,10 +1,27 @@
 {% extends 'frontbase/base.html' %}
-
+{% block title %}
+	<title>{{ beauty.beauty_name }}的详细资料</title>
+{% endblock %}
+{% block meta_tag %}
+	<meta name="keywords" content="{{ beauty.beauty_name }}">
+	<meta name="description" content="{{ beauty.detail }}">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="meizitu.com-妹子图官网首页">
+	<meta property="og:description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:site_name" content="妹子图 妹子图官网首页 女神图片 美女图片 人体艺术">
+	<meta property="og:updated_time" content="{{ beauty.create_time }}">
+	<meta property="article:section" content="meizitu.com-妹子图官网首页">
+	<meta property="article:published_time" content="{{ beauty.create_time }}">
+	<meta property="article:modified_time" content="{{ beauty.modify_time }}">
+	<meta property="twitter:description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="twitter:title" content="meizitu.com-妹子图官网首页">
+{% endblock %}
 {% block head %}
+	<link rel="canonical" href="{{ url }}">
     <link rel="stylesheet" href="{% static 'css/beauty_detail.min.css' %}">
 {% endblock %}
-
-{% block title %}女神详细资料{% endblock %}
 
 {% block main %}
     <!-- 内容区 开始 -->
@@ -22,7 +39,7 @@
                 <div class="article_content p-3">
                     <div class="row person_info rounder d-flex flex-column">
                         <div class="col-12 p-3 beauty_header justify-content-between">
-                            <p class="pl-2 font-weight-bold btn btn-warning">{{ beauty.beauty_name }} </p>
+                            <h2 class="pl-2 font-weight-bold btn btn-warning">{{ beauty.beauty_name }} </h2>
                             <p class="pr-2 btn btn-primary float-right">个人百科词条</p>
                         </div>
                         <div class="mt-3 d-flex flex-row info">
@@ -116,12 +133,12 @@
 	                    {% for beauty_album in beauty_albums %}
 		                    <div class="img_display col-6 col-sm-4 col-lg-4 mb-2">
 	                            <div class="thumbnail">
-	                                <a class="imgs_link" href="{% url 'album:show_pic' beauty_album.uid %}">
+	                                <a class="imgs_link" href="{{ beauty_album.get_absolute_url }}">
 	                                    <img class="lazyload border border-secondary" src="" data-src="{{ url }}{{ beauty_album.cover_img }}" alt="{{ beauty.beauty_name }}">
 	                                </a>
 	                                <div class="imgs_title">
 	                                    <h2 class="title_height">
-	                                        <a class="text-dark" href="{% url 'album:show_pic' beauty_album.uid %}">{{ beauty_album.title }}</a>
+	                                        <a class="text-dark" href="{{ beauty_album.get_absolute_url }}">{{ beauty_album.title }}</a>
 	                                    </h2>
 	                                </div>
 	                            </div>

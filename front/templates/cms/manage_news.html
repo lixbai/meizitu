@@ -1,7 +1,7 @@
 {% extends 'cms/base.html' %}
 
 {% block title %}
-News 消息管理
+News 发布新闻
 {% endblock %}
 
 {% block head %}
@@ -14,7 +14,7 @@ News 消息管理
 {% endblock %}
 
 {% block content-header %}
-News 消息管理
+News 管理
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@ News 消息管理
 			<!-- general form elements -->
 			<div class="card card-primary">
 				<div class="card-header">
-					<h3 class="card-title">新增消息</h3>
+					<h3 class="card-title">新增 News</h3>
 				</div>
 				<!-- /.card-header -->
 				<!-- form start -->
@@ -46,12 +46,12 @@ News 消息管理
 						</div>
 
 						<div class="form-group">
-							<label for="desc">消息简短描述</label>
+							<label for="desc">新闻简短描述</label>
 							<input type="text" class="form-control" id="desc" name="desc" placeholder="可以为空！">
 						</div>
 
 						<div class="form-group">
-							<label for="tags">文章标签</label>
+							<label for="tags">新闻标签</label>
 							<div class="tags">
 								<button type="button" class="btn btn-info ml-2 add_tag_btn">添加标签</button>
 								<div class="add_cut_html" style="display: none">
@@ -71,8 +71,7 @@ News 消息管理
 
 						<div class="form-group">
 							<label for="content">内容</label>
-{#							<textarea name="content" id="content" rows="3" class="form-control" placeholder="不能为空！"></textarea>#}
-							<script id="editor" name="content" type="text/plain">这里写你的初始化内容</script>
+							<script id="editor" name="content" type="text/plain">这里写你的内容</script>
 						</div>
 
 						<div class="form-group">
@@ -85,7 +84,6 @@ News 消息管理
 								</span>
 							</div>
 						</div>
-
 					</div>
 					<!-- /.card-body -->
 

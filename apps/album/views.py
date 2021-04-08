@@ -5,33 +5,32 @@ from apps.beauty.models import BeautyTags
 from django.conf import settings
 from django.views.generic import View
 from django.core.paginator import Paginator
-from utils.aliyun_oss import a_prefix_url
-from utils.tencent_cos import t_prefix_url
+# from utils.aliyun_oss import a_prefix_url
+# from utils.tencent_cos import t_prefix_url
 import random
+import json
 from django.utils import timezone
 from rest_framework.views import APIView
 from utils.throttle import VisitThrottle
-from rest_framework.renderers import JSONRenderer
+from rest_framework.renderers import JSONRenderer,TemplateHTMLRenderer
+
 # album 主页
 class AlbumsView(APIView):
-
     #这里做限流措施
     throttle_classes = [VisitThrottle,]
     renderer_classes = [JSONRenderer]
 
     def get(self, request):
         page = int (request.GET.get ('p', 1))
-
         try:
             albums = Album.objects.all()
         except:
             return render(request, '404.html')
-        url = request.build_absolute_uri (settings.MEDIA_URL)
+        pre_url = request.build_absolute_uri (settings.MEDIA_URL)
 
         # 你可以感兴趣的功能 开始
         random_day = timezone.now() + timezone.timedelta(days=random.randint(-16, -8))
         random_albums = albums.filter(create_time__lt=random_day)[0:5]
-
         # 你可以感兴趣的功能 结束
 
         #做分页处理
@@ -45,14 +44,13 @@ class AlbumsView(APIView):
             'page_obj': page_obj,
             'paginator': paginator,
 
-            'url': url,
-            'a_prefix_url': a_prefix_url,
-            't_prefix_url': t_prefix_url,
-
+            'url': pre_url,
+            # 'a_prefix_url': a_prefix_url,
+            # 't_prefix_url': t_prefix_url,
             'random_albums':random_albums
         }
         context.update(context_data)
-        return render (request, 'album/beauty_album.html', context=context)
+        return render (request, 'album/album.html', context=context)
 
     def get_pagination_data(self,paginator,page_obj,around_count=2):
         current_page = page_obj.number
@@ -107,19 +105,21 @@ class AlbumsView(APIView):
 # 根据传递进来的tag,获取关联的图集album
 class TagGetAlbumView(APIView):
     throttle_classes = [VisitThrottle,]
-    def get(self, request, tag, *args, **kwargs):
+    renderer_classes = [JSONRenderer]
+    def get(self, request, *args, **kwargs):
         #获取传递进来的分页的标志,默认第一页
+        tag = kwargs['tag']
         page = int(request.GET.get('p', 1))
 
         try:
-            albumtag = AlbumTags.objects.prefetch_related('album_tags').get(pk=tag)
+            albumtag = AlbumTags.objects.prefetch_related('album_tags').get(tag=tag)
         except:
             return render(request, '404.html')
         # albumtag = AlbumTags.objects.get(pk=tag)
         # 根据albumTags的实例对象，查找管理的album对象，manytomany的关系
         albums = albumtag.album_tags.all()
 
-        url = request.build_absolute_uri(settings.MEDIA_URL)
+        pre_url = request.build_absolute_uri(settings.MEDIA_URL)
 
         # 你可能感兴趣的功能开始
         ctime = timezone.now()
@@ -140,7 +140,7 @@ class TagGetAlbumView(APIView):
             'albums': page_obj.object_list,
             'page_obj': page_obj,
             'paginator': paginator,
-            'url':url,
+            'url':pre_url,
 
             'random_albums':random_albums
         }
@@ -179,14 +179,15 @@ class TagGetAlbumView(APIView):
 
 
 # 点击就可以察看到pic_html
-class ShowPicView(View):
+class ShowPicView(APIView):
     throttle_classes = [VisitThrottle,]
-    def get(self, request, uid, *args, **kwargs):
+    renderer_classes = [JSONRenderer]
+    def get(self, request, *args, **kwargs):
         # 根据uid 可以查到album中的数据,同时还可以查到pic表中的数据,因为这个uid在两个表中都存在
-
+        uid = kwargs['uid']
         # 1,先差album, 把其中需要传递的数据先拿出来
         try:
-            album = Album.objects.prefetch_related ('tags', 'pic').get (pk=uid)
+            album = Album.objects.prefetch_related ('tags', 'pic').get(pk=uid)
             # tags = album.tags.all()
             pics = album.pic.all().order_by('pk')
         except:
@@ -196,13 +197,13 @@ class ShowPicView(View):
         # 获取传递进来的分页的标志,默认第一页
         page = int (request.GET.get ('p', 1))
         # 做分页处理
-        paginator = Paginator (pics, 4)
+        paginator = Paginator (pics, 5)
         page_obj = paginator.page (page)
         # 例用这个函数处理分页
         context_data = self.get_pagination_data (paginator, page_obj)
         # 分页功能代码结束
 
-        url = request.build_absolute_uri (settings.MEDIA_URL)
+        pre_url = request.build_absolute_uri (settings.MEDIA_URL)
 
         '''
          点击 换一组的功能开始，这里用随机的功能吧
@@ -224,8 +225,8 @@ class ShowPicView(View):
             'pics': page_obj.object_list,
             'page_obj': page_obj,
             'paginator': paginator,
-            'url': url,
-            't_prefix_url': t_prefix_url,
+            'url': pre_url,
+            # 't_prefix_url': t_prefix_url,
 
             'random_albums': random_albums,
         }

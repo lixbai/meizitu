@@ -28,8 +28,8 @@ News.prototype.listenUploadFilesEvent = function(){
         formData.append('file', file) //注意这个里面的参数第一个'file'是和view函数里面接收的是一样的.
 
         //封装file完成之后,调用Ajax超后台发送
-        xfzajax.post({
-            'url': '/cms/upload_cloud_files/',
+        m_ajax.post({
+            'url': '/cms/upload_files/',
             'data':formData, //这里直接传递我们上面封装好的formData就可以了,因为那个需要上传的文件就在formData中
             //下面两个需要传递的参数,一定要写,不屑不成功
             'processData': false,
@@ -38,12 +38,10 @@ News.prototype.listenUploadFilesEvent = function(){
             'success': function(result){
                 if(result['code']===200){
                     window.messageBox.showSuccess('上传图片成功！')
-                    url = result['data']['aliyun_url']
+                    url = result['data']['url']
                     console.log(url)
                     var url_btn = $('#thumbnail')
                     url_btn.val(url)
-
-
                 }
             }
         })

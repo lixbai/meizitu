@@ -1,6 +1,5 @@
 from apps.forms_errors import FormErrorMixin
 from django import forms
-from apps.beauty.models import Beauty
 
 class AlbumTagsForm(forms.Form):
     pk = forms.IntegerField(error_messages={'required':'必须传入主键'})

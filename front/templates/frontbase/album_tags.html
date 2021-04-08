@@ -1,216 +1,214 @@
 <div class="container border mt-3" id="tags">
         <div class="row">
-            <p class="text-dark">个性标签 - {{   tag_chosen|default:'最新' }}</p>
+            <p class="text-dark">个性标签 - {{ tag_chosen|default:'最新' }}</p>
             <ul class="tags_1">
                 <li class="manytags">
-                    <a href="{% url 'album:tags' tag=1 %}" class="badge badge-pill badge-success ">沙滩</a>
-                    <a href="{% url 'album:tags' tag=2 %}" class="badge badge-pill badge-success ">泳池</a>
-                    <a href="{% url 'album:tags' tag=3 %}" class="badge badge-pill badge-success ">户外</a>
-                    <a href="{% url 'album:tags' tag=4 %}" class="badge badge-pill badge-success badge-warning ">街拍</a>
-                    <a href="{% url 'album:tags' tag=5 %}" class="badge badge-pill badge-success badge-warning ">家居</a>
-                    <a href="{% url 'album:tags' tag=6 %}" class="badge badge-pill badge-success badge-warning ">圣诞</a>
-                    <a href="{% url 'album:tags' tag=7 %}" class="badge badge-pill badge-success badge-warning ">春节</a>
-                    <a href="{% url 'album:tags' tag=8 %}" class="badge badge-pill badge-success badge-warning ">沙漠</a>
-                    <a href="{% url 'album:tags' tag=9 %}" class="badge badge-pill badge-success badge-warning ">私房照</a>
-                    <a href="{% url 'album:tags' tag=10 %}" class="badge badge-pill badge-success badge-warning ">浴室</a>
-                    <a href="{% url 'album:tags' tag=11 %}" class="badge badge-pill badge-success badge-warning ">浴缸</a>
-                    <a href="{% url 'album:tags' tag=12 %}" class="badge badge-pill badge-success badge-warning ">温泉</a>
-                    <a href="{% url 'album:tags' tag=13 %}" class="badge badge-pill badge-success badge-warning ">雪地</a>
+                    <a href="{% url 'album:tags' tag='沙滩' %}" class="badge badge-pill badge-success ">沙滩</a>
+                    <a href="{% url 'album:tags' tag='泳池' %}" class="badge badge-pill badge-success ">泳池</a>
+                    <a href="{% url 'album:tags' tag='户外' %}" class="badge badge-pill badge-success ">户外</a>
+                    <a href="{% url 'album:tags' tag='街拍' %}" class="badge badge-pill badge-success badge-warning ">街拍</a>
+                    <a href="{% url 'album:tags' tag='家居' %}" class="badge badge-pill badge-success badge-warning ">家居</a>
+                    <a href="{% url 'album:tags' tag='圣诞' %}" class="badge badge-pill badge-success badge-warning ">圣诞</a>
+                    <a href="{% url 'album:tags' tag='春节' %}" class="badge badge-pill badge-success badge-warning ">春节</a>
+                    <a href="{% url 'album:tags' tag='沙漠' %}" class="badge badge-pill badge-success badge-warning ">沙漠</a>
+                    <a href="{% url 'album:tags' tag='私房照' %}" class="badge badge-pill badge-success badge-warning ">私房照</a>
+                    <a href="{% url 'album:tags' tag='浴室' %}" class="badge badge-pill badge-success badge-warning ">浴室</a>
+                    <a href="{% url 'album:tags' tag='浴缸' %}" class="badge badge-pill badge-success badge-warning ">浴缸</a>
+                    <a href="{% url 'album:tags' tag='温泉' %}" class="badge badge-pill badge-success badge-warning ">温泉</a>
+                    <a href="{% url 'album:tags' tag='雪地' %}" class="badge badge-pill badge-success badge-warning ">雪地</a>
                 </li>
                 <li class="manytags">
-                    <a href=" " class="badge badge-pill badge-success ">萝莉</a>
-                    <a href=" " class="badge badge-pill badge-success ">空姐</a>
-                    <a href=" " class="badge badge-pill badge-success ">女神</a>
-                    <a href=" " class="badge badge-pill badge-success ">护士</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">秘书</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">女兵</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">警花</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">厨娘</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">教师</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">女仆</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">尤物</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">姐妹花</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning">娇小萝莉</a>
+                    <a href="{% url 'album:tags' tag='萝莉' %}" class="badge badge-pill badge-success ">萝莉</a>
+                    <a href="{% url 'album:tags' tag='空姐' %}" class="badge badge-pill badge-success ">空姐</a>
+                    <a href="{% url 'album:tags' tag='女神' %}" class="badge badge-pill badge-success ">女神</a>
+                    <a href="{% url 'album:tags' tag='护士' %}" class="badge badge-pill badge-success ">护士</a>
+                    <a href="{% url 'album:tags' tag='秘书' %}" class="badge badge-pill badge-success badge-warning">秘书</a>
+                    <a href="{% url 'album:tags' tag='女兵' %}" class="badge badge-pill badge-success badge-warning">女兵</a>
+                    <a href="{% url 'album:tags' tag='警花' %}" class="badge badge-pill badge-success badge-warning">警花</a>
+                    <a href="{% url 'album:tags' tag='厨娘' %}" class="badge badge-pill badge-success badge-warning">厨娘</a>
+                    <a href="{% url 'album:tags' tag='教师' %}" class="badge badge-pill badge-success badge-warning">教师</a>
+                    <a href="{% url 'album:tags' tag='女仆' %}" class="badge badge-pill badge-success badge-warning">女仆</a>
+                    <a href="{% url 'album:tags' tag='尤物' %}" class="badge badge-pill badge-success badge-warning">尤物</a>
+                    <a href="{% url 'album:tags' tag='姐妹花' %}" class="badge badge-pill badge-success badge-warning">姐妹花</a>
+                    <a href="{% url 'album:tags' tag='娇小萝莉' %}" class="badge badge-pill badge-success badge-warning">娇小萝莉</a>
                 </li>
                 <li class="manytags_special">
-                    <a href=" " class="badge badge-pill badge-success ">湿身</a>
-                    <a href=" " class="badge badge-pill badge-success ">蜜桃臀</a>
-                    <a href=" " class="badge badge-pill badge-success">骨感</a>
-                    <a href=" " class="badge badge-pill badge-success">极品</a>
-                    <a href=" " class="badge badge-pill badge-success">美腿</a>
-                    <a href=" " class="badge badge-pill badge-success">波涛胸涌</a>
-                    <a href=" " class="badge badge-pill badge-success">人间胸器</a>
-                    <a href=" " class="badge badge-pill badge-success">童颜巨乳</a>
-                    <a href=" " class="badge badge-pill badge-success">肉感</a>
-                    <a href=" " class="badge badge-pill badge-success">白嫩</a>
-                    <a href=" " class="badge badge-pill badge-success">美臀</a>
-                    <a href=" " class="badge badge-pill badge-success">玉足</a>
-                    <a href=" " class="badge badge-pill badge-success">丁字裤</a>
-                    <a href=" " class="badge badge-pill badge-success">黑丝</a>
-                    <a href=" " class="badge badge-pill badge-success">高跟鞋</a>
-                    <a href=" " class="badge badge-pill badge-success">丝袜</a>
-                    <a href=" " class="badge badge-pill badge-success">旗袍</a>
-                    <a href=" " class="badge badge-pill badge-success">制服</a>
-                    <a href=" " class="badge badge-pill badge-success">角色扮演</a>
-                    <a href=" " class="badge badge-pill badge-success">香肩</a>
-                    <a href=" " class="badge badge-pill badge-success">玉背</a>
-                    <a href=" " class="badge badge-pill badge-success">肚兜</a>
-                    <a href=" " class="badge badge-pill badge-success">汉服</a>
-                    <a href=" " class="badge badge-pill badge-success">和服</a>
-                    <a href=" " class="badge badge-pill badge-success">比基尼</a>
-                    <a href=" " class="badge badge-pill badge-success">内衣</a>
-                    <a href=" " class="badge badge-pill badge-success">校服</a>
-                    <a href=" " class="badge badge-pill badge-success">眼镜</a>
-                    <a href=" " class="badge badge-pill badge-success">水手服</a>
-                    <a href=" " class="badge badge-pill badge-success">开背毛衣</a>
-                    <a href=" " class="badge badge-pill badge-success">小麦色</a>
-                    <a href=" " class="badge badge-pill badge-success">双马尾</a>
-                    <a href=" " class="badge badge-pill badge-success">纹身</a>
+                    <a href="{% url 'album:tags' tag='湿身' %}" class="badge badge-pill badge-success ">湿身</a>
+                    <a href="{% url 'album:tags' tag='蜜桃臀' %}" class="badge badge-pill badge-success ">蜜桃臀</a>
+                    <a href="{% url 'album:tags' tag='骨感' %}" class="badge badge-pill badge-success">骨感</a>
+                    <a href="{% url 'album:tags' tag='极品' %}" class="badge badge-pill badge-success">极品</a>
+                    <a href="{% url 'album:tags' tag='美腿' %}" class="badge badge-pill badge-success">美腿</a>
+                    <a href="{% url 'album:tags' tag='波涛胸涌' %}" class="badge badge-pill badge-success">波涛胸涌</a>
+                    <a href="{% url 'album:tags' tag='人间胸器' %}" class="badge badge-pill badge-success">人间胸器</a>
+                    <a href="{% url 'album:tags' tag='童颜巨乳' %}" class="badge badge-pill badge-success">童颜巨乳</a>
+                    <a href="{% url 'album:tags' tag='肉感' %}" class="badge badge-pill badge-success">肉感</a>
+                    <a href="{% url 'album:tags' tag='白嫩' %}" class="badge badge-pill badge-success">白嫩</a>
+                    <a href="{% url 'album:tags' tag='美臀' %}" class="badge badge-pill badge-success">美臀</a>
+                    <a href="{% url 'album:tags' tag='玉足' %}" class="badge badge-pill badge-success">玉足</a>
+                    <a href="{% url 'album:tags' tag='丁字裤' %}" class="badge badge-pill badge-success">丁字裤</a>
+                    <a href="{% url 'album:tags' tag='黑丝' %}" class="badge badge-pill badge-success">黑丝</a>
+                    <a href="{% url 'album:tags' tag='高跟鞋' %}" class="badge badge-pill badge-success">高跟鞋</a>
+                    <a href="{% url 'album:tags' tag='丝袜' %}" class="badge badge-pill badge-success">丝袜</a>
+                    <a href="{% url 'album:tags' tag='旗袍' %}" class="badge badge-pill badge-success">旗袍</a>
+                    <a href="{% url 'album:tags' tag='制服' %}" class="badge badge-pill badge-success">制服</a>
+                    <a href="{% url 'album:tags' tag='角色扮演' %}" class="badge badge-pill badge-success">角色扮演</a>
+                    <a href="{% url 'album:tags' tag='香肩' %}" class="badge badge-pill badge-success">香肩</a>
+                    <a href="{% url 'album:tags' tag='玉背' %}" class="badge badge-pill badge-success">玉背</a>
+                    <a href="{% url 'album:tags' tag='肚兜' %}" class="badge badge-pill badge-success">肚兜</a>
+                    <a href="{% url 'album:tags' tag='汉服' %}" class="badge badge-pill badge-success">汉服</a>
+                    <a href="{% url 'album:tags' tag='和服' %}" class="badge badge-pill badge-success">和服</a>
+                    <a href="{% url 'album:tags' tag='比基尼' %}" class="badge badge-pill badge-success">比基尼</a>
+                    <a href="{% url 'album:tags' tag='内衣' %}" class="badge badge-pill badge-success">内衣</a>
+                    <a href="{% url 'album:tags' tag='校服' %}" class="badge badge-pill badge-success">校服</a>
+                    <a href="{% url 'album:tags' tag='眼镜' %}" class="badge badge-pill badge-success">眼镜</a>
+                    <a href="{% url 'album:tags' tag='水手服' %}" class="badge badge-pill badge-success">水手服</a>
+                    <a href="{% url 'album:tags' tag='开背毛衣' %}" class="badge badge-pill badge-success">开背毛衣</a>
+                    <a href="{% url 'album:tags' tag='小麦色' %}" class="badge badge-pill badge-success">小麦色</a>
+                    <a href="{% url 'album:tags' tag='双马尾' %}" class="badge badge-pill badge-success">双马尾</a>
+                    <a href="{% url 'album:tags' tag='纹身' %}" class="badge badge-pill badge-success">纹身</a>
                 </li>
                 <li class="manytags">
-                    <a href=" " class="badge badge-pill badge-success ">清新</a>
-                    <a href=" " class="badge badge-pill badge-success ">萌系</a>
-                    <a href=" " class="badge badge-pill badge-success ">治愈系</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">清纯</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">气质</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">性感</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">冷艳</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">野性</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">诱惑</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">养眼</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">大尺度</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">妩媚</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">成熟</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">可爱</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">运动</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">知性</a>
-                    <a href=" " class="badge badge-pill badge-success badge-warning ">非主流</a>
-
+                    <a href="{% url 'album:tags' tag='清新' %}" class="badge badge-pill badge-success ">清新</a>
+                    <a href="{% url 'album:tags' tag='萌系' %}" class="badge badge-pill badge-success ">萌系</a>
+                    <a href="{% url 'album:tags' tag='治愈系' %}" class="badge badge-pill badge-success ">治愈系</a>
+                    <a href="{% url 'album:tags' tag='清纯' %}" class="badge badge-pill badge-success badge-warning ">清纯</a>
+                    <a href="{% url 'album:tags' tag='气质' %}" class="badge badge-pill badge-success badge-warning ">气质</a>
+                    <a href="{% url 'album:tags' tag='性感' %}" class="badge badge-pill badge-success badge-warning ">性感</a>
+                    <a href="{% url 'album:tags' tag='冷艳' %}" class="badge badge-pill badge-success badge-warning ">冷艳</a>
+                    <a href="{% url 'album:tags' tag='野性' %}" class="badge badge-pill badge-success badge-warning ">野性</a>
+                    <a href="{% url 'album:tags' tag='诱惑' %}" class="badge badge-pill badge-success badge-warning ">诱惑</a>
+                    <a href="{% url 'album:tags' tag='养眼' %}" class="badge badge-pill badge-success badge-warning ">养眼</a>
+                    <a href="{% url 'album:tags' tag='大尺度' %}" class="badge badge-pill badge-success badge-warning ">大尺度</a>
+                    <a href="{% url 'album:tags' tag='妩媚' %}" class="badge badge-pill badge-success badge-warning ">妩媚</a>
+                    <a href="{% url 'album:tags' tag='成熟' %}" class="badge badge-pill badge-success badge-warning ">成熟</a>
+                    <a href="{% url 'album:tags' tag='可爱' %}" class="badge badge-pill badge-success badge-warning ">可爱</a>
+                    <a href="{% url 'album:tags' tag='运动' %}" class="badge badge-pill badge-success badge-warning ">运动</a>
+                    <a href="{% url 'album:tags' tag='知性' %}" class="badge badge-pill badge-success badge-warning ">知性</a>
+                    <a href="{% url 'album:tags' tag='非主流' %}" class="badge badge-pill badge-success badge-warning ">非主流</a>
                 </li>
             </ul>
             <ul class="tags_2 ">
                 <li class="tuijiguidang ">
                     <span class="badge badge-danger ">图集归档</span><br>
-                    <a href=" ">雅拉伊</a>
-                    <a href=" ">阳光宝贝</a>
-                    <a href=" ">秀人网</a>
-                    <a href=" ">美媛馆</a>
-                    <a href=" ">爱蜜社</a>
-                    <a href=" ">魅妍社</a>
-                    <a href=" ">模范学院</a>
-                    <a href=" ">尤蜜荟</a>
-                    <a href=" ">蜜桃社</a>
-                    <a href=" ">尤物馆</a>
-                    <a href=" ">御女郎</a>
-                    <a href=" ">嗲囡囡</a>
-                    <a href=" ">瑞丝馆 (猫萌榜)</a>
-                    <a href=" ">网红馆(糖果画报)</a>
-                    <a href=" ">优星馆</a>
-                    <a href=" ">影私荟</a>
-                    <a href=" ">语画界</a>
-                    <a href=" ">花の颜</a>
-                    <a href=" ">星乐园</a>
-                    <a href=" ">顽味生活</a>
-                    <a href=" ">花漾</a>
-                    <a href=" ">星颜社</a>
-                    <a href=" ">尤果网</a>
-                    <a href=" ">尤果圈</a>
-                    <a href=" ">优果网</a>
-                    <a href=" ">推女神</a>
-                    <a href=" ">推女郎</a>
-                    <a href=" ">波萝社</a>
-                    <a href=" ">激萌文化</a>
-                    <a href=" ">兔几盟</a>
-                    <a href=" ">青豆客</a>
-                    <a href=" ">果团网</a>
-                    <a href=" ">熊川纪信</a>
-                    <a href=" ">熊薄荷叶</a>
-                    <a href=" ">头条女神</a>
-                    <a href=" ">飞图网</a>
-                    <a href=" ">尤美</a>
-                    <a href=" ">蜜团女孩</a>
-                    <a href=" ">蜜丝</a>
-                    <a href=" ">轰趴猫</a>
-                    <a href=" ">猎女神</a>
-                    <a href=" ">克拉女神</a>
-                    <a href=" ">51modo</a>
-                    <a href=" ">RQ-STAR</a>
-                    <a href=" ">YS-Web</a>
-                    <a href=" ">DGC</a>
-                    <a href=" ">Bomb.tv</a>
-                    <a href=" ">@misty</a>
-                    <a href=" ">Sabra.net</a>
-                    <a href=" ">4K-STAR</a>
+                    <a href="{% url 'album:tags' tag='雅拉伊' %}">雅拉伊</a>
+                    <a href="{% url 'album:tags' tag='阳光宝贝' %}">阳光宝贝</a>
+                    <a href="{% url 'album:tags' tag='秀人网' %}">秀人网</a>
+                    <a href="{% url 'album:tags' tag='美媛馆' %}">美媛馆</a>
+                    <a href="{% url 'album:tags' tag='爱蜜社' %}">爱蜜社</a>
+                    <a href="{% url 'album:tags' tag='魅妍社' %}">魅妍社</a>
+                    <a href="{% url 'album:tags' tag='模范学院' %}">模范学院</a>
+                    <a href="{% url 'album:tags' tag='尤蜜荟' %}">尤蜜荟</a>
+                    <a href="{% url 'album:tags' tag='蜜桃社' %}">蜜桃社</a>
+                    <a href="{% url 'album:tags' tag='尤物馆' %}">尤物馆</a>
+                    <a href="{% url 'album:tags' tag='御女郎' %}">御女郎</a>
+                    <a href="{% url 'album:tags' tag='嗲囡囡' %}">嗲囡囡</a>
+                    <a href="{% url 'album:tags' tag='瑞丝馆(猫萌榜)' %}">瑞丝馆(猫萌榜)</a>
+                    <a href="{% url 'album:tags' tag='网红馆(糖果画报)' %}">网红馆(糖果画报)</a>
+                    <a href="{% url 'album:tags' tag='优星馆' %}">优星馆</a>
+                    <a href="{% url 'album:tags' tag='影私荟' %}">影私荟</a>
+                    <a href="{% url 'album:tags' tag='语画界' %}">语画界</a>
+                    <a href="{% url 'album:tags' tag='花の颜' %}">花の颜</a>
+                    <a href="{% url 'album:tags' tag='星乐园' %}">星乐园</a>
+                    <a href="{% url 'album:tags' tag='顽味生活' %}">顽味生活</a>
+                    <a href="{% url 'album:tags' tag='花漾' %}">花漾</a>
+                    <a href="{% url 'album:tags' tag='星颜社' %}">星颜社</a>
+                    <a href="{% url 'album:tags' tag='尤果网' %}">尤果网</a>
+                    <a href="{% url 'album:tags' tag='尤果圈' %}">尤果圈</a>
+                    <a href="{% url 'album:tags' tag='优果网' %}">优果网</a>
+                    <a href="{% url 'album:tags' tag='推女神' %}">推女神</a>
+                    <a href="{% url 'album:tags' tag='推女郎' %}">推女郎</a>
+                    <a href="{% url 'album:tags' tag='波萝社' %}">波萝社</a>
+                    <a href="{% url 'album:tags' tag='激萌文化' %}">激萌文化</a>
+                    <a href="{% url 'album:tags' tag='兔几盟' %}">兔几盟</a>
+                    <a href="{% url 'album:tags' tag='青豆客' %}">青豆客</a>
+                    <a href="{% url 'album:tags' tag='果团网' %}">果团网</a>
+                    <a href="{% url 'album:tags' tag='熊川纪信' %}">熊川纪信</a>
+                    <a href="{% url 'album:tags' tag='熊薄荷叶' %}">熊薄荷叶</a>
+                    <a href="{% url 'album:tags' tag='头条女神' %}">头条女神</a>
+                    <a href="{% url 'album:tags' tag='飞图网' %}">飞图网</a>
+                    <a href="{% url 'album:tags' tag='尤美' %}">尤美</a>
+                    <a href="{% url 'album:tags' tag='蜜团女孩' %}">蜜团女孩</a>
+                    <a href="{% url 'album:tags' tag='蜜丝' %}">蜜丝</a>
+                    <a href="{% url 'album:tags' tag='轰趴猫' %}">轰趴猫</a>
+                    <a href="{% url 'album:tags' tag='猎女神' %}">猎女神</a>
+                    <a href="{% url 'album:tags' tag='克拉女神' %}">克拉女神</a>
+                    <a href="{% url 'album:tags' tag='51modo' %}">51modo</a>
+                    <a href="{% url 'album:tags' tag='RQ-STAR' %}">RQ-STAR</a>
+                    <a href="{% url 'album:tags' tag='YS-Web' %}">YS-Web</a>
+                    <a href="{% url 'album:tags' tag='DGC' %}">DGC</a>
+                    <a href="{% url 'album:tags' tag='Bomb.tv' %}">Bomb.tv</a>
+                    <a href="{% url 'album:tags' tag='@misty' %}">@misty</a>
+                    <a href="{% url 'album:tags' tag='Sabra.net' %}">Sabra.net</a>
+                    <a href="{% url 'album:tags' tag='4K-STAR' %}">4K-STAR</a>
                 </li>
                 <li class="border-0 ">
                     <span class="badge badge-danger ">欧洲美国</span><br>
-                    <a href=" ">美国</a>
-                    <a href=" ">俄罗斯</a>
-                    <a href=" ">乌克兰</a>
-                    <a href=" ">英国</a>
-                    <a href=" ">法国</a>
-                    <a href=" ">德国</a>
-                    <a href=" ">意大利</a>
-                    <a href=" ">西班牙</a>
-                    <a href=" ">荷兰</a>
-                    <a href=" ">捷克</a>
-                    <a href=" ">丹麦</a>
-                    <a href=" ">土耳其</a>
-                    <a href=" ">瑞典</a>
-                    <a href=" ">葡萄牙</a>
-                    <a href=" ">希腊</a>
-                    <a href=" ">爱尔兰</a>
-                    <a href=" ">挪威</a>
-                    <a href=" ">加拿大</a>
-                    <a href=" ">波兰</a>
-                    <a href=" ">塞尔维亚</a>
-                    <a href=" ">奥地利</a>
-                    <a href=" ">比利时</a>
-                    <a href=" ">波黑</a>
-                    <a href=" ">白俄罗斯</a>
+                    <a href="{% url 'album:tags' tag='美国' %}">美国</a>
+                    <a href="{% url 'album:tags' tag='俄罗斯' %}">俄罗斯</a>
+                    <a href="{% url 'album:tags' tag='乌克兰' %}">乌克兰</a>
+                    <a href="{% url 'album:tags' tag='英国' %}">英国</a>
+                    <a href="{% url 'album:tags' tag='法国' %}">法国</a>
+                    <a href="{% url 'album:tags' tag='德国' %}">德国</a>
+                    <a href="{% url 'album:tags' tag='意大利' %}">意大利</a>
+                    <a href="{% url 'album:tags' tag='西班牙' %}">西班牙</a>
+                    <a href="{% url 'album:tags' tag='荷兰' %}">荷兰</a>
+                    <a href="{% url 'album:tags' tag='捷克' %}">捷克</a>
+                    <a href="{% url 'album:tags' tag='丹麦' %}">丹麦</a>
+                    <a href="{% url 'album:tags' tag='土耳其' %}">土耳其</a>
+                    <a href="{% url 'album:tags' tag='瑞典' %}">瑞典</a>
+                    <a href="{% url 'album:tags' tag='葡萄牙' %}">葡萄牙</a>
+                    <a href="{% url 'album:tags' tag='希腊' %}">希腊</a>
+                    <a href="{% url 'album:tags' tag='爱尔兰' %}">爱尔兰</a>
+                    <a href="{% url 'album:tags' tag='挪威' %}">挪威</a>
+                    <a href="{% url 'album:tags' tag='加拿大' %}">加拿大</a>
+                    <a href="{% url 'album:tags' tag='波兰' %}">波兰</a>
+                    <a href="{% url 'album:tags' tag='塞尔维亚' %}">塞尔维亚</a>
+                    <a href="{% url 'album:tags' tag='奥地利' %}">奥地利</a>
+                    <a href="{% url 'album:tags' tag='比利时' %}">比利时</a>
+                    <a href="{% url 'album:tags' tag='波黑' %}">波黑</a>
+                    <a href="{% url 'album:tags' tag='白俄罗斯' %}">白俄罗斯</a>
                 </li>
                 <li>
                     <span class="badge badge-danger ">亚洲日韩</span>
                     <br>
-                    <a href=" ">亚洲</a>
-                    <a href=" ">日韩</a>
-                    <a href=" ">日本</a>
-                    <a href=" ">韩国</a>
-                    <a href=" ">伊朗</a>
-                    <a href=" ">新加坡</a>
-                    <a href=" ">以色列</a>
-                    <a href=" ">中国内地</a>
-                    <a href=" ">中国台湾</a>
-                    <a href=" ">中国香港</a>
-                    <a href=" ">中国澳门</a>
-                    <a href=" ">马来西亚</a>
-                    <a href=" ">越南</a>
-                    <a href=" ">泰国</a>
-                    <a href=" ">菲律宾</a>
-                    <a href=" ">印度</a>
+                    <a href="{% url 'album:tags' tag='亚洲' %}">亚洲</a>
+                    <a href="{% url 'album:tags' tag='日韩' %}">日韩</a>
+                    <a href="{% url 'album:tags' tag='日本' %}">日本</a>
+                    <a href="{% url 'album:tags' tag='韩国' %}">韩国</a>
+                    <a href="{% url 'album:tags' tag='伊朗' %}">伊朗</a>
+                    <a href="{% url 'album:tags' tag='新加坡' %}">新加坡</a>
+                    <a href="{% url 'album:tags' tag='以色列' %}">以色列</a>
+                    <a href="{% url 'album:tags' tag='中国内地' %}">中国内地</a>
+                    <a href="{% url 'album:tags' tag='中国台湾' %}">中国台湾</a>
+                    <a href="{% url 'album:tags' tag='中国香港' %}">中国香港</a>
+                    <a href="{% url 'album:tags' tag='中国澳门' %}">中国澳门</a>
+                    <a href="{% url 'album:tags' tag='马来西亚' %}">马来西亚</a>
+                    <a href="{% url 'album:tags' tag='越南' %}">越南</a>
+                    <a href="{% url 'album:tags' tag='泰国' %}">泰国</a>
+                    <a href="{% url 'album:tags' tag='菲律宾' %}">菲律宾</a>
+                    <a href="{% url 'album:tags' tag='印度' %}">印度</a>
                 </li>
                 <li>
                     <span class="badge badge-danger ">美洲巴西</span>
                     <br>
-                    <a href=" ">巴西</a>
-                    <a href=" ">哥伦比亚</a>
-                    <a href=" ">委内瑞拉</a>
-                    <a href=" ">墨西哥</a>
-                    <a href=" ">阿根廷</a>
-                    <a href=" ">智利</a>
-                    <a href=" ">古巴</a>
-                    <a href=" ">波多黎各</a></li>
+                    <a href="{% url 'album:tags' tag='巴西' %}">巴西</a>
+                    <a href="{% url 'album:tags' tag='哥伦比亚' %}">哥伦比亚</a>
+                    <a href="{% url 'album:tags' tag='委内瑞拉' %}">委内瑞拉</a>
+                    <a href="{% url 'album:tags' tag='墨西哥' %}">墨西哥</a>
+                    <a href="{% url 'album:tags' tag='阿根廷' %}">阿根廷</a>
+                    <a href="{% url 'album:tags' tag='智利' %}">智利</a>
+                    <a href="{% url 'album:tags' tag='古巴' %}">古巴</a>
+                    <a href="{% url 'album:tags' tag='波多黎各' %}">波多黎各</a></li>
                 <li>
                     <span class="badge badge-danger ">大洋洲非洲</span>
                     <br>
-                    <a href=" ">澳大利亚</a>
-                    <a href=" ">南非</a>
-                    <a href=" ">新西兰</a>
-                    <a href=" ">混血</a>
-                    <a href=" ">欧美</a>
-                    <a href=" ">非洲</a>
+                    <a href="{% url 'album:tags' tag='澳大利亚' %}">澳大利亚</a>
+                    <a href="{% url 'album:tags' tag='南非' %}">南非</a>
+                    <a href="{% url 'album:tags' tag='新西兰' %}">新西兰</a>
+                    <a href="{% url 'album:tags' tag='混血' %}">混血</a>
+                    <a href="{% url 'album:tags' tag='欧美' %}">欧美</a>
+                    <a href="{% url 'album:tags' tag='非洲' %}">非洲</a>
                 </li>
-
             </ul>
         </div>
     </div>

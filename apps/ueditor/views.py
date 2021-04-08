@@ -19,7 +19,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.http import require_http_methods
 
 from meizitu import settings as meizitu_settings
-from utils.tencent_cos import client
+
 
 # 更改工作目录。这么做的目的是七牛qiniu的sdk
 # 在设置缓存路径的时候默认会设置到C:/Windows/System32下面
@@ -60,13 +60,11 @@ try:
 except:
     pass
 
-
 # 用来判断是否要将文件上传到七牛
 try:
     UEDITOR_UPLOAD_TO_QINIU = settings.UEDITOR_UPLOAD_TO_QINIU
 except:
     pass
-
 
 # 用来判断是否要将文件上传到阿里云oss
 try:
@@ -82,8 +80,8 @@ except:
 
 
 # 如果既没有配置上传到本地，又没有配置上传到七牛，那么就抛出异常
-if not UEDITOR_UPLOAD_PATH and not UEDITOR_UPLOAD_TO_QINIU and not UEDITOR_UPLOAD_TO_ALIYUN and not UEDITOR_UPLOAD_TO_TENCENT:
-    raise RuntimeError("UEditor的UEDITOR_UPLOAD_TO_SERVER或者UEDITOR_UPLOAD_TO_QINIU必须配置一项！")
+# if not UEDITOR_UPLOAD_PATH and not UEDITOR_UPLOAD_TO_QINIU and not UEDITOR_UPLOAD_TO_ALIYUN and not UEDITOR_UPLOAD_TO_TENCENT:
+#     raise RuntimeError("UEditor的UEDITOR_UPLOAD_TO_SERVER或者UEDITOR_UPLOAD_TO_QINIU必须配置一项！")
 
 
 # 判断是否配置了config.json文件的路径
@@ -207,7 +205,12 @@ class UploadView(View):
         """
         上传文件到自己的服务器
         """
-        with open(os.path.join(UEDITOR_UPLOAD_PATH, filename), 'wb') as fp:
+        # 需要手动创建news_pic文件夹
+        if not os.path.exists (settings.MEDIA_ROOT + '/news_pic/'):
+            os.makedirs (settings.MEDIA_ROOT + '/news_pic/')
+        print(UEDITOR_UPLOAD_PATH)
+        print(os.path.join(settings.MEDIA_ROOT, 'news_pic', filename) )
+        with open(os.path.join(UEDITOR_UPLOAD_PATH, 'news_pic', filename), 'wb') as fp:
             for chunk in upfile.chunks():
                 fp.write(chunk)
         url = reverse("ueditor:send_file", kwargs={"filename": filename})
@@ -281,7 +284,7 @@ class UploadView(View):
 # 如果你把图片放到阿里云oss中，再把UEDITOR_UPLOAD_TO_SERVER = False，这个函数就不起作用
 # 同样本地文件也无法显示在文章详情中
 def send_file(request,filename):
-    fp = open(os.path.join(UEDITOR_UPLOAD_PATH,filename),'rb')
+    fp = open(os.path.join(UEDITOR_UPLOAD_PATH, 'news_pic',filename),'rb')
     response = FileResponse(fp)
     response['Content-Type'] = "application/octet-stream"
     return response

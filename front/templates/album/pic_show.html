@@ -1,13 +1,26 @@
 {% extends 'frontbase/base.html' %}
-
-{% block head %}
-	<link rel="stylesheet" href="{% static 'css/index.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/pic_show.min.css' %}">
-
-{% endblock %}
-
 {% block title %}
-	{{ album.title }}
+	<title>{{ album.title }}</title>
+{% endblock %}
+{% block meta_tag %}
+	<meta name="keywords" content="{{ album.title }} {% for tag in tags %}{{ tag.tag }} {% endfor %}">
+	<meta name="description" content="{{ album.desc }}">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="{{ album.title }} {% for tag in tags %}{{ tag.tag }} {% endfor %}-meizitu.com妹子图官网">
+	<meta property="og:description" content="{{ album.desc }}-meizitu.com妹子图官网">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:site_name" content="妹子图 妹子图官网首页 女神图片 美女图片 人体艺术">
+	<meta property="og:updated_time" content="{{ album.create_time }}">
+	<meta property="article:section" content="{{ album.title }} {% for tag in tags %}{{ tag.tag }} {% endfor %}-meizitu.com妹子图官网">
+	<meta property="article:published_time" content="{{ album.create_time }}">
+	<meta property="article:modified_time" content="{{ album.modify_time }}">
+	<meta property="twitter:description" content="{{ album.desc }}-meizitu.com妹子图官网">
+	<meta property="twitter:title" content="{{ album.title }} {% for tag in tags %}{{ tag.tag }} {% endfor %}-meizitu.com妹子图官网">
+{% endblock %}
+{% block head %}
+	<link rel="canonical" href="{{ url }}">
+	<link rel="stylesheet" href="{% static 'css/pic_show.min.css' %}">
 {% endblock %}
 
 {% block main %}
@@ -21,7 +34,8 @@
 						<a href="javascript:void(0)" class="badge badge-secondary">{{ album.beauty_name }}</a>
 
 						{% for tag in tags %}
-							<a href="{% url 'album:tags' tag.pk %}" class="badge badge-secondary" target="_blank">{{ tag.tag }}</a>
+							<a href="{{ tag.get_absolute_url }}" class="badge badge-secondary"
+							   target="_blank">{{ tag.tag }}</a>
 						{% endfor %}
 
 					</div>
@@ -29,17 +43,24 @@
 			</div>
 			<div class="col-10 desc_2 offset-1 text-center">
 				<p class="album_desc text-secondary mt-1 mb-1">{{ album.desc }}</p>
-				<p class="album-info text-secondary mt-2">该图集包含<b class="text-danger">&nbsp;{{ album.pic.all.count }}张照片</b>，在
-					<b>{{ album.create_time }}</b> 创建，被浏览了 <b>{{ album.watch_count }}</b> 次</p>
+				<p class="album-info text-secondary mt-2">该图集包含<strong
+						class="text-danger">&nbsp;{{ album.pic.all.count }}张照片</strong>，在
+					<strong>{{ album.create_time }}</strong> 创建，被浏览了 <strong>{{ album.watch_count }}</strong> 次</p>
 				<a href="javascript:void(0)" class="btn btn-success mt-3 mr-1">下载这个图集</a>
 				<a href="javascript:void(0)" class="btn btn-success mt-3 ml-1">下载其它小姐姐的图集</a>
 			</div>
 			<div class="col-12 album_photos mt-3">
 				<div class="photos text-center">
+				<div id="outerdiv"
+				     style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+					<div id="innerdiv" style="position:absolute;">
+						<img id="max_img" style="border:5px solid #fff;" src=""/>
+					</div>
+				</div>
 					<ul id="pic">
 						{% for pic in pics %}
 							<li><img class="img-fluid lazyload" src="{% static 'images/400x400.gif' %}"
-							         data-src="{{ t_prefix_url }}{{ pic.picture }}" alt="{{ album.title }}"></li>
+							         data-src="{{ url }}{{ pic.picture }}" alt="{{ album.title }}"></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -93,69 +114,15 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-
-
-	{#    <div class="container mt-3 mb-3" id="picshow">#}
-	{#        <div class="row pt-2 pb-2">#}
-	{#            <div class="col-12 desc_1">#}
-	{#                <div class="album_title text-center">#}
-	{#                    <h1 class="pt-1 pb-1">[XiuRen秀人网] 2020.05.20 No.2266 Lovely璐璐</h1>#}
-	{#                    <div class="album_tags mt-1 mb-2">#}
-	{#                        <a href="#" class="badge badge-secondary">王昭璐</a>#}
-	{#                        <a href="#" class="badge badge-secondary">Lovely璐璐</a>#}
-	{#                        <a href="#" class="badge badge-secondary">秀人网</a>#}
-	{#                        <a href="#" class="badge badge-secondary">空姐</a>#}
-	{#                        <a href="#" class="badge badge-secondary">丝袜</a>#}
-	{#                        <a href="#" class="badge badge-secondary">丝袜</a>#}
-	{#                    </div>#}
-	{#                </div>#}
-	{#            </div>#}
-	{#            <div class="col-10 desc_2 offset-1 text-center">#}
-	{#                <p class="album_desc text-secondary mt-1 mb-1">模特@Lovely璐璐 第二套发布，空姐丝袜主题系列，婉如娃娃脸精致般的面容之下，前凸后翘的惹火魔鬼身材，共42P，希望大家喜欢和多多支持新人。</p>#}
-	{#                <p class="album-info text-secondary mt-1">该图集包含<b class="text-danger">&nbsp;42张照片</b>，在 <b>2020/7/1</b> 创建，被浏览了 <b>37534</b> 次</p>#}
-	{#                <a href="" class="btn btn-success mt-2 mr-1">下载这个图集</a>#}
-	{#                <a href="" class="btn btn-success mt-2 ml-1">下载其它小姐姐的图集</a>#}
-	{#            </div>#}
-	{#            <div class="col-12 album_photos mt-2">#}
-	{#                <div class="photos text-center">#}
-	{#                    <ul id="pic">#}
-	{#                        <li><img class="img-fluid" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt=""></li>#}
-	{#                        <li><img class="img-fluid" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt=""></li>#}
-	{#                        <li><img class="img-fluid" src="https://t1.onvshen.com:85/gallery/27952/33197/s/001.jpg" alt=""></li>#}
-	{#                    </ul>#}
-	{#                </div>#}
-	{#                <div class="page mt-3 mb-4">#}
-	{#                    <nav aria-label="Page navigation example">#}
-	{#                        <ul class="pagination justify-content-center">#}
-	{#                            <li class="page-item disabled">#}
-	{#                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">上一页</a>#}
-	{#                            </li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">1</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">2</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">3</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">4</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">5</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">6</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">7</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">8</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">9</a></li>#}
-	{#                            <li class="page-item"><a class="page-link" href="#">10</a></li>#}
-	{#                            <li class="page-item">#}
-	{#                                <a class="page-link" href="#">下一页</a>#}
-	{#                            </li>#}
-	{#                        </ul>#}
-	{#                    </nav>#}
-	{#                </div>#}
-	{#            </div>#}
-	{#        </div>#}
-	{##}
-	{#    </div>#}
 	<!-- 图片展示区结束 -->
 
 	<!-- 你可能感兴趣的其他图集 开始 -->
 	{% include 'frontbase/suggest_album_5.html' with random_albums=random_albums %}
 	<!-- 你可能感兴趣的其他图集 结束 -->
 
+{% endblock %}
+
+{% block jsfile %}
+	<script src="{% static 'js/zoom_pic.min.js' %}"></script>
 {% endblock %}

@@ -70,21 +70,20 @@
 
 						<div class="form-group">
 							<label for="tags">图集标签</label>
-							<select multiple="multiple" class="form-control overflow-auto" name="tags" id="tags">
 								{% for tag in tags %}
-			                        <option value="{{ tag.pk }}" class="badge badge-success mr-1">{{ tag.tag }}</option>
+			                        <span style="font-size: 13px;" class="badge">
+										<input class="form-group mb-2" type="checkbox" name="tags" value="{{ tag.pk }}">{{ tag.tag }}
+									</span>
 			                    {% endfor %}
-							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="beauty">链接到的美女</label>
-							<select name="beauty" id="beauty" class="form-control">
 								{% for beauty in beautys %}
-									<option value="{{ beauty.pk }}">{{ beauty.beauty_name }}</option>
+									<span style="font-size: 13px;" class="badge">
+										<input class="form-group mb-2" type="radio" name="beauty" value="{{ beauty.pk }}">{{ beauty.beauty_name }}
+									</span>
 								{% endfor %}
-
-							</select>
 						</div>
 
 						<div class="form-group">

@@ -54,7 +54,7 @@ class BeautyView(APIView, MyPaginatorMixin):
         except:
             return render(request, '404.html')
 
-        url = request.build_absolute_uri(settings.MEDIA_URL)
+        pre_url = request.build_absolute_uri(settings.MEDIA_URL)
 
         # 这里做一个猜你喜欢的女神的功能 开始
         # 思路同样是：获取点击时候的创建时间，然后用一个随机的天数，这样每一次调用这个函数都是不一样的返回结果
@@ -73,7 +73,7 @@ class BeautyView(APIView, MyPaginatorMixin):
             'page_obj':page_obj,
             'paginator': paginator,
 
-            'url': url,
+            'url': pre_url,
             'random_beautys': random_beautys
         }
         context.update(page_data)
@@ -101,20 +101,23 @@ def tags(request, tag):
 #根据传递进来的tag, 获取关联的图集beauty, 方法2:用分页
 class TagGetBeautyView(APIView, MyPaginatorMixin):
     throttle_classes = [VisitThrottle,]
-    def get(self, request, tag, *args, **kwargs):
+    renderer_classes = [JSONRenderer]
+    def get(self, request, *args, **kwargs):
+        tag = kwargs['tag']
+
         #因为是用分页,所以需要传递进来参数标志p,如果没有,就默认第一页,
         page = int(request.GET.get('p', 1))
 
         # 注意下面的'beauty__album' 这个设定，这个用双下划线关联第三张表
         try:
-            beautytag = BeautyTags.objects.prefetch_related('beauty','beauty__album').get (pk=tag)
+            beautytag = BeautyTags.objects.prefetch_related('beauty','beauty__album').get (tag=tag)
             # 根据albumTags的实例对象，查找管理的album对象，manytomany的关系
             # beautys = beautytag.beauty.all()
             beautys = beautytag.beauty.all()
         except:
             return render(request, '404.html')
 
-        url = request.build_absolute_uri (settings.MEDIA_URL)
+        pre_url = request.build_absolute_uri (settings.MEDIA_URL)
 
         # 这里做一个猜你喜欢的女神的功能 开始
         # 思路同样是：获取点击时候的创建时间，然后用一个随机的天数，这样每一次调用这个函数都是不一样的返回结果
@@ -133,7 +136,7 @@ class TagGetBeautyView(APIView, MyPaginatorMixin):
             'beautys': page_obj.object_list,
             'page_obj': page_obj,
             'paginator': paginator,
-            'url': url,
+            'url': pre_url,
             'random_beautys': random_beautys
         }
         context.update(page_data)
@@ -142,7 +145,9 @@ class TagGetBeautyView(APIView, MyPaginatorMixin):
 
 class BeautyDetailView(APIView):
     throttle_classes = [VisitThrottle]
-    def get(self, request, uid, *args, **kwargs):
+    renderer_classes = [JSONRenderer]
+    def get(self, request,*args, **kwargs):
+        uid = kwargs['uid']
         # 根据uid 查找对应的instance,
         try:
             beauty = Beauty.objects.prefetch_related ('album').get (pk=uid)
@@ -157,12 +162,12 @@ class BeautyDetailView(APIView):
         random_beautys = Beauty.objects.filter (create_time__lt=random_days) [0:5]
         # 这里做一个猜你喜欢的女神的功能 结束
 
-        url = request.build_absolute_uri (settings.MEDIA_URL)
+        pre_url = request.build_absolute_uri (settings.MEDIA_URL)
 
         context = {
             'beauty': beauty,
             'beauty_albums': beauty_albums,
-            'url': url,
+            'url': pre_url,
 
             'random_beautys': random_beautys,
         }

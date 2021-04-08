@@ -2,11 +2,16 @@ from django.db import models
 from apps.beauty.models import Beauty
 from shortuuidfield import ShortUUIDField
 import os
+# from django.template.defaultfilters import slugify
+from uuslug import slugify
 
 
 #图集标签类
 class AlbumTags(models.Model):
     tag = models.CharField(max_length=40, verbose_name='图集标签', error_messages={'max_length':'最长为40位', 'min_length':'最短是0位'})
+
+    def get_absolute_url(self):
+        return '/album/tags/%s'%(self.tag)
 
 
 
@@ -48,6 +53,26 @@ class Album(models.Model):
 
     def get_uid(self):
        return self.uid
+
+    def get_absolute_url(self):
+        '''
+        这里return语句,解析：内容很多
+        （1）首先这个函数get_absolute_url就是针对每一个Album实体，返回一个绝对的URL，但是如何返回这个url，是一个学问
+        或者说如何设计这个返回url的格式是问题，总的来说这个函数的功能是给每一个Album实体返回一个url。
+        在return中返回的值，就是url的格式，这里有些内容可以自行设计，有些则不行：
+        如：开头的/album --> 1.必不可少的是开头的反斜杠,因为在生产sitemaps.xml中产生的url跟这里保持一致，如果没有反斜杠就会变成127.0.0.1album域名和album中间没有隔开，这种url是不对的。
+                            2.必不可少的是为什么要添加这个album，因为我们在这个app中的url.py中规定的app_name='album'如果这里不加上album，那么这个函数生产的url就缺失了album，那么就和url.py中规定的无法匹配
+        如：/show_pic/ --> 这里也不是乱加的，是因为在views.py中有一个函数是查看详细的，同时这个函数指向的url.py中path里面也是这么定义的。所以需要搬过来。
+        如：/%s/%s --> 这里也不是乱加的，还是和url中path里面有一个show_pic/<str:uid>/<str:str> 关联一起的。
+        如：.html --> 这个是自己添加的，不添加也米有问题。
+
+        （2）在这里构造了返回的绝对URL之后，那么在对应的模板HTML页面里面。如果需要用到album的实例，只需要直接调用 album.get_absolute_url这个函数就可以了，不需要在拼接路径。
+        （3）系统里面其实还有一个叫slug的功能，其实也就是把标题转换成那种用 横杠- 链接的标题放到URL中去，这样在url中就可以看到当前访问的是什么。
+            但是我们在这里没有用那个slug的功能，我们直接用标题当作url中的最后一个参数，因为是要用横杠代替空格，所以我们用self.title.replace()这个函数， 这里只处理一个空格的情况，其他的情况都没有处理
+        '''
+        return '/album/show_pic/%s/%s.html'%(self.uid, (self.title).replace('/','_').replace(' ','-'))
+
+
 
 
 

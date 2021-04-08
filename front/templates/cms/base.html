@@ -38,8 +38,8 @@
 
 	<script src="{% static 'sweetalert/sweetalert.min.js' %}"></script>
 	<script src="{% static 'js/message.min.js' %}"></script>
-	<script src="{% static 'js/xfzajax.min.js' %}"></script>
-	<script src="{% static 'js/xfzalert.min.js' %}"></script>
+	<script src="{% static 'js/m_ajax.min.js' %}"></script>
+	<script src="{% static 'js/m_alert.min.js' %}"></script>
 
 	{% block head %}
 	
@@ -92,13 +92,13 @@
 					<li class="nav-item">
 						<a href="{% url 'cms:write_beauty_tag' %}" class="nav-link">
 							<i class="nav-icon fa fa-tag"></i>
-							<p>标签管理</p>
+							<p>标签</p>
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href="{% url 'cms:write_beauty' %}" class="nav-link">
 							<i class="nav-icon fa fa-mobile"></i>
-							<p>美女资料</p>
+							<p>新增 美女</p>
 						</a>
 					</li>
 
@@ -107,13 +107,13 @@
 					<li class="nav-item">
 						<a href="{% url 'cms:write_album_tag' %}" class="nav-link">
 							<i class="nav-icon fa fa-tag"></i>
-							<p>标签管理</p>
+							<p>标签</p>
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href="{% url 'cms:write_album' %}" class="nav-link">
 							<i class="nav-icon fa fa-wine-glass-alt"></i>
-							<p>图集图片管理</p>
+							<p>新增 图集</p>
 						</a>
 					</li>
 					<li class="nav-item">
@@ -127,7 +127,7 @@
 					<li class="nav-item">
 						<a href="{% url 'cms:write_news_category' %}" class="nav-link">
 							<i class="nav-icon fa fa-tag"></i>
-							<p>文章分类管理</p>
+							<p>板块 管理</p>
 						</a>
 					</li>
 					<li class="nav-item">
@@ -139,7 +139,7 @@
 
 					<li class="nav-header">广告管理</li>
 					<li class="nav-item">
-						<a href="{% url 'cms:write_ad' %}" class="nav-link">
+						<a href="" class="nav-link">
 							<i class="nav-icon fa fa-ad"></i>
 							<p>新增广告位</p>
 						</a>

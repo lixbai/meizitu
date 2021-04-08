@@ -1,10 +1,24 @@
 {% extends 'frontbase/base.html' %}
-
-{% block title %}美女图集展示区-{{ tag }}{% endblock %}
-
+{% block title %}
+	<title>{{ tag }}美女图集展示区</title>
+{% endblock %}
+{% block meta_tag %}
+	<meta name="keywords" content="{{ tag }} 妹子图 妹子图官网首页 女神图片 美女图片 人体艺术">
+	<meta name="description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="meizitu.com-妹子图官网首页">
+	<meta property="og:description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:site_name" content="妹子图 妹子图官网首页 女神图片 美女图片 人体艺术">
+	<meta property="twitter:description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="twitter:title" content="meizitu.com-妹子图官网首页">
+{% endblock %}
+{% block head %}
+	<link rel="canonical" href="{{ url }}">
+{% endblock %}
 {% block main %}
 	<!-- 标签分类 开始 -->
-
 	{% include 'frontbase/album_tags.html' with tag_chosen=tag %}
 	<!-- 标签分类 结束 -->
 
@@ -17,13 +31,13 @@
 			{% for album in albums %}
 				<div class="img_display col-6 col-sm-6 col-lg-3 pr-md-4 pl-md-4">
 					<div class="thumbnail">
-						<a class="imgs_link" href="{% url 'album:show_pic' album.uid %}">
+						<a class="imgs_link" href="{{ album.get_absolute_url }}">
 							<img class="lazyload border border-light" src="" data-src="{{ url }}{{ album.cover_img }}"
 							     alt="{{ album.beauty_name }}">
 						</a>
 						<div class="imgs_title">
 							<h2 class="title_height">
-								<a class="text-light" href="{% url 'album:show_pic' album.uid %}">{{ album.title }}</a>
+								<a class="text-light" href="{{ album.get_absolute_url }}">{{ album.title }}</a>
 							</h2>
 						</div>
 					</div>

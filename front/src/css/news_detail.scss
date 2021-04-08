@@ -20,10 +20,29 @@
 	  .article_content {
 		margin-top: 10px;
 		border: 1px solid #e9ecef;
+		.article_header {
+		  .title {
+			font-size: 22px;
+			color: #0f401b;
+		  }
+		  .pub_time {
+			font-size: 13px;
+			color: grey;
+		  }
+		  .desc {
+				padding: 10px 15px;
+			  font-size: 14px;
+			  line-height: 21px;
+			  letter-spacing: normal;
+			  word-spacing: normal;
+			  //color: #333;
+			  color: #757575;
+		  }
+		}
 		
 		.article_body {
 		  .article {
-			margin-top: 20px;
+			margin-top: 5px;
 			
 			img {
 			  max-width: 100%;

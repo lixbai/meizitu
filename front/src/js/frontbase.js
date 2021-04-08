@@ -1,4 +1,5 @@
 $(function () {
+    $(".lazyload").lazyload();
     if(window.template){
         template.defaults.imports.timeSince = function (dateValue) {
             var date = new Date(dateValue);

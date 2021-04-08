@@ -13,12 +13,6 @@ def search(request):
     return HttpResponse(query)
 
 
-def download(request):
-    return render(request, 'download/download_list.html')
-
-
-
-
 # 主页视图
 def news_index(request):
     # count 是一页几条新闻的意思
@@ -27,7 +21,9 @@ def news_index(request):
 
     context = {
         'newses':news,
+        'url': request.get_raw_uri()
     }
+    # return render(request, 'news/news_index首页消息展示的另外一种展示界面.html', context=context)
     return render(request, 'news/news_index.html', context=context)
 
 # 根据传递进来的category_name 选择返回对应的文章
@@ -48,7 +44,7 @@ def news_list(request):
     # 通过p参数，来指定要获取第几页的数据
     # 并且这个p参数，是通过查询字符串的方式传过来的/news/list/?p=2
     page = int(request.GET.get('p',1))
-    print(page)
+
     # 分类为0：代表不进行任何分类，直接按照时间倒序排序
     category_id = int(request.GET.get('category_id',0))
     # 0,1
@@ -65,12 +61,13 @@ def news_list(request):
         newses = News.objects.prefetch_related('category', 'tag').filter(category__id=category_id)[start:end]
     serializer = NewsSerializer(newses,many=True)
     data = serializer.data
-    print(data)
+    # print(data)
     return restful.result(data=data)
 
 # 消息详情也展示
-def news_detail(request, news_id):
+def news_detail(request, news_id, title):
     #根据传递进来的news_id 索引具体的news ,然后展示回去
+    print(title)
     try:
         news = News.objects.get(pk=news_id)
     except:
@@ -78,7 +75,8 @@ def news_detail(request, news_id):
     side_newses = News.objects.all()[0:10]
     context = {
         'news':news,
-        'side_newses':side_newses
+        'side_newses':side_newses,
+        'url': request.get_raw_uri()
     }
     return render(request, 'news/news_detail.html', context=context)
 

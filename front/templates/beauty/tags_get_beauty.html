@@ -1,10 +1,24 @@
 {% extends 'frontbase/base.html' %}
-
-{% block head %}
-	<link rel="stylesheet" href="{% static 'css/beauty.min.css' %}">
+{% block title %}
+	<title>根据{{ tag }}搜索到的所有美女女神</title>
+{% endblock %}
+{% block meta_tag %}
+	<meta name="keywords" content="妹子图 妹子图官网首页 女神图片 美女图片 人体艺术 {{ tag }}美女 {{ tag }}图片 {{ tag }}女神">
+	<meta name="description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="meizitu.com-妹子图官网首页">
+	<meta property="og:description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:site_name" content="妹子图 妹子图官网首页 女神图片 美女图片 人体艺术 {{ tag }}美女 {{ tag }}图片 {{ tag }}女神">
+	<meta property="twitter:description" content="meizitu.com 国内最大的美女图片分享网站，妹子图官网提供美女信息浏览，美女图片在线观看，和女神图片的下载">
+	<meta property="twitter:title" content="meizitu.com-妹子图官网首页">
 {% endblock %}
 
-{% block title %}美女女神专区-{{ tag }}{% endblock %}
+{% block head %}
+	<link rel="canonical" href="{{ url }}">
+	<link rel="stylesheet" href="{% static 'css/beauty.min.css' %}">
+{% endblock %}
 
 {% block main %}
 	<!-- 标签分类 开始 -->
@@ -19,18 +33,18 @@
 			{% for beauty in beautys %}
 				<div class="beauty_img_display col-6 col-sm-4 col-md-3 col-lg-2 mb-2 p-3">
 					<div class="thumbnail">
-						<a class="imgs_link" target="_blank" href="{% url 'beauty:beauty_detail' beauty.uid %}">
+						<a class="imgs_link" target="_blank" href="{% url 'beauty:beauty_detail' beauty.uid beauty.beauty_name %}">
 							<img class="lazyload" src="" data-src="{{ url }}{{ beauty.cover_img }}"
 							     alt="{{ beauty.beauty_name }}">
 						</a>
 						<div class="beauty_imgs_title">
 							<h2 class="title_height d-flex justify-content-center">
 								<a class="text-dark" target="_blank"
-								   href="{% url 'beauty:beauty_detail' beauty.uid %}">{{ beauty.beauty_name }}</a>
+								   href="{% url 'beauty:beauty_detail' beauty.uid beauty.beauty_name %}">{{ beauty.beauty_name }}</a>
 							</h2>
 							<h2 class="title_height  d-flex justify-content-center mt-2">
 								<a class="text-secondary" target="_blank" style="font-size: 13px;"
-								   href="{% url 'beauty:beauty_detail' beauty.uid %}">(图集共有 <strong
+								   href="{% url 'beauty:beauty_detail' beauty.uid beauty.beauty_name %}">(图集共有 <strong
 										style="font-size: 15px; color: red;">{{ beauty.album.all.count }}</strong>
 									张)</a>
 							</h2>

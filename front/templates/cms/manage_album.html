@@ -70,11 +70,12 @@
 
 						<div class="form-group">
 							<label for="tags">图集标签</label>
-							<select multiple="multiple" class="form-control overflow-auto" name="tags" id="tags">
 								{% for tag in tags %}
-			                        <option value="{{ tag.pk }}" class="badge badge-success mr-1">{{ tag.tag }}</option>
+			                        <span style="font-size: 13px" class="badge">
+										<input class="form-group" type="checkbox" name="tags" value="{{ tag.pk }}">{{ tag.tag }}
+									</span>
 			                    {% endfor %}
-							</select>
+
 						</div>
 
 						<div class="form-group">
@@ -100,7 +101,7 @@
 					<!-- /.card-body -->
 
 					<div class="card-footer">
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary">提 交</button>
 					</div>
 				</form>
 			</div>

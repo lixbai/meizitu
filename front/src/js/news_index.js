@@ -19,10 +19,11 @@ NewsIndex.prototype.listenSwitchCategory = function () {
         var li = $(this)
         var category_id = li.attr('data-id')
         var page = 1
-
+        li.siblings().children().removeClass('bg-warning text-white')
+        li.children().addClass('bg-warning text-white')
         event.preventDefault();
         //向后端发送请求
-        xfzajax.get({
+        m_ajax.get({
             'url': '/news/list/',
             'data': {
                 'p': page,
@@ -31,8 +32,7 @@ NewsIndex.prototype.listenSwitchCategory = function () {
             'success': function (result) {
                 if (result['code'] === 200) {
                     var newses = result['data']
-                    console.log(newses)
-                    var tpl = template('test', {'newses': newses})
+                    var tpl = template('js_load_news', {'newses': newses})
                     var news_item = $('.news_item')
 
                     news_item.empty()
@@ -46,17 +46,15 @@ NewsIndex.prototype.listenSwitchCategory = function () {
                 }
             }
         })
-
     })
 }
 
 // 点击加载更多美女资讯
 NewsIndex.prototype.listenLoadMoreNews = function () {
     var self = this;
-    var loadMoreBtn = $("#load_more_news");
-    console.log(loadMoreBtn)
-    loadMoreBtn.click(function (event) {
-        xfzajax.get({
+
+    self.loadMoreBtn.click(function (event) {
+        m_ajax.get({
             'url': '/news/list/',
             'data': {
                 'p': self.page,
@@ -65,20 +63,19 @@ NewsIndex.prototype.listenLoadMoreNews = function () {
             'success': function (result) {
                 if (result['code'] === 200) {
                     var newses = result['data']
-                    console.log(newses)
+
                     if (newses.length > 0) {
-                        var tpl = template('test', {'newses': newses})
+                        var tpl = template('js_load_news', {'newses': newses})
                         var news_item = $(".news_item")
                         news_item.append(tpl);
                         //点击一次之后，要设置page加一，然后方便下一次点击的时候传递给后端函数。
                         self.page += 1;
                     } else {
-                        loadMoreBtn.hide()
+                        self.loadMoreBtn.hide()
                     }
                 }
             }
         })
-
     })
 }
 

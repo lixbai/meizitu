@@ -15,11 +15,11 @@ AlbumTags.prototype.listenAddTagsBtnEvent = function(){
     var addbtn = $('#add-btn');
     //绑定点击事件
     addbtn.click(function(){
-        xfzalert.alertOneInput({
+        m_alert.alertOneInput({
             'title': '请输入标签',
             'placeholder': '添加标签',
             'confirmCallback':function(inputValue){
-                xfzajax.post({
+                m_ajax.post({
                     'url': '/cms/write_album_tag/',
                     'data': {
                         'tag': $.trim(inputValue)
@@ -30,7 +30,7 @@ AlbumTags.prototype.listenAddTagsBtnEvent = function(){
                             window.location.reload()
                         }
                         else{
-                            xfzalert.close()
+                            m_alert.close()
                         }
                     }
                 })
@@ -54,14 +54,14 @@ AlbumTags.prototype.listenEditTagsEvent = function(){
         var tag = tr.attr('data-tag');
         console.log(tag)
 
-        xfzalert.alertOneInput({
+        m_alert.alertOneInput({
             'title': '请填入新的标签名字',
             'value': tag,
             'confirmCallback': function (inputValue) {
                 if(inputValue===tag){
-                    xfzalert.alertErrorToast('跟原来的值一样,不修改乱点什么!')
+                    m_alert.alertErrorToast('跟原来的值一样,不修改乱点什么!')
                 }else {
-                     xfzajax.post({
+                     m_ajax.post({
                   'url': '/cms/edit_album_tags/',
                   'data': {
                       'pk': pk,
@@ -90,14 +90,14 @@ AlbumTags.prototype.listenDeleteTagsEvent = function(){
         var tr = self.parent().parent();
         var pk = tr.attr('data-pk');
         console.log(pk)
-        xfzajax.post({
+        m_ajax.post({
             'url':'/cms/del_album_tags/',
             'data': {
                 'pk': pk,
             },
             'success': function (result) {
                 if(result['code']===200){
-                   xfzalert.alertConfirm({
+                   m_alert.alertConfirm({
                        'text':'确认删除吗',
                        'confirmCallback': function(){
                            window.location.reload()

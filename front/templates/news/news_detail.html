@@ -1,10 +1,28 @@
 {% extends 'frontbase/base.html' %}
-
+{% block title %}
+	<title>{{ news.title }}</title>
+{% endblock %}
+{% block meta_tag %}
+	<meta name="keywords" content="{{ news.title }} {% for news_tag in news.tag.all %} {{ news_tag.tag }}{% endfor %}">
+	<meta name="description" content="{{ news.desc }}">
+	<meta property="og:type" content="website"/>
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="{{ news.title }}">
+	<meta property="og:description" content="{% for news_tag in news.tag.all %} {{ news_tag.tag }}{% endfor %} {{ news.desc }}">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:site_name" content="妹子图 妹子图官网首页 女神图片 美女图片 人体艺术 美女图片下载 秀人网">
+	<meta property="og:updated_time" content="{{ news.pub_time }}">
+	<meta property="article:section" content="meizitu.com-妹子图官网首页">
+	<meta property="article:published_time" content="{{ news.pub_time }}">
+	<meta property="article:modified_time" content="{{ news.pub_time }}">
+	<meta property="twitter:description" content="{% for news_tag in news.tag.all %} {{ news_tag.tag }}{% endfor %} {{ news.desc }}">
+	<meta property="twitter:title" content="{{ news.title }}">
+{% endblock %}
 {% block head %}
+	<link rel="canonical" href="{{ url }}">
 	<link rel="stylesheet" href="{% static 'css/news_detail.min.css' %}">
 {% endblock %}
-
-{% block title %}News Detail 最新情报文章{% endblock %}
 
 {% block main %}
 	<!-- 内容区 开始 -->
@@ -20,8 +38,9 @@
 				</nav>
 				<div class="article_content w-100 rounded p-3">
 					<div class="article_header text-center">
-						<h1 class="title font-weight-bold" style="font-size: 20px;">{{ news.title }}</h1>
+						<h1 class="title font-weight-bold">{{ news.title }}</h1>
 						<p class="pub_time mt-2 text-secondary">{{ news.pub_time }}</p>
+						<p class="desc font-italic">{{ news.desc }}</p>
 					</div>
 					<div class="article_body mt-4">
 						<article class="article">
@@ -46,13 +65,13 @@
 						{% for side_news in side_newses %}
 							<div class="row no-gutters mt-2 pb-2">
 								<div class="col-md-4 flex-column align-self-center left-img">
-									<a href="{% url 'news:news_detail' side_news.pk %}">
-										<img src="{{ side_news.thumbnail }}" class="card-img" alt="...">
+									<a href="{{ side_news.get_absolute_url }}">
+										<img src="{{ side_news.thumbnail }}" class="card-img" alt="{{ side_news.title }}">
 									</a>
 								</div>
 								<div class="col-md-8 right-text">
-									<a href="{% url 'news:news_detail' side_news.pk %}" class="text-decoration-none">
-										<p class="card-title text-success"><span>•&nbsp;</span>{{ side_news.title }}</p>
+									<a href="{{ side_news.get_absolute_url }}" class="text-decoration-none">
+										<h2 class="card-title text-success"><span>•&nbsp;</span>{{ side_news.title }}</h2>
 										<div class="content">
 											<p class="font-italic font-weight-normal">{{ side_news.desc }}</p>
 										</div>

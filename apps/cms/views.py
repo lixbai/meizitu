@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required #装饰器，判断是不是 staff是的话，就让访问该视图
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.views.generic import View
 from django.views.decorators.http import require_POST
 from apps.album.models import AlbumTags, Album, Pic
@@ -9,10 +11,11 @@ from apps.news.models import NewsCategory, News, NewsTag
 from utils import restful
 from .forms import AlbumTagsForm, DelAlbumTagsForm
 import os
+import time
 from django.conf import settings
 import oss2
-from utils.aliyun_oss import bucket, a_prefix_url
-from utils.tencent_cos import client, t_prefix_url
+# from utils.aliyun_oss import bucket, a_prefix_url
+# from utils.tencent_cos import client, t_prefix_url
 import json
 
 #后台首页
@@ -21,79 +24,13 @@ def index(request):
     return render(request, 'cms/index.html')
 
 '''
-处理图集标签
-'''
-#处理图集标签页面的视图
-
-class WriteAblumTagView(View):
-    def get(self, request, *args, **kwargs):
-        tags = AlbumTags.objects.all()
-        context = {
-            'tags': tags
-        }
-        return render(request, 'cms/manage_album_tags.html', context=context)
-
-    # 增加标签视图
-    def post(self, request, *args, **kwargs):
-        # 把前台传递过来的数据，添加到数据库就可以了，当然还需要校验数据的正确性。因为AlbumTags只有一个数据，也可以不用使用那种表单的形式
-        tag = request.POST.get ('tag')
-
-        #前台传递过来的标签是一个大的字符串，各个标签之间用空格做分割，这里采用split()函数来做分割
-        #分割成一个一个的标签，然后在分次存入数据库中，这样就避免了，前台一个一个的传递近来了。
-        tag_list = str.split(tag)
-
-        for i in range(len(tag_list)):
-            try:
-                # 校验传递过来的name是不是已经在数据库里面存在了，如果存在就不用插入了
-                exists = AlbumTags.objects.filter (tag__icontains=tag_list[i]).exists ()
-
-                if not exists:
-                    AlbumTags.objects.create (tag=tag_list[i])
-                else:
-                    i = i + 1
-            except:
-                return restful.params_error (message='插入的有问题！')
-
-        return restful.ok()
-
-# 编辑图集标签视图
-#因为是修改，所以需要一个索引，需要知道是哪一个要修改，还有要修改的值，一共需要传递两个值过来，所以需要用到post，所以需要用到表单
-@require_POST
-def edit_album_tags(request):
-    form = AlbumTagsForm(request.POST)
-    if form.is_valid():
-        pk = form.cleaned_data.get('pk')
-        tag = form.cleaned_data.get('tag')
-
-        try:
-            AlbumTags.objects.filter(pk=pk).update(tag=tag)
-            return restful.ok()
-        except:
-            return restful.params_error(message='传入的数据有问题！')
-    else:
-        return restful.params_error(message=form.get_error())
-
-# 删除图集标签视图
-@require_POST
-def del_album_tags(request):
-    form = DelAlbumTagsForm(request.POST)
-    if form.is_valid():
-        pk = form.cleaned_data.get('pk')
-    try:
-        t = AlbumTags.objects.filter(pk=pk).delete()
-        return restful.ok()
-    except:
-        return restful.params_error(message='无法删除')
-
-
-
-'''
 处理美女标签
 '''
 # 处理美女标签的视图
+@method_decorator(login_required(login_url='/'), name='dispatch')
 class WriteBeautyTagView(View):
     def get(self, request, *args, **kwargs):
-        tags = BeautyTags.objects.all()
+        tags = BeautyTags.objects.prefetch_related('beauty').all()
         context = {
             'tags': tags
         }
@@ -121,6 +58,7 @@ class WriteBeautyTagView(View):
 
 #定义修改美女标签的视图
 @require_POST
+@staff_member_required(login_url='/')
 def edit_beauty_tag(request):
     #这里让人采用的是JS,向服务器发送数据
     #这里暂时不用form表单的形式,看下直接获取OK不
@@ -136,6 +74,7 @@ def edit_beauty_tag(request):
 
 #定义删除美女标签的功能
 @require_POST
+@staff_member_required(login_url='/')
 def delete_beauty_tag(request):
     #根据js传递过来的标签的id,到数据库中执行删除操作
     pk = request.POST.get('pk')
@@ -150,7 +89,8 @@ def delete_beauty_tag(request):
 '''
 处理美女
 '''
-#处理美女的视图
+#处理美女的视图 备份
+@method_decorator(login_required(login_url='/'), name='dispatch')
 class WriteBeautyView(View):
     def get(self, request, *args, **kwargs):
         tags = BeautyTags.objects.all()
@@ -184,9 +124,10 @@ class WriteBeautyView(View):
                 BeautyTags.objects.get(pk=int(tags_id[i]))
         )
 
-        print('*'*20)
-        print(beauty_name, age, birthday, country, xingzuo, tall, weight, sanwei, job, interested, detail, cover_img, tags_id)
-        print('*'*20)
+        # print('*'*20)
+        # print(cover_img)
+        # print(beauty_name, age, birthday, country, xingzuo, tall, weight, sanwei, job, interested, detail, cover_img, tags_id)
+        # print('*'*20)
 
         try:
             beauty = Beauty.objects.create(beauty_name=beauty_name, age=age, birthday=birthday, country=country, xingzuo=xingzuo, tall=tall, weight=weight, sanwei=sanwei, job=job, interested=interested, detail=detail, cover_img=cover_img)
@@ -195,31 +136,98 @@ class WriteBeautyView(View):
             beauty.tags.add(*upload_beauty_tags)
 
             # 上传cover_img 到阿里云 腾讯云
-            print ('uid...->', beauty.get_uid ())
-            print ('cover_img.name...->', cover_img.name)
+            # print ('uid...->', beauty.get_uid ())
+            # print ('cover_img.name...->', cover_img.name)
             '''这里同样也要做改名处理'''
-            new_filename = os.listdir(os.path.join (settings.MEDIA_ROOT, 'beauty', beauty.get_uid ()))[0]
-            src_cover_img_path = os.path.join (settings.MEDIA_ROOT, 'beauty', beauty.get_uid (), new_filename)
-            dest_cover_img_path = os.path.join ('beauty', beauty.get_uid (), new_filename).replace ('\\', '/')
-            print ('dest_cover_img_path-->', dest_cover_img_path)
+            # new_filename = os.listdir(os.path.join (settings.MEDIA_ROOT, 'beauty', beauty.get_uid ()))[0]
+            # src_cover_img_path = os.path.join (settings.MEDIA_ROOT, 'beauty', beauty.get_uid (), new_filename)
+            # dest_cover_img_path = os.path.join ('beauty', beauty.get_uid (), new_filename).replace ('\\', '/')
+            # print ('dest_cover_img_path-->', dest_cover_img_path)
 
             # 上传cover_img到腾讯Cos
-            r = client.put_object_from_local_file (
-                Bucket='li-1302251434',
-                LocalFilePath=src_cover_img_path,
-                Key=dest_cover_img_path,
-            )
-            print (r ['ETag'])
+            # r = client.put_object_from_local_file (
+            #     Bucket='li-1302251434',
+            #     LocalFilePath=src_cover_img_path,
+            #     Key=dest_cover_img_path,
+            # )
+            # print (r ['ETag'])
 
             # 上传cover_img到阿里云OSS
-            from utils.aliyun_oss import bucket
-            res = bucket.put_object_from_file (dest_cover_img_path, src_cover_img_path)
-            print ('aliyun-------->', res.status)
+            # from utils.aliyun_oss import bucket
+            # res = bucket.put_object_from_file (dest_cover_img_path, src_cover_img_path)
+            # print ('aliyun-------->', res.status)
 
             # return restful.ok()
             return redirect('cms:write_beauty')
         except:
             return restful.params_error('美女信息插入不成功!')
+
+
+'''
+处理图集标签
+'''
+#处理图集标签页面的视图
+@method_decorator(login_required(login_url='/'), name='dispatch')
+class WriteAblumTagView(View):
+    def get(self, request, *args, **kwargs):
+        tags = AlbumTags.objects.prefetch_related('album_tags').all()
+        context = {
+            'tags': tags
+        }
+        return render(request, 'cms/manage_album_tags.html', context=context)
+
+    # 增加标签视图
+    def post(self, request, *args, **kwargs):
+        # 把前台传递过来的数据，添加到数据库就可以了，当然还需要校验数据的正确性。因为AlbumTags只有一个数据，也可以不用使用那种表单的形式
+        tag = request.POST.get ('tag')
+
+        #前台传递过来的标签是一个大的字符串，各个标签之间用空格做分割，这里采用split()函数来做分割
+        #分割成一个一个的标签，然后在分次存入数据库中，这样就避免了，前台一个一个的传递近来了。
+        tag_list = str.split(tag)
+
+        for i in range(len(tag_list)):
+            try:
+                # 校验传递过来的name是不是已经在数据库里面存在了，如果存在就不用插入了
+                exists = AlbumTags.objects.filter (tag__icontains=tag_list[i]).exists ()
+
+                if not exists:
+                    AlbumTags.objects.create (tag=tag_list[i])
+                else:
+                    i = i + 1
+            except:
+                return restful.params_error (message='插入的有问题！')
+        return restful.ok()
+
+# 编辑图集标签视图
+#因为是修改，所以需要一个索引，需要知道是哪一个要修改，还有要修改的值，一共需要传递两个值过来，所以需要用到post，所以需要用到表单
+@staff_member_required(login_url='/')
+@require_POST
+def edit_album_tags(request):
+    form = AlbumTagsForm(request.POST)
+    if form.is_valid():
+        pk = form.cleaned_data.get('pk')
+        tag = form.cleaned_data.get('tag')
+
+        try:
+            AlbumTags.objects.filter(pk=pk).update(tag=tag)
+            return restful.ok()
+        except:
+            return restful.params_error(message='传入的数据有问题！')
+    else:
+        return restful.params_error(message=form.get_error())
+
+# 删除图集标签视图
+@staff_member_required(login_url='/')
+@require_POST
+def del_album_tags(request):
+    form = DelAlbumTagsForm(request.POST)
+    if form.is_valid():
+        pk = form.cleaned_data.get('pk')
+    try:
+        t = AlbumTags.objects.filter(pk=pk).delete()
+        return restful.ok()
+    except:
+        return restful.params_error(message='无法删除')
 
 
 '''
@@ -314,6 +322,7 @@ class WriteBeautyView(View):
 '''
 处理图集对应的图片
 '''
+@method_decorator(login_required(login_url='/'), name='dispatch')
 class PicView(View):
     def get(self, request, *args, **kwargs):
         albums = Album.objects.all()
@@ -362,8 +371,9 @@ class PicView(View):
 
 
 '''
-处理图集 和 图片一起上传
+处理图集 和 图片一起上传 目前使用的
 '''
+@method_decorator(login_required(login_url='/'), name='dispatch')
 class WriteAlbumView(View):
     def get(self, request, *args, **kwargs):
         tags = AlbumTags.objects.all()
@@ -385,10 +395,9 @@ class WriteAlbumView(View):
         download_url = request.POST.get('download_url')
         download_password = request.POST.get('download_password')
         download_price = request.POST.get('download_price')
-
         cover_img = request.FILES.get('cover_img')
-        print('cover_img_type:',type(cover_img))
-        print('before_cover_img_name:',cover_img.name)
+        # print('cover_img_type:',type(cover_img))
+        # print('before_cover_img_name:',cover_img.name)
 
         # 上传图片集合
         pictures = request.FILES.getlist ('picture')
@@ -438,20 +447,20 @@ class WriteAlbumView(View):
                         Pic.objects.bulk_create (more_pic_list)
 
                         # 上传cover_img 到阿里云 腾讯云
-                        print ('uid...->', a.get_uid ())
-                        print ('after_cover_img.name...->', cover_img.name)
+                        # print ('uid...->', a.get_uid ())
+                        # print ('after_cover_img.name...->', cover_img.name)
                         '''
                         这里有一个注意点：就是文件名中间如果有空格，需要另外处理掉这个空格，要不然在底下凭借文件路径的时候，不会成功，路径中
                         会有空格出现，就导致变成两个路径。但是！但是django数据库却能够存储成功，这里应该就是人家数据库设计的机制了。
                         这里其实也没有做过多的处理，因为整个文件上传的机制是：首先上传到服务器，然后再由服务器调用代码去存到阿里云，腾讯云啊，
                         因为本地数据库已经给文件改名并且存储了，所以这里只要获取本地已经存储到的文件名，直接用这个新的文件名就可以下一步存到阿里云，腾讯云了。
                         '''
-                        new_filename = os.listdir(os.path.join (settings.MEDIA_ROOT, 'album', a.get_uid ()))[0]
-                        print(new_filename)
-                        src_cover_img_path = os.path.join (settings.MEDIA_ROOT, 'album', a.get_uid (), new_filename)
-                        dest_cover_img_path = os.path.join ('album', a.get_uid (), new_filename).replace ('\\', '/')
-                        print('src_path-->',src_cover_img_path)
-                        print ('dest_cover_img_path-->',dest_cover_img_path)
+                        # new_filename = os.listdir(os.path.join (settings.MEDIA_ROOT, 'album', a.get_uid ()))[0]
+                        # print(new_filename)
+                        # src_cover_img_path = os.path.join (settings.MEDIA_ROOT, 'album', a.get_uid (), new_filename)
+                        # dest_cover_img_path = os.path.join ('album', a.get_uid (), new_filename).replace ('\\', '/')
+                        # print('src_path-->',src_cover_img_path)
+                        # print ('dest_cover_img_path-->',dest_cover_img_path)
 
                         # 上传cover_img到腾讯Cos
                         # r = client.put_object_from_local_file (
@@ -462,36 +471,36 @@ class WriteAlbumView(View):
                         # print (r ['ETag'])
 
                         # 上传cover_img到阿里云OSS
-                        from utils.aliyun_oss import bucket
-                        res = bucket.put_object_from_file (dest_cover_img_path, src_cover_img_path)
-                        print ('aliyun-------->', res.status)
+                        # from utils.aliyun_oss import bucket
+                        # res = bucket.put_object_from_file (dest_cover_img_path, src_cover_img_path)
+                        # print ('aliyun-------->', res.status)
 
 
-                        # 上传图片Pic 到阿里云 腾讯云
+                        # 上传图片列表Pic 到阿里云 腾讯云
                         '''
                         这里为什么不用做文件改名处理，因为文件本身已经存到本地了，django帮我们改过不合格的名字了，我们os.listdir()获取到的
                         就是已经合格的名字了。所以在拼接路径的时候，就可以直接用。
                         '''
-                        src_pic_path_dir = os.path.join (settings.MEDIA_ROOT, 'pic', a.get_uid ())
-                        print(src_pic_path_dir)
-                        name_list = os.listdir(src_pic_path_dir)
-                        print(name_list)
+                        # src_pic_path_dir = os.path.join (settings.MEDIA_ROOT, 'pic', a.get_uid ())
+                        # print(src_pic_path_dir)
+                        # name_list = os.listdir(src_pic_path_dir)
+                        # print(name_list)
 
                         # 循环添加图片到云空间
-                        for i in range(len(name_list)):
-                            # 上传到阿里云
-                            bucket.put_object_from_file(
-                                os.path.join('pic', a.get_uid(), name_list[i]).replace('\\', '/'),
-                                os.path.join(settings.MEDIA_ROOT, 'pic', a.get_uid(), name_list[i])
-                            )
-                            # 上传到腾讯云
+                        # for i in range(len(name_list)):
+                        #     # 上传到阿里云
+                        #     bucket.put_object_from_file(
+                        #         os.path.join('pic', a.get_uid(), name_list[i]).replace('\\', '/'),
+                        #         os.path.join(settings.MEDIA_ROOT, 'pic', a.get_uid(), name_list[i])
+                        #     )
+                        #     # 上传到腾讯云
                             # client.put_object_from_local_file(
                             #     Bucket='li-1302251434',
                             #     LocalFilePath=os.path.join(settings.MEDIA_ROOT, 'pic', a.get_uid(), name_list[i]),
                             #     Key=os.path.join('pic', a.get_uid(), name_list[i]).replace('\\', '/')
                             # )
 
-                        return HttpResponse('图片上传成功!')
+                        return restful.ok()
                     except:
                         return HttpResponse ('图片上传不成功！')
                 else:
@@ -504,8 +513,9 @@ class WriteAlbumView(View):
 
 
 '''
-消息分类 处理
+news 板块 处理
 '''
+@method_decorator(login_required(login_url='/'), name='dispatch')
 class WriteNewsCategory(View):
     def get(self, request, *args, **kwargs):
         news_category = NewsCategory.objects.all()
@@ -531,6 +541,8 @@ class WriteNewsCategory(View):
         return restful.ok()
 
 # 编辑分类
+@staff_member_required(login_url='/')
+@require_POST
 def edit_news_category(request):
     pk = request.POST.get('pk')
     category = request.POST.get('category')
@@ -543,6 +555,8 @@ def edit_news_category(request):
             return restful.params_error(message='插入不成功!')
 
 # 删除分类
+@staff_member_required(login_url='/')
+@require_POST
 def del_news_category(request):
     pk = request.POST.get('pk')
 
@@ -560,6 +574,8 @@ def del_news_category(request):
 news 文章标签 处理
 '''
 # 增加tag
+@staff_member_required(login_url='/')
+@require_POST
 def news_add_tags(request):
     # 从前台接收tag，存入数据库
     tag = request.POST.get('tag')
@@ -579,6 +595,8 @@ def news_add_tags(request):
         return restful.params_error(message='插入有问题')
 
 # 修改tag
+@staff_member_required(login_url='/')
+@require_POST
 def news_edit_tags(request):
     # 从前台接受tag
     # 到数据库中找，找到了，update
@@ -597,6 +615,8 @@ def news_edit_tags(request):
             return restful.params_error (message='插入不成功!')
 
 # 删除tag
+@staff_member_required(login_url='/')
+@require_POST
 def news_del_tags(request):
     # 从前台接受PK，到数据库中查找，然后删掉
     pk = request.POST.get('pk')
@@ -613,6 +633,7 @@ def news_del_tags(request):
 '''
 news消息 处理
 '''
+@method_decorator(login_required(login_url='/'), name='dispatch')
 class WriteNews(View):
     def get(self, request, *args, **kwargs):
         news_categories = NewsCategory.objects.all()
@@ -636,14 +657,14 @@ class WriteNews(View):
                 NewsCategory.objects.get (pk=int (category_list [i]))
             )
 
-            print('*'*20)
-            print('title ---> ', title)
-            print('desc ---> ',desc)
-            print('thumbnail ---> ', thumbnail)
-            print('content ---> ', content)
-            print('category_list ---> ', category_list)
-            print('upload_category--> ' ,upload_category)
-            print('*'*20)
+            # print('*'*20)
+            # print('title ---> ', title)
+            # print('desc ---> ',desc)
+            # print('thumbnail ---> ', thumbnail)
+            # print('content ---> ', content)
+            # print('category_list ---> ', category_list)
+            # print('upload_category--> ' ,upload_category)
+            # print('*'*20)
         try:
             news = News.objects.create(title=title, desc=desc, thumbnail=thumbnail, content=content)
             news.category.add(*upload_category)
@@ -651,7 +672,9 @@ class WriteNews(View):
         except:
             return restful.params_error(message='上传不成功')
 
-# 使用ajax来操作
+# 使用ajax来操作,上传文章
+@staff_member_required(login_url='/')
+@require_POST
 def ajax_news_post(request):
     title = request.POST.get('title')
     desc = request.POST.get('desc')
@@ -698,10 +721,10 @@ def ajax_news_post(request):
 
 
 # 文章首页的功能之： 广告位
-class WriteAdView(View):
-    def get(self, request, *args, **kwargs):
-
-        return render(request, 'cms/manage_ad.html')
+# class WriteAdView(View):
+#     def get(self, request, *args, **kwargs):
+#
+#         return render(request, 'cms/manage_ad.html')
 
 
 # ueditor 上传图片的处理视图.
@@ -711,8 +734,14 @@ def upload_files(request):
     file = request.FILES.get('file') #get()函数里面的file是ajax发送过来的名字.
     #获取file的名字
     name = file.name
+    # 修改上传之后的file的名字
+    name = time.strftime ("%Y_%m_%d_%H_%M_%S", time.localtime (time.time ()))+'.jpg'
     #保存, 注意这里open的第一个参数,是一个拼接的路径,
-    print(os.path.join(settings.MEDIA_ROOT, 'news', name))
+    # print(os.path.join(settings.MEDIA_ROOT, 'news', name))
+
+    # 需要手动创建news文件夹
+    if not os.path.exists (settings.MEDIA_ROOT+'/news/'):
+        os.makedirs (settings.MEDIA_ROOT+'/news/')
 
     with open(os.path.join(settings.MEDIA_ROOT, 'news', name), 'wb') as fp:
         for chunk in file.chunks():
@@ -752,7 +781,7 @@ def aliyun_oss_tencent_cos_local_upload_files(request):
     src_path = os.path.join(settings.MEDIA_ROOT, 'news', name)
 
     # 上传到阿里云
-    bucket.put_object_from_file (des_path, src_path)
+    # bucket.put_object_from_file (des_path, src_path)
     # # 上传到腾讯云
     # client.put_object_from_local_file (
     #     Bucket='li-1302251434',
@@ -761,7 +790,7 @@ def aliyun_oss_tencent_cos_local_upload_files(request):
     # )
 
     # 拼接成完成的绝对路径如: http://127.0.0.1/media/xxx.jpg的形式
-    aliyun_url = a_prefix_url + 'news/' + name
+    # aliyun_url = a_prefix_url + 'news/' + name
     # tencent_url = t_prefix_url + 'news/' + name
     # 把上面拼接得到的完整的路径返回给js,燃js在现实在那个输入框里面.这里可以使用腾讯和阿里 和本地三个平台的URL
 
