@@ -50,7 +50,7 @@ pycryptodome==3.9.9
 PyMySQL==0.9.3
 python-memcached==1.59
 pytz==2020.1
-PyYAML==5.3.1
+PyYAML==5.4
 query-string==2019.4.13
 requests==2.23.0
 shortuuid==1.0.1
